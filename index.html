@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <script>'use strict';'serviceWorker'in navigator&&navigator.serviceWorker.register('service-worker.js').then(function(a){a.onupdatefound=function(){var b=a.installing;b.onstatechange=function(){switch(b.state){case'installed':navigator.serviceWorker.controller?console.log('New or updated content is available.'):console.log('Content is now available offline!');break;case'redundant':console.error('The installing service worker became redundant.');}}}}).catch(function(a){console.error('Error during service worker registration:',a)});
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143771561-3"></script>
     <script>
@@ -57,6 +59,7 @@
     <!--QQ应用模式-->
     <title>Holger's Index</title>
     <link href="style.css" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
     <script src="https://at.alicdn.com/t/font_1230786_59ub5vczww4.js"></script>
     <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="sou.js"></script>
