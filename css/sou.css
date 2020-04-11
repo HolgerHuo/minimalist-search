@@ -178,7 +178,7 @@ a {
     padding: 15px 0px 0px 0px;
     border-radius: 5px;
     box-shadow: 0px 5px 20px 0px #d8d7d7;
-    transition: all 0.3s;
+    transition: all 0.5s;
     display: none;
     z-index: 999
 }
@@ -326,7 +326,7 @@ a {
     top: 5px;
     z-index: 2000000;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 #menu i {
@@ -464,7 +464,7 @@ a {
 .list ul li a {
     width: 100%;
     border-radius: 5px;
-    transition: 0.2s all linear;
+    transition: 0.4s all linear;
     height: 100%;
     display: block;
     color: #fff;
@@ -477,7 +477,7 @@ a {
 .list ul li a i {
     margin-right: 5px;
     margin-left: 15px;
-    transition: 0.2s all linear;
+    transition: 0.4s all linear;
 }
 
 .list ul li a i.iconfont {
@@ -638,21 +638,6 @@ a {
     width:100%
 }
 
-/* The snackbar - position it at the bottom and in the middle of the screen */
-#snackbar {
-    visibility: hidden; /* Hidden by default. Visible on click */
-    min-width: 250px; /* Set a default minimum width */
-    margin-left: -125px; /* Divide value of min-width by 2 */
-    background-color: rgb(187, 187, 187); /* Black background color */
-    color: #333; /* White text color */
-    text-align: center; /* Centered text */
-    border-radius: 2px; /* Rounded borders */
-    padding: 16px; /* Padding */
-    position: fixed; /* Sit on top of the screen */
-    z-index: 1; /* Add a z-index if needed */
-    left: 30%; /* Center the snackbar */
-    bottom: 30px; /* 30px from the bottom */
-  }
 
 
 @media (max-width: 720px) {
@@ -778,7 +763,7 @@ a {
 }
 .hitokoto{
     position: absolute;
-    bottom: 30%;
+    margin-top: 100px;
     z-index: 1000;
     text-align: center;
     width: 100%;
@@ -787,84 +772,3 @@ a {
     line-height: 28px;
     font-size: 17px;
 }
-
-.snackbar-container {
-    transition: all 500ms ease;
-    transition-property: top, right, bottom, left, opacity;
-    font-family: Roboto, sans-serif;
-    font-size: 14px;
-    min-height: 14px;
-    background-color: #ebebeb;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: rgb(49, 49, 49);
-    line-height: 22px;
-    padding: 18px 24px;
-    bottom: -100px;
-    top: -100px;
-    opacity: 0;
-    z-index: 9999; }
-    .snackbar-container .action {
-      background: inherit;
-      display: inline-block;
-      border: none;
-      font-size: inherit;
-      text-transform: uppercase;
-      color: #4caf50;
-      margin: 0 0 0 24px;
-      padding: 0;
-      min-width: min-content;
-      cursor: pointer; }
-  
-  @media (min-width: 640px) {
-    .snackbar-container {
-      min-width: 288px;
-      max-width: 568px;
-      display: inline-flex;
-      border-radius: 2px;
-      margin: 24px; } }
-  
-  @media (max-width: 640px) {
-    .snackbar-container {
-      left: 0;
-      right: 0;
-      width: 100%; } }
-  
-  .snackbar-pos.bottom-center {
-    top: auto !important;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0); }
-  
-  .snackbar-pos.bottom-left {
-    top: auto !important;
-    bottom: 0;
-    left: 0; }
-  
-  .snackbar-pos.bottom-right {
-    top: auto !important;
-    bottom: 0;
-    right: 0; }
-  
-  .snackbar-pos.top-left {
-    bottom: auto !important;
-    top: 0;
-    left: 0; }
-  
-  .snackbar-pos.top-center {
-    bottom: auto !important;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0); }
-  
-  .snackbar-pos.top-right {
-    bottom: auto !important;
-    top: 0;
-    right: 0; }
-  
-  @media (max-width: 640px) {
-    .snackbar-pos.bottom-center, .snackbar-pos.top-center {
-      left: 0;
-      transform: none; } }

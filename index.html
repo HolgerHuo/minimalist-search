@@ -415,8 +415,8 @@
     </div>
     <!-- 侧栏 end -->
     <div class="mywth" style="width: 320px;">
-        <div data-v-6d083e75="" id="he-plugin-simple" style="position: relative;"><script data-v-6d083e75="" type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.14&amp;key=e2b04289e870b005374ee030148d64fd"></script> <div data-v-6d083e75="" class="s-sticker" style="font-size: 1.4em; cursor: pointer; padding: 0px 5px; background-color: transparent;"><div data-v-6d083e75="" style="width: 0px;"></div> <div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-tmp module" style="font-size: 12px; color: rgb(74, 74, 74); vertical-align: middle;">22°C</div><div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-city module" style="font-size: 12px; color: rgb(74, 74, 74); vertical-align: middle;">Tianjin</div><div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-cond module" style="vertical-align: middle;"><img data-v-7d48daab="" src="https://cdn.heweather.com/img/plugin/190516/icon/c/100d.png" style="width: 16px; height: 16px;"></div><div data-v-7d48daab="" data-v-6d083e75="" class="module" style="vertical-align: middle;"></div><div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-qlty module" style="color: rgb(148, 206, 111); font-size: 12px; vertical-align: middle;">Excellent</div> <div data-v-6d083e75="" style="width: 100%;"></div></div> <div data-v-6d083e75=""><!----></div></div>
-         <script>
+        <div data-v-6d083e75="" id="he-plugin-simple" style="position: relative;"><script async data-v-6d083e75="" type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.14&amp;key=e2b04289e870b005374ee030148d64fd"></script> <div data-v-6d083e75="" class="s-sticker" style="font-size: 1.4em; cursor: pointer; padding: 0px 5px; background-color: transparent;"><div data-v-6d083e75="" style="width: 0px;"></div> <div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-tmp module" style="font-size: 12px; color: rgb(74, 74, 74); vertical-align: middle;">22°C</div><div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-city module" style="font-size: 12px; color: rgb(74, 74, 74); vertical-align: middle;">Tianjin</div><div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-cond module" style="vertical-align: middle;"><img data-v-7d48daab="" src="https://cdn.heweather.com/img/plugin/190516/icon/c/100d.png" style="width: 16px; height: 16px;"></div><div data-v-7d48daab="" data-v-6d083e75="" class="module" style="vertical-align: middle;"></div><div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-qlty module" style="color: rgb(148, 206, 111); font-size: 12px; vertical-align: middle;">Excellent</div> <div data-v-6d083e75="" style="width: 100%;"></div></div> <div data-v-6d083e75=""><!----></div></div>
+         <script async>
          WIDGET = {
            CONFIG: {
              "modules": "01234",
@@ -506,6 +506,9 @@
                         </li>
                     </ul>
                 </div>
+                <div class="hitokoto">
+                    <p id="hitokoto">😀 Loading...</p>——「<span id="from">😀 Loading...</span>」
+                </div>
             </div>
         <script async>  
             fetch('https://v1.hitokoto.cn')  
@@ -522,9 +525,6 @@
             console.error(err);  
             })  
         </script>  
-        </div>
-        <div class="hitokoto">
-        <p id="hitokoto">😀 Loading...</p>——「<span id="from">😀 Loading...</span>」
         </div>
         <div class="foot">  
            Minimalist Index by
