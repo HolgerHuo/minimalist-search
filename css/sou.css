@@ -1,0 +1,870 @@
+@charset "utf-8";
+
+/*
+作者:D.Young
+主页：https://yyv.me/
+github：https://github.com/5iux/sou
+日期：2019-07-11
+版权所有，请勿删除
+❶❷❸❹❺❻❼❽❾❿
+由 yeetime 修改
+github：https://github.com/yeetime/sou2
+日期：2019-12-13
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    color: #000;
+}
+
+.search,
+.wd,
+.s {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.wd::-webkit-input-placeholder {
+    color: #ccc;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+ul,
+li {
+    display: block;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #464545;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+}
+
+.con {
+    width: 100%;
+    transition: 1s all;
+    margin: auto;
+    min-width: 320px;
+    height: 380px;
+    position: absolute;
+    left: 0;
+    top: -100px;
+    right: 0;
+    bottom: 0;
+}
+
+.con .shlogo {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    background: url(../static/images/avatar-300x300.webp) no-repeat center/cover;
+}
+
+.con .shlogo a {
+    width: 100%;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.sou {
+    max-width: 680px;
+    height: 50px;
+}
+
+.con .sou {
+    max-width: 680px;
+    position: relative;
+    width: calc(100% - 60px);
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+.con .sou form {
+    width: 100%;
+    /*border: 1px solid #ddd;*/
+    height: 50px;
+    display: block;
+    margin: 10px auto 30px;
+    position: relative;
+}
+
+.sou form .se {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    left: 6px;
+    top: 6px;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #777;
+}
+
+.sou form .se:hover {
+    filter:alpha(Opacity=70);
+    -moz-opacity:0.7;
+    opacity: 0.7
+}
+
+.con .sou form .wd {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    line-height: 100%;
+    text-indent: 55px;
+    font-size: 18px;
+}
+
+.con .sou form .wd:focus {
+    background: #fff;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+    border-color: #fff
+}
+
+.sou form .s {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    right: 6px;
+    top: 6px;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #777;
+}
+
+.search-engine {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #FFF;
+    padding: 15px 0px 0px 0px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px 0px #d8d7d7;
+    transition: all 0.3s;
+    display: none;
+    z-index: 999
+}
+
+.search-engine-head {
+    overflow: hidden;
+    text-indent: 20px;
+    margin-bottom: 10px;
+    padding-right: 15px;
+}
+
+.search-engine-tit {
+    float: left;
+    margin: 0;
+    font-size: 14px;
+    color: #999;
+}
+
+.search-engine ul {
+    padding: 0;
+    height: 40px;
+    margin: 0 auto;
+    justify-content: left;
+}
+
+.search-engine ul::before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    border-top: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+    border-left: 8px solid transparent;
+
+}
+
+.search-engine-list::after {
+    content: '';
+    width: 70px;
+    height: 18px;
+    position: absolute;
+    top: -17px;
+    left: 1px;
+}
+
+.search-engine-list li {
+    float: left;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    font-size: 14px;
+    left: 15px;
+    padding: 5px 10px 5px 10px;
+    margin: 0 10px 10px 0;
+    background: #f9f9f9;
+    color: #999;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    border-radius: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.search-engine-list li img {
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    float: left;
+    margin-right: 5px;
+    margin-top: 2.5px;
+}
+
+.quick-div {
+    margin: 0 auto;
+    width: 100%;
+    justify-content: left;
+}
+
+
+
+.quick {
+    width: 17%;
+    height: 40px;
+    margin: 5px 3px;
+    left: 30px;
+    float: left;
+    -webkit-tap-highlight-color: transparent;
+    background: #eee;
+    font-size: 16px;
+    color: #777;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 40px;
+    text-align: center;
+    text-indent: 30px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 20px;
+}
+
+.quick:active {
+    background: #fff;
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, .1);
+}
+
+.quick i {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(0.7);
+}
+
+.foot {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1000;
+    text-align: center;
+    width: 100%;
+    color: #999;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+
+#menu {
+    width: 50px;
+    height: 50px;
+    transform: scale(0.8);
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    z-index: 2000000;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#menu i {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 24px auto;
+    width: 30px;
+    height: 2px;
+    background: #777;
+}
+
+#menu i:before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    top: -8px;
+    background: #777;
+    position: absolute;
+    right: 0;
+}
+
+#menu i:after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    bottom: -8px;
+    background: #777;
+    position: absolute;
+    left: 0;
+}
+
+#menu.on {
+    right: 380px;
+    background: #29f;
+    border-radius: 25px;
+    box-shadow: 0 6px 8px rgba(36, 159, 253, .3);
+}
+
+#menu.on i {
+    width: 20px;
+    background: #fff;
+}
+
+#menu.on i:before {
+    top: -5px;
+    transform: rotate(45deg);
+    width: 14px;
+    right: -1px;
+    left: auto;
+    background: #fff;
+}
+
+#menu.on i:after {
+    bottom: -5px;
+    transform: rotate(-45deg);
+    width: 14px;
+    right: -1px;
+    left: auto;
+    background: #fff;
+}
+
+.side {
+    width: 357px;
+    padding:0px 10px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    z-index: 2000;
+    background: #222d46;
+    transition: 0.3s all linear;
+}
+
+.side.closed {
+    right: -380px;
+}
+
+.tab-nav {
+    overflow: hidden;
+    height: 5%;
+}
+
+.tab-nav a {
+    display: block;
+    float: left;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #999;
+
+}
+
+.tab-nav a.current {
+    background: rgba(0, 27, 26, 0.28);
+    color: #fff;
+}
+
+.tab-con {
+    position: relative;
+    width: 357px;
+    height: 95%;
+    overflow: hidden;
+}
+
+.j-tab-con {
+    height: 100%;
+}
+
+.tab-con-item {
+    height: 100%;
+    width: 357px;
+    display: none;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.list ul {
+    height: 100%;
+    float: left;
+    margin-bottom: 20px;
+
+}
+
+.list ul li {
+    float: left;
+    margin: 5px;
+    width: 100px;
+    height: 30px;
+    text-align: left;
+    line-height: 30px;
+}
+
+.list ul li a {
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.2s all linear;
+    height: 100%;
+    display: block;
+    color: #fff;
+    font-weight: 500;
+    background: #293550;
+    text-align: left;
+    font-size: 12px;
+}
+
+.list ul li a i {
+    margin-right: 5px;
+    margin-left: 15px;
+    transition: 0.2s all linear;
+}
+
+.list ul li a i.iconfont {
+    font-size: 14px;
+}
+
+.list ul li:hover a {
+    color: #fff;
+    background-color: #29f;
+    background-image: linear-gradient(135deg, rgba(35, 153, 255) 0%, rgba(84, 175, 253) 100%);
+    box-shadow: 0 3px 3px rgba(0, 40, 70, .3);
+}
+
+.list ul li:hover a i {
+    color: #fff !important;
+}
+
+.list ul li.title {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px 0 0;
+    text-align: left;
+    text-indent: 10px;
+    /*border-bottom: 1px dashed #dedede;*/
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.list ul li.title i {
+    color: #29f;
+    margin-right: 5px;
+    font-weight: normal;
+}
+
+
+.set_blocks {
+    background: rgb(221, 221, 221);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.set_blocks_title {
+    font-size: 14px;
+    background-color: rgb(65, 110, 152);
+    color: #fff;
+    padding: 10px 15px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.set_blocks_content {
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+.set_blocks_content table {
+    font-size: 14px;
+    text-align:right;
+    width:100%;
+    border-collapse:collapse;
+}
+
+.set_blocks_content table tr td:nth-child(2) {
+    text-align:left;
+}
+
+.set_blocks_content table tr td {
+    border-bottom:1px solid;
+    border-color: rgb(71, 144, 191);
+}
+
+.set_blocks_content button {
+    background: none;
+    border:1px solid rgba(72, 91, 94, 0);
+    border-radius: 3px;
+}
+
+.set_blocks_content button:hover {
+    border:1px solid #485b5e;
+}
+
+.set_blocks_content button:active {
+    color: #fff;
+    background-color: #599cff;
+}
+
+.set_blocks_content .se_add_preinstall {
+    margin-top: 10px;
+    text-align:center;
+}
+
+.set_blocks_content .se_add_preinstall button {
+    width: 40%;
+    height: 20px;
+    border:1px solid #485b5e;
+    border-radius: 3px;
+    text-align:center;
+    background: none;
+}
+
+.set_blocks_content .se_add_preinstall button:active {
+    color: #fff;
+    background-color: #599cff;
+}
+
+.add_content {
+    border:1px solid #599cff;
+    border-radius: 3px;
+    margin-top: 10px;
+    padding: 8px 12px;
+}
+
+.add_content .from_items {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.add_content input {
+    width: 100%;
+}
+
+.add_content .button {
+    text-align:center;
+}
+
+.add_content button {
+    width: 30%;
+    height: 20px;
+    border:1px solid #485b5e;
+    border-radius: 3px;
+    text-align:center;
+    background: none;
+    margin:0px 10px;
+}
+
+.add_content .se_add_save:active {
+    color: #fff;
+    background-color: #21ff2c;
+}
+
+.add_content .se_add_cancel:active {
+    color: #fff;
+    background-color: #599cff;
+}
+
+.me {
+    text-align: center;
+    color: #fff;
+}
+
+.my_data {
+    color: #fff;
+}
+
+.my_data textarea {
+    width:100%
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: rgb(187, 187, 187); /* Black background color */
+    color: #333; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 30%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+  }
+
+
+@media (max-width: 720px) {
+    .con {
+        top: 0px;
+    }
+    .con .shlogo {
+        width: 100px;
+        height: 100px;
+    }
+    .con .sou form .wd:focus {
+        background: #f1f1f1;
+        box-shadow: none;
+        border-color: #ccc
+    }
+    .con .sou form button {
+        border-radius: 25px;
+    }
+    #menu.on {
+        right: 270px;
+    }
+    .side {
+        width: 227px;
+    }
+    .tab-con {
+        width: 227px;
+    }
+    .tab-con-item {
+        width: 227px;
+    }
+    .side ul {
+        width: 220px;
+    }
+    .con .sou ul li {
+        width: 100px;
+        font-size: 12px;
+    }
+    .quick{
+        left: 0px;
+    }
+    .home,
+    #menu {
+        top: 5px;
+    }
+}
+
+@media (max-height: 420px) {
+    .con {
+        margin: 0;
+        top: 0px;
+    }
+    .con .sou form .wd {
+        text-indent: 50px;
+    }
+    .con .sou form:after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        /*background: url(icon/lg.svg) no-repeat center/cover;*/
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .con .shlogo {
+        display: none;
+    }
+    .home,
+    #menu,
+    .foot {
+        display: none;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #222d46;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #293550;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #293550;
+}
+
+::-webkit-scrollbar-corner {
+    background: #222d46;
+}
+.mywth {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    z-index: 100000;
+    height: 22px;
+}
+.mywth {
+    color: #777;
+    left: 10px;
+    top: 20px;
+    overflow: hidden;
+
+}
+
+.mywth.hidden {
+    display: none;
+}
+.mywth {
+    color: #bbb;
+}
+.hitokoto{
+    position: absolute;
+    bottom: 30%;
+    z-index: 1000;
+    text-align: center;
+    width: 100%;
+    color: #383838;
+    height: 25px;
+    line-height: 28px;
+    font-size: 17px;
+}
+
+.snackbar-container {
+    transition: all 500ms ease;
+    transition-property: top, right, bottom, left, opacity;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    min-height: 14px;
+    background-color: #ebebeb;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(49, 49, 49);
+    line-height: 22px;
+    padding: 18px 24px;
+    bottom: -100px;
+    top: -100px;
+    opacity: 0;
+    z-index: 9999; }
+    .snackbar-container .action {
+      background: inherit;
+      display: inline-block;
+      border: none;
+      font-size: inherit;
+      text-transform: uppercase;
+      color: #4caf50;
+      margin: 0 0 0 24px;
+      padding: 0;
+      min-width: min-content;
+      cursor: pointer; }
+  
+  @media (min-width: 640px) {
+    .snackbar-container {
+      min-width: 288px;
+      max-width: 568px;
+      display: inline-flex;
+      border-radius: 2px;
+      margin: 24px; } }
+  
+  @media (max-width: 640px) {
+    .snackbar-container {
+      left: 0;
+      right: 0;
+      width: 100%; } }
+  
+  .snackbar-pos.bottom-center {
+    top: auto !important;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  
+  .snackbar-pos.bottom-left {
+    top: auto !important;
+    bottom: 0;
+    left: 0; }
+  
+  .snackbar-pos.bottom-right {
+    top: auto !important;
+    bottom: 0;
+    right: 0; }
+  
+  .snackbar-pos.top-left {
+    bottom: auto !important;
+    top: 0;
+    left: 0; }
+  
+  .snackbar-pos.top-center {
+    bottom: auto !important;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  
+  .snackbar-pos.top-right {
+    bottom: auto !important;
+    top: 0;
+    right: 0; }
+  
+  @media (max-width: 640px) {
+    .snackbar-pos.bottom-center, .snackbar-pos.top-center {
+      left: 0;
+      transform: none; } }

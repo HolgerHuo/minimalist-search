@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <meta charset="UTF-8">
-    <script>'use strict';'serviceWorker'in navigator&&navigator.serviceWorker.register('service-worker.js').then(function(a){a.onupdatefound=function(){var b=a.installing;b.onstatechange=function(){switch(b.state){case'installed':navigator.serviceWorker.controller?console.log('New or updated content is available.'):console.log('Content is now available offline!');break;case'redundant':console.error('The installing service worker became redundant.');}}}}).catch(function(a){console.error('Error during service worker registration:',a)});
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet"> <!--引用Google Fonts Josefin Sans-->
+    <script async>'use strict';'serviceWorker'in navigator&&navigator.serviceWorker.register('service-worker.js').then(function(a){a.onupdatefound=function(){var b=a.installing;b.onstatechange=function(){switch(b.state){case'installed':navigator.serviceWorker.controller?console.log('New or updated content is available.'):console.log('Content is now available offline!');break;case'redundant':console.error('The installing service worker became redundant.');}}}}).catch(function(a){console.error('Error during service worker registration:',a)});
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143771561-3"></script>
-    <script>
+    <script async>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'UA-143771561-3');
     </script>
+    <script async src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>  
+    <script async src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>  
     <meta name="author" content="Holger" />
     <title>Holger's Index - A index for everyone</title>
     <meta name="keywords" content="Holger,Holger's Blog,aggregator,index,homepage,start,开始界面,网站聚合,主页,网址大全,网址导航">
@@ -24,14 +26,14 @@
     <meta property="og:url" content="https://holger.net.cn">
     <meta property="og:title" content="Holger's Index - An index for everyone!">
     <meta property="og:description" content="Holger's Index - A homepage with all websites you want!">
-    <meta property="og:image" content="https://blog.holger.net.cn/static/images/avatar.png">
+    <meta property="og:image" content="./static/images/avatar-300x300.webp">
     <meta property="og:site_name" content="Holger's Index - A homepage with all websites you want!">
     <!-- / Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Holger's Index - An index for everyone!">
     <meta name="twitter:description" content="Holger's Index - A homepage with all websites you want!">
-    <meta name="twitter:image" content="https://blog.holger.net.cn/static/images/avatar.png">
-    <script>
+    <meta name="twitter:image" content="./static/images/avatar-300x300.webp">
+    <script async>
       var _hmt = _hmt || [];
       (function() {
         var hm = document.createElement("script");
@@ -42,10 +44,10 @@
     </script>      
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-siteapp">
-    <link rel="icon" href="https://blog.holger.net.cn/static/images/avatar.png" sizes="192x192" />
-    <link rel="apple-touch-icon-precomposed" href="https://blog.holger.net.cn/static/images/server/apple-touch-icon.png" />
-    <meta name="msapplication-TileImage" content="https://blog.holger.net.cn/static/images/avatar.png" />
-    <link rel="shortcut icon" href="https://blog.holger.net.cn/static/images/avatar.png" />
+    <link rel="icon" href="./static/images/avatar-300x300.webp" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="./static/images/server/apple-touch-icon.png" />
+    <meta name="msapplication-TileImage" content="./static/images/avatar-300x300.webp" />
+    <link rel="shortcut icon" href="./static/images/avatar-300x300.webp" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -58,168 +60,490 @@
     <meta name="x5-page-mode" content="app">
     <!--QQ应用模式-->
     <title>Holger's Index</title>
-    <link href="style.css" rel="stylesheet">
-    <link rel="manifest" href="/manifest.json">
-    <script src="https://at.alicdn.com/t/font_1230786_59ub5vczww4.js"></script>
-    <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="sou.js"></script>
+    <script async src="./js/jquery-3.4.1.min.js"></script>
+    <script async src="./js/jQuery.rTabs.js"></script>
+    <script async src="./js/js.cookie.js"></script>
+    <script async src="./js/sou.js"></script>
+    <script async src="./js/darkmode.js"></script>
+    <link rel="stylesheet" href="./font_1230786_swt4kkie8ym/iconfont.css">
+    <link rel="stylesheet" href="./font_1614281/iconfont.css">
+    <script async src="./font_1230786_swt4kkie8ym/iconfont.js"></script>
+    <link id="daily-theme" rel="stylesheet" href="./css/sou.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" data-original-media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+    <link id="dark-theme" rel="stylesheet" href="./css/sou_night.css" media="(prefers-color-scheme: dark)" data-original-media="(prefers-color-scheme: dark)">
 </head>
-
 <body>
-    <div id="menu"><i></i></div>
-    <div class="list closed">
-        <ul>
-          <!------>
-            <li class="title"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shipin"></use></svg> Media</li>
-            <li><a rel="nofollow" href="https://www.youtube.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-youtube"></use>
-</svg> Youtube</a></li>
-            <li><a rel="nofollow" href="https://v.qq.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-tengxunshipin"></use></svg>腾讯视频</a></li>
-            <li><a rel="nofollow" href="https://www.youku.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-youku"></use></svg>优酷</a></li>
-            <li><a rel="nofollow" href="https://www.iqiyi.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-aiqiyi"></use></svg>爱奇艺</a></li>
-            <li><a rel="nofollow" href="http://www.zmz2019.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-zimu"></use></svg>字幕组</a></li>
-            <li><a rel="nofollow" href="http://www.acfun.cn/index.html" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-acfun"></use></svg>ACFUN</a></li>
-            <li><a rel="nofollow" href="https://www.bilibili.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bili"></use></svg>哔哩哔哩</a></li>
-            <li><a rel="nofollow" href="https://yingshi.ml" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yunbo"></use></svg>影视搜索</a></li>
-          <!------> 
-            <li class="title"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-youxiang"></use></svg> Email</li>
-            <li><a rel="nofollow" href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-gmail"></use></svg>Gmail</a></li>
-            <li><a rel="nofollow" href="https://outlook.live.com/mail/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-windows"></use></svg>Hotmail</a></li>
-            <li><a rel="nofollow" href="https://mail.163.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wangyi"></use></svg>网易邮箱</a></li>
-            <li><a rel="nofollow" href="https://mail.sina.com.cn/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-xinlangwang"></use></svg>新浪邮箱</a></li>
-            <li><a rel="nofollow" href="https://mail.qq.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-QQ"></use></svg>QQ邮箱</a></li>
-            <li><a rel="nofollow" href="https://qiye.aliyun.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yunyouxiang"></use></svg>阿里邮箱</a></li>
-          <!------>
-            <li class="title"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-msg"></use></svg> SNS</li>
-            <li><a href="https://sns.holger.net.cn" target="_blank"></use> &nbsp&nbsp&nbsp&nbsp&nbsp  Notre Monde</a></li>
-            <li><a rel="nofollow" href="https://www.weibo.com" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-weibo"></use></svg>微博</a></li>
-            <li><a rel="nofollow" href="https://www.zhihu.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhihu"></use></svg>知乎</a></li>
-            <li><a rel="nofollow" href="https://www.douban.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-douban"></use></svg>豆瓣</a></li>
-            <li><a rel="nofollow" href="https://www.jianshu.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jianshu"></use></svg>简书</a></li>
-            <li><a rel="nofollow" href="https://www.v2ex.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-v2ex"></use></svg>V2EX</a></li>
-            <li><a rel="nofollow" href="https://www.instagram.com" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-instagram"></use></svg>Instagram</a></li>
-            <li><a rel="nofollow" href="https://www.twitter.com" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-twitter"></use></svg>Twitter</a></li>
-            <li><a rel="nofollow" href="https://www.facebook.com" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-facebook"></use></svg>Facebook</a></li>
-          <!------>
-            <li class="title"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-gouwuche"></use></svg> E-Shopping</li>
-            <li><a rel="nofollow" href="https://www.taobao.com" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-taobao"></use></svg>淘宝网</a></li>
-            <li><a rel="nofollow" href="https://dyartstyle.com/juhuasuan/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-juhuasuan"></use></svg>聚划算</a></li>
-            <li><a rel="nofollow" href="https://dyartstyle.com/temai/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-temai"></use></svg>淘宝特卖</a></li>
-            <li><a rel="nofollow" href="https://mobile.yangkeduo.com/duo_cms_mall.html?pid=8742514_71211367&cpsSign=CM_190605_8742514_71211367_92fdd9f7fb637fec599bf556f263ed1f&duoduo_type=2&launch_wx=1" title="拼多多手机端专属商城，超低价商品火热抢购中，更有超多大额优惠券持续发放，一键立抢>>" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-99"></use></svg>拼多多</a></li>
-            <li><a rel="nofollow" href="https://www.jd.com" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jingdong"></use></svg>京东</a></li>
-            <li><a rel="nofollow" href="https://www.suning.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-suning"></use></svg>苏宁易购</a></li>
-            <li><a rel="nofollow" href="http://you.163.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yanxuan"></use></svg>网易严选</a></li>
-            <li><a rel="nofollow" href="https://www.amazon.cn/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-amazon"></use></svg>亚马逊</a></li>
-            <li><a rel="nofollow" href="http://www.dangdang.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dangdang"></use></svg>当当</a></li>
-            <li><a rel="nofollow" href="https://wat.dyartstyle.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wat"></use></svg>吾爱淘</a></li>
-          <!------>
-            <li class="title"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-sheji"></use></svg> UX</li>
-            <li><a rel="nofollow" href="https://web.yyv.me/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-daohang1"></use></svg>设计导航</a></li>
-            <li><a rel="nofollow" href="https://www.pinterest.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-pinterest"></use></svg>Pinterest</a></li>
-            <li><a rel="nofollow" href="https://www.behance.net/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-behance"></use></svg>Behance</a></li>
-            <li><a rel="nofollow" href="https://www.dribbble.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dribbble"></use></svg>Dribbble</a></li>
-            <li><a rel="nofollow" href="https://huaban.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-huaban"></use></svg>花瓣</a></li>
-            <li><a rel="nofollow" href="https://www.zcool.com.cn/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-zhanku"></use></svg>站酷</a></li>
-            <li><a rel="nofollow" href="https://www.iconfont.cn/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-iconfont"></use></svg>阿里图标</a></li>
-            <li><a rel="nofollow" href="https://www.iconfinder.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-eye"></use></svg>IconFinder</a></li>
-            <li><a rel="nofollow" href="https://uiiiuiii.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jiaocheng"></use></svg>优设教程</a></li>
-          <!------>
-            <li class="title"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-sousuo"></use></svg> Search Engines</li>
-            <li><a rel="nofollow" href="https://www.google.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-google"></use></svg>Google</a></li>
-            <li><a rel="nofollow" href="https://duckduckgo.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-duck"></use></svg>DuckGo</a></li>
-            <li><a rel="nofollow" href="https://www.bing.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-bing"></use></svg>Bing</a></li>
-            <li><a rel="nofollow" href="https:/m.baidu.com/?pu=sz%401321_480&wpo=btmfast" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-icon_baidulogo"></use></svg>百度</a></li>
-            <li><a rel="nofollow" href="https://hk.yahoo.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-yahoo"></use></svg>雅虎</a></li>
-            <li><a rel="nofollow" href="https://www.sogou.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-sougou"></use></svg>搜狗</a></li>
-            <li><a rel="nofollow" href="https://www.naver.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-icon-test"></use></svg>NAVER</a></li>
-            <li><a rel="nofollow" href="https://mijisou.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-miji"></use></svg>秘迹</a></li>
-            <li><a rel="nofollow" href="https://www.dogedoge.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-gougou"></use></svg>多吉</a></li>
-            <li><a rel="nofollow" href="https://seeres.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-sousuo"></use></svg>seeres</a></li>
-            <!------>
-            <li class="title"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-ai-tool"></use></svg> Tools</li>
-            <li><a rel="nofollow" href="http://tools.imiku.me/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-ai-tool"></use></svg>Miku工具</a></li>
-            <li><a rel="nofollow" href="/ip/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wangluo"></use></svg>IP查询</a></li>
-            <li><a rel="nofollow" href="https://translate.google.cn/?hl=zh-CN" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-fanyi"></use></svg>谷歌翻译</a></li>
-            <li><a rel="nofollow" href="http://www.slimego.cn/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-shilaimu"></use></svg>史莱姆</a></li>
-            <li><a rel="nofollow" href="https://feedly.com" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-feedly"></use></svg>Feedly</a></li>         
-            <li><a rel="nofollow" href="https://pan.baidu.com" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-baiduyun"></use></svg>百度网盘</a></li>
-            <li><a rel="nofollow" href="https://www.mdeditor.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-md"></use></svg>MD编辑器</a></li>
-            <li><a rel="nofollow" href="http://cubic-bezier.com" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-quxian"></use></svg>贝赛尔曲线</a></li>
-            <li><a rel="nofollow" href="/base64/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-base64"></use></svg>Base64</a></li>
-            <li><a rel="nofollow" href="https://javascriptobfuscator.com/Javascript-Obfuscator.aspx" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-jshunxiao"></use></svg>JS混淆器</a></li>
-            <li><a rel="nofollow" href="https://ping.pe" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wangluo1"></use></svg>Ping.pe</a></li>
-            <li><a rel="nofollow" href="https://ping.chinaz.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-pingup"></use></svg>站长Ping</a></li>
-            <li><a rel="nofollow" href="https://apkdl.in/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-anzhuo"></use></svg>APK下载</a></li>
-            <!------>
-            <li class="title"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-kongzhitai"></use></svg> Dev</li>
-            <li><a rel="nofollow" href="http://www.w3school.com.cn/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-h5"></use></svg>W3school</a></li>
-            <li><a rel="nofollow" href="https://github.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg>Github</a></li>
-            <li><a rel="nofollow" href="https://codepen.io/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-codepen"></use></svg>Codepen</a></li>
-            <li><a rel="nofollow" href="https://www.52pojie.cn/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-theater-masks"></use></svg>吾爱破解</a></li>
-            <li><a rel="nofollow" href="https://segmentfault.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-msg"></use></svg>SF思否</a></li>
-            <li><a rel="nofollow" href="https://cdnjs.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cdnjs"></use></svg>CdnJs</a></li>
-            <li><a rel="nofollow" href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-font-awesome"></use></svg>Font A.</a></li>
-            <li><a rel="nofollow" href="https://msdn.itellyou.cn/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-windows"></use></svg>MSDN下载</a></li>
-            <li><a rel="nofollow" href="https://dash.cloudflare.com/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloudflare"></use></svg>C. flare</a></li>
-            <li><a rel="nofollow" href="https://www.swiper.com.cn/" target="_blank"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-S"></use></svg>Swiper</a></li>
-        </ul>
-    </div>
-    <div class="mywth" style="width: 320px;">
-      <div data-v-6d083e75="" id="he-plugin-simple" style="position: relative;"><script data-v-6d083e75="" type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.14&amp;key=e2b04289e870b005374ee030148d64fd"></script> <div data-v-6d083e75="" class="s-sticker" style="font-size: 1.4em; cursor: pointer; padding: 0px 5px; background-color: transparent;"><div data-v-6d083e75="" style="width: 0px;"></div> <div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-tmp module" style="font-size: 12px; color: rgb(74, 74, 74); vertical-align: middle;">22°C</div><div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-city module" style="font-size: 12px; color: rgb(74, 74, 74); vertical-align: middle;">Tianjin</div><div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-cond module" style="vertical-align: middle;"><img data-v-7d48daab="" src="https://cdn.heweather.com/img/plugin/190516/icon/c/100d.png" style="width: 16px; height: 16px;"></div><div data-v-7d48daab="" data-v-6d083e75="" class="module" style="vertical-align: middle;"></div><div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-qlty module" style="color: rgb(148, 206, 111); font-size: 12px; vertical-align: middle;">Excellent</div> <div data-v-6d083e75="" style="width: 100%;"></div></div> <div data-v-6d083e75=""><!----></div></div>
-       <script>
-       WIDGET = {
-         CONFIG: {
-           "modules": "01234",
-           "background": 5,
-           "tmpColor": "4A4A4A",
-           "tmpSize": "12",
-           "cityColor": "4A4A4A",
-           "citySize": "12",
-           "aqiSize": "12",
-           "weatherIconSize": "16",
-           "alertIconSize": "14",
-           "padding": "0px 5px 0px 5px",
-           "shadow": "1",
-           "language": "auto",
-           "fixed": "false",
-           "vertical": "middle",
-           "horizontal": "left",
-           "key": "f942bb77264e47f591868eba33b5b472"
-         }
-         /*天气key定期删除换新，还是自己去官方申请吧大佬们！https://dev.heweather.com/widget/simple*/
-       }
-       </script>
-       <script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
-       <!--和风天气插件-->
-   </div>
-        <!--和风天气插件-->
 
+    <!-- 侧栏 -->
+    <div id="menu"><i></i></div>
+
+    <div class="side closed">
+
+        <div class="tab-nav j-tab-nav">
+
+            <a href="javascript:void(0);" class="current">Sites</a>
+
+            <a href="javascript:void(0);">Settings</a>
+
+            <a href="javascript:void(0);">Backup</a>
+
+        </div>
+
+        <div class="tab-con">
+
+            <div class="j-tab-con">
+                <!--书签-->
+                <div class="tab-con-item" style="display:block;">
+
+                    <div class="list">
+                        <ul>
+                                <!------>
+                                <li class="title"><i class="iconfont icon-youxiang"></i> Emails</li>
+                                <li><a rel="nofollow" href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><i
+                                        class="iconfont icon-gmail" style="color: #f03;"></i>Gmail</a></li>
+                                <li><a rel="nofollow" href="https://outlook.live.com/mail/" target="_blank"><i
+                                        class="iconfont icon-windows" style="color: #059;"></i>Hotmail</a></li>
+                                <li><a rel="nofollow" href="https://mail.163.com/" target="_blank"><i
+                                        class="iconfont icon-wangyi" style="color: #169;"></i>网易邮箱</a></li>
+                                <li><a rel="nofollow" href="https://mail.sina.com.cn/" target="_blank"><i
+                                        class="iconfont icon-xinlang" style="color: #e6162d;"></i>新浪邮箱</a></li>
+                                <li><a rel="nofollow" href="https://mail.qq.com/" target="_blank"><i
+                                        class="iconfont icon-QQ" style="color: #f05;"></i>QQ邮箱</a></li>
+                                <li><a rel="nofollow" href="https://qiye.aliyun.com/" target="_blank"><i
+                                        class="iconfont icon-yunyouxiang" style="color: #f15534;"></i>阿里邮箱</a></li>
+                                <!------>
+                                <li class="title"><i class="iconfont icon-msg"></i> SNS</li>
+                                <li><a href="https://sns.holger.net.cn" target="_blank"><i
+                                    class="iconfont " style="color: #e6162d;"></i>Notre Monde</a></li>
+                                <li><a rel="nofollow" href="https://www.weibo.com" target="_blank"><i
+                                        class="iconfont icon-weibo" style="color: #e6162d;"></i>微博</a></li>
+                                <li><a rel="nofollow" href="https://www.zhihu.com/" target="_blank"><i
+                                        class="iconfont icon-zhihu" style="color: #0084ff;"></i>知乎</a></li>
+                                <li><a rel="nofollow" href="https://www.douban.com/" target="_blank"><i
+                                        class="iconfont icon-douban" style="color: #072;"></i>豆瓣</a></li>
+                                <li><a rel="nofollow" href="https://www.instagram.com" target="_blank"><i
+                                        class="iconfont icon-instagram" style="color: #93009f;"></i>Instagram</a></li>
+                                <li><a rel="nofollow" href="https://www.twitter.com" target="_blank"><i
+                                        class="iconfont icon-twitter" style="color: #00bcff;"></i>Twitter</a></li>
+                                <li><a rel="nofollow" href="https://www.facebook.com" target="_blank"><i
+                                        class="iconfont icon-facebook" style="color: #4267b2;"></i>Facebook</a></li>
+                                <!------>
+                                <li class="title"><i class="iconfont icon-shipin"></i>Media</li>
+                                <li><a rel="nofollow" href="https://www.youtube.com/" target="_blank"><i
+                                        class="iconfont icon-youtube" style="color:#f03;"></i>Youtube</a></li>
+                                <li><a rel="nofollow" href="https://v.qq.com/" target="_blank"><i
+                                        class="iconfont icon-tengxunshipin" style="color:#2a0;"></i>腾讯视频</a></li>
+                                <li><a rel="nofollow" href="https://www.youku.com/" target="_blank"><i
+                                        class="iconfont icon-youku" style="color:#09e;"></i>优酷</a></li>
+                                <li><a rel="nofollow" href="https://www.iqiyi.com/" target="_blank"><i
+                                        class="iconfont icon-aiqiyi" style="color:#1d0;"></i>爱奇艺</a></li>
+                                <li><a rel="nofollow" href="http://www.zmz2019.com/" target="_blank"><i
+                                        class="iconfont icon-zimu" style="color: #067;"></i>字幕组</a></li>
+                                <li><a rel="nofollow" href="http://www.acfun.cn/index.html" target="_blank"><i
+                                        class="iconfont icon-acfun" style="color:#f33;"></i>ACFUN</a></li>
+                                <li><a rel="nofollow" href="https://www.bilibili.com/" target="_blank"><i
+                                        class="iconfont icon-bili" style="color:#09e;"></i>哔哩哔哩</a></li>
+                                <li><a rel="nofollow" href="/movies/" target="_blank"><i class="iconfont icon-yunbo"
+                                                                                         style="color:#0bf;"></i>影视搜索</a>
+                                </li>
+                                <li><a rel="nofollow" href="/tv/" target="_blank"><i class="iconfont icon-dianshi"
+                                                                                     style="color:#9ae;"></i>直播电视</a>
+                                </li>
+                                <li><a rel="nofollow" href="https://music.yyv.me/" target="_blank"><i
+                                        class="iconfont icon-yinle" style="color:#f4a;"></i>音乐解析</a></li>
+                                <!------>
+                                <li class="title"><i class="iconfont icon-gouwuche"></i> Shopping</li>
+                                <li><a rel="nofollow" href="https://www.taobao.com" target="_blank"><i
+                                        class="iconfont icon-taobao" style="color: #ff6019;"></i>淘宝网</a></li>
+                                <li><a rel="nofollow" href="https://dyartstyle.com/juhuasuan/" target="_blank"><i
+                                        class="iconfont icon-juhuasuan" style="color: #E61414;"></i>聚划算</a></li>
+                                <li><a rel="nofollow" href="https://dyartstyle.com/temai/" target="_blank"><i
+                                        class="iconfont icon-temai" style="color: #ff6019;"></i>淘宝特卖</a></li>
+                                <li><a rel="nofollow"
+                                       href="https://mobile.yangkeduo.com/duo_cms_mall.html?pid=8742514_71211367&cpsSign=CM_190605_8742514_71211367_92fdd9f7fb637fec599bf556f263ed1f&duoduo_type=2&launch_wx=1"
+                                       title="拼多多手机端专属商城，超低价商品火热抢购中，更有超多大额优惠券持续发放，一键立抢>>" target="_blank"><i
+                                        class="iconfont icon-99" style="color: #f83e3e;"></i>拼多多</a></li>
+                                <li><a rel="nofollow" href="https://www.jd.com" target="_blank"><i
+                                        class="iconfont icon-jingdong" style="color: #e33333;"></i>京东</a></li>
+                                <li><a rel="nofollow" href="https://www.suning.com/" target="_blank"><i
+                                        class="iconfont icon-suning" style="color: #f90;"></i>苏宁易购</a></li>
+                                <li><a rel="nofollow" href="http://you.163.com/" target="_blank"><i
+                                        class="iconfont icon-yanxuan" style="color: #B4A078;"></i>网易严选</a></li>
+                                <li><a rel="nofollow" href="https://www.amazon.cn/" target="_blank"><i
+                                        class="iconfont icon-amazon" style="color: #fc9b18;"></i>亚马逊</a></li>
+                                <li><a rel="nofollow" href="http://www.dangdang.com/" target="_blank"><i
+                                        class="iconfont icon-dangdang" style="color: #ff2832;"></i>当当</a></li>
+                                <li><a rel="nofollow" href="https://wat.dyartstyle.com/" target="_blank"><i
+                                        class="iconfont icon-wat" style="color: #fe2e52;"></i>吾爱淘</a></li>
+                                <!------>
+                                <li class="title"><i class="iconfont icon-sheji"></i> UX</li>
+                                <li><a rel="nofollow" href="https://web.yyv.me/" target="_blank"><i
+                                        class="iconfont icon-daohang1"></i>设计导航</a></li>
+                                <li><a rel="nofollow" href="https://www.pinterest.com/" target="_blank"><i
+                                        class="iconfont icon-pinterest" style="color:#e02;"></i>Pinterest</a></li>
+                                <li><a rel="nofollow" href="https://www.behance.net/" target="_blank"><i
+                                        class="iconfont icon-behance" style="color:#56f;"></i>Behance</a></li>
+                                <li><a rel="nofollow" href="https://www.dribbble.com/" target="_blank"><i
+                                        class="iconfont icon-dribbble" style="color:#e48;"></i>Dribbble</a></li>
+                                <li><a rel="nofollow" href="https://huaban.com/" target="_blank"><i
+                                        class="iconfont icon-huaban" style="color:#f06;"></i>花瓣</a></li>
+                                <li><a rel="nofollow" href="https://www.zcool.com.cn/" target="_blank"><i
+                                        class="iconfont icon-zhanku" style="color:#f90;"></i>站酷</a></li>
+                                <li><a rel="nofollow" href="https://www.iconfont.cn/" target="_blank"><i
+                                        class="iconfont icon-iconfont" style="color: #ff6019;"></i>阿里图标</a></li>
+                                <li><a rel="nofollow" href="https://www.iconfinder.com/" target="_blank"><i
+                                        class="iconfont icon-eye"></i>IconFinder</a></li>
+                                <li><a rel="nofollow" href="https://uiiiuiii.com/" target="_blank"><i
+                                        class="iconfont icon-jiaocheng" style="color:#0aa;"></i>优设教程</a></li>
+                                <!------>
+                                <li class="title"><i class="iconfont icon-ai-tool"></i> Widgets</li>
+                                <li><a rel="nofollow" href="/ip/" target="_blank"><i class="iconfont icon-wangluo"
+                                                                                     style="color: #02f;"></i>IP查询</a>
+                                </li>
+                                <li><a rel="nofollow" href="https://translate.google.cn/?hl=zh-CN" target="_blank"><i
+                                        class="iconfont icon-fanyi" style="color: #02f;"></i>谷歌翻译</a></li>
+                                <li><a rel="nofollow" href="http://www.slimego.cn/" target="_blank"><i
+                                        class="iconfont icon-shilaimu" style="color: #0f89c2;"></i>史莱姆</a></li>
+                                <li><a rel="nofollow" href="https://gugeji.com/" target="_blank"><i
+                                        class="iconfont icon-google" style="color:#4285f4"></i>镜像</a></li>
+                                <li><a rel="nofollow" href="https://feedly.com" target="_blank"><i
+                                        class="iconfont icon-feedly" style="color: #11dd00;"></i>Feedly</a></li>
+                                <li><a rel="nofollow" href="https://pan.baidu.com" target="_blank"><i
+                                        class="iconfont icon-baiduyun" style="color: #148bfe;"></i>百度网盘</a></li>
+                                <li><a rel="nofollow" href="https://www.baiduwp.com" target="_blank"><i
+                                        class="iconfont icon-cloud-download" style="color: #148bfe;"></i>网盘解析</a></li>
+                                <li><a rel="nofollow" href="https://www.mdeditor.com/" target="_blank"><i
+                                        class="iconfont icon-md" style="color:#09f;"></i>MD编辑器</a></li>
+                                <li><a rel="nofollow" href="https://miku.tools/" target="_blank"><i
+                                        class="iconfont icon-ai-tool"></i>Miku工具</a></li>
+                                <li><a rel="nofollow" href="http://cubic-bezier.com" target="_blank"><i
+                                        class="iconfont icon-quxian" style="color: #f08;"></i>贝赛尔曲线</a></li>
+                                <li><a rel="nofollow" href="/base64/" target="_blank"><i class="iconfont icon-base64"
+                                                                                         style="color:#1d0;"></i>Base64</a>
+                                </li>
+                                <li><a rel="nofollow" href="https://javascriptobfuscator.com/Javascript-Obfuscator.aspx"
+                                       target="_blank"><i class="iconfont icon-jshunxiao" style="color: #48c;"></i>JS混淆器</a>
+                                </li>
+                                <li><a rel="nofollow" href="https://ping.pe" target="_blank"><i
+                                        class="iconfont icon-wangluo1" style="color:#1d0;"></i>Ping.pe</a></li>
+                                <li><a rel="nofollow" href="https://ping.chinaz.com/" target="_blank"><i
+                                        class="iconfont icon-pingup" style="color:#2361ad;"></i>站长Ping</a></li>
+                                <li><a rel="nofollow" href="https://apkdl.in/" target="_blank"><i
+                                        class="iconfont icon-anzhuo" style="color:#094;"></i>APK下载</a></li>
+                                <!------>
+                                <li class="title"><i class="iconfont icon-kongzhitai"></i> Dev</li>
+                                <li><a rel="nofollow" href="http://www.w3school.com.cn/" target="_blank"><i
+                                        class="iconfont icon-h5" style="color:#c03;"></i>W3school</a></li>
+                                <li><a rel="nofollow" href="https://github.com/" target="_blank"><i
+                                        class="iconfont icon-github"></i>Github</a></li>
+                                <li><a rel="nofollow" href="https://codepen.io/" target="_blank"><i
+                                        class="iconfont icon-codepen"></i>Codepen</a></li>
+                                <li><a rel="nofollow" href="https://www.52pojie.cn/" target="_blank"><i
+                                        class="iconfont icon-theater-masks" style="color:#f03;"></i>吾爱破解</a></li>
+                                <li><a rel="nofollow" href="https://segmentfault.com/" target="_blank"><i
+                                        class="iconfont icon-msg" style="color:#096;"></i>SF思否</a></li>
+                                <li><a rel="nofollow" href="https://cdnjs.com/" target="_blank"><i
+                                        class="iconfont icon-cdnjs" style="color: #e52;"></i>CdnJs</a></li>
+                                <li><a rel="nofollow" href="https://fontawesome.com/icons?d=gallery&m=free"
+                                       target="_blank"><i class="iconfont icon-font-awesome" style="color: #4af;"></i>Font
+                                    A.</a></li>
+                                <li><a rel="nofollow" href="https://msdn.itellyou.cn/" target="_blank"><i
+                                        class="iconfont icon-windows" style="color: #48c;"></i>MSDN下载</a></li>
+                                <li><a rel="nofollow" href="https://dash.cloudflare.com/" target="_blank"><i
+                                        class="iconfont icon-cloudflare" style="color: #f37f20;"></i>C. flare</a></li>
+                                <li><a rel="nofollow" href="https://www.swiper.com.cn/" target="_blank"><i
+                                        class="iconfont icon-S" style="color:#065fe3;"></i>Swiper</a></li>
+                            </ul>
+                    </div>
+
+                </div>
+                <!--书签 end-->
+                <!--设置-->
+                <div class="tab-con-item">
+
+                    <div class="set">
+                        <!--搜索引擎设置-->
+                        <div class="set_blocks">
+                            <div class="set_blocks_title">
+                                Search Engines
+                            </div>
+                            <div class="set_blocks_content">
+                                <div class="se_list">
+                                    <table class="se_list_table">
+                                        <tr>
+                                            <td><span class="iconfont iconhome"></span></td>
+                                            <td>百度</td>
+                                            <td>
+                                                <button class="set_se_default" value="baidu"><span class="iconfont iconstrore-add"></span></button>
+                                                &nbsp;
+                                                <button class="edit_se" value="baidu"><span class="iconfont iconbook-edit"></span></button>
+                                                &nbsp;
+                                                <button class="delete_se" value="baidu"><span class="iconfont icondelete"></span></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>Google</td>
+                                            <td>
+                                                <button class="set_se_default" value="google"><span class="iconfont iconstrore-add"></span></button>
+                                                &nbsp;
+                                                <button class="edit_se" value="google"><span class="iconfont iconbook-edit"></span></button>
+                                                &nbsp;
+                                                <button class="delete_se" value="google"><span class="iconfont icondelete"></span></button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="se_add_preinstall">
+                                    <button class="set_se_list_add"><span class="icon iconfont icontianjia"></span>Add new</button>
+                                    <button class="set_se_list_preinstall"><span class="icon iconfont iconjinggao"></span>Reset</button>
+                                </div>
+                                <div class="add_content se_add_content" style="display:none;">
+                                    <div class="from_items">
+                                        <p><b>Sequence:</b></p>
+                                        <input type="hidden" name="key_inhere">
+                                        <input type="number" name="key" placeholder="A valid number">
+                                    </div>
+                                    <div class="from_items">
+                                        <p><b>Name:</b></p>
+                                        <input type="text" name="title" placeholder="Name">
+                                    </div>
+                                    <div class="from_items">
+                                        <p><b>URL</b></p>
+                                        <input type="url" name="url" placeholder="Begin with https://">
+                                    </div>
+                                    <div class="from_items">
+                                        <p><b>Query</b></p>
+                                        <input type="text" name="name" placeholder="Queries after ?">
+                                    </div>
+                                    <div class="from_items">
+                                        <p><b>Icon</b></p>
+                                        <input type="text" name="img" placeholder="Img URL">
+                                    </div>
+                                    <div class="from_items button">
+                                        <button class="se_add_save">Save</button>
+                                        <button class="se_add_cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--搜索引擎设置 end-->
+                        <!--快捷方式设置-->
+                        <div class="set_blocks">
+                            <div class="set_blocks_title">
+                                Shortcuts
+                            </div>
+                            <div class="set_blocks_content">
+                                <div class="quick_list">
+                                    <table class="quick_list_table">
+                                        <tr>
+                                            <td>1.&nbsp;</td>
+                                            <td>Holger's Blog</td>
+                                            <td>
+                                                <button class="edit_quick" value="1"><span class="iconfont iconbook-edit"></span></button>
+                                                &nbsp;
+                                                <button class="delete_quick" value="1"><span class="iconfont icondelete"></span></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2.&nbsp;</td>
+                                            <td>Notre Monde</td>
+                                            <td>
+                                                <button class="edit_quick" value="2"><span class="iconfont iconbook-edit"></span></button>
+                                                &nbsp;
+                                                <button class="delete_quick" value="2"><span class="iconfont icondelete"></span></button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="se_add_preinstall">
+                                    <button class="set_quick_list_add"><span class="icon iconfont icontianjia"></span>Add new</button>
+                                    <button class="set_quick_list_preinstall"><span class="icon iconfont iconjinggao"></span>Reset</button>
+                                </div>
+                                <div class="add_content quick_add_content" style="display:none;">
+                                    <div class="from_items">
+                                        <p><b>Sequence:</b></p>
+                                        <input type="hidden" name="key_inhere">
+                                        <input type="number" name="key" placeholder="A valid number">
+                                    </div>
+                                    <div class="from_items">
+                                        <p><b>Name:</b></p>
+                                        <input type="text" name="title" placeholder="Name">
+                                    </div>
+                                    <div class="from_items">
+                                        <p><b>URL:</b></p>
+                                        <input type="url" name="url" placeholder="Begin with https://">
+                                    </div>
+                                    <div class="from_items">
+                                        <p><b>Icon:</b></p>
+                                        <input type="text" name="img" placeholder="Img URL">
+                                    </div>
+                                    <div class="from_items button">
+                                        <button class="quick_add_save">Save</button>
+                                        <button class="quick_add_cancel">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--快捷方式设置 end-->
+                    </div>
+
+                </div>
+                <!--设置 end-->
+                <!--我的-->
+                <div class="tab-con-item">
+
+                    <div class="me">
+                        <p><img src="./icon/user.png"></p>
+                    </div>
+                    <div class="my_data">
+                        <hr>
+                        <br>
+                        <h3>Backup</h3>
+                        <textarea id="data_txt"></textarea>
+                        <br>
+                        <button id="my_data_in">Import</button>
+                        <button id="my_data_out">Export</button>
+                    </div>
+
+                </div>
+                <!--我的 end-->
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- 侧栏 end -->
+    <div class="mywth" style="width: 320px;">
+        <div data-v-6d083e75="" id="he-plugin-simple" style="position: relative;"><script data-v-6d083e75="" type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.14&amp;key=e2b04289e870b005374ee030148d64fd"></script> <div data-v-6d083e75="" class="s-sticker" style="font-size: 1.4em; cursor: pointer; padding: 0px 5px; background-color: transparent;"><div data-v-6d083e75="" style="width: 0px;"></div> <div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-tmp module" style="font-size: 12px; color: rgb(74, 74, 74); vertical-align: middle;">22°C</div><div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-city module" style="font-size: 12px; color: rgb(74, 74, 74); vertical-align: middle;">Tianjin</div><div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-cond module" style="vertical-align: middle;"><img data-v-7d48daab="" src="https://cdn.heweather.com/img/plugin/190516/icon/c/100d.png" style="width: 16px; height: 16px;"></div><div data-v-7d48daab="" data-v-6d083e75="" class="module" style="vertical-align: middle;"></div><div data-v-7d48daab="" data-v-6d083e75="" class="s-sticker-qlty module" style="color: rgb(148, 206, 111); font-size: 12px; vertical-align: middle;">Excellent</div> <div data-v-6d083e75="" style="width: 100%;"></div></div> <div data-v-6d083e75=""><!----></div></div>
+         <script>
+         WIDGET = {
+           CONFIG: {
+             "modules": "01234",
+             "background": 5,
+             "tmpColor": "4A4A4A",
+             "tmpSize": "12",
+             "cityColor": "4A4A4A",
+             "citySize": "12",
+             "aqiSize": "12",
+             "weatherIconSize": "16",
+             "alertIconSize": "14",
+             "padding": "0px 5px 0px 5px",
+             "shadow": "1",
+             "language": "auto",
+             "fixed": "false",
+             "vertical": "middle",
+             "horizontal": "left",
+             "key": "f942bb77264e47f591868eba33b5b472"
+           }
+           /*天气key定期删除换新，还是自己去官方申请吧大佬们！https://dev.heweather.com/widget/simple*/
+         }
+         </script>
+         <script src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
+         <!--和风天气插件-->
+     </div>
+          <!--和风天气插件-->
+  
+    <!--搜索框和书签-->
     <div id="content">
         <div class="con">
-            <div class="shlogo"></div>
+
+            <!--一般搜索框上面都有的图片↓-->
+           <div class="shlogo"></div>
+
             <div class="sou">
-                <form action="https://www.google.com/search?" method="get" target="_self">
-                    <input class="wd" type="text" placeholder="My life is all about you~" name="q" x-webkit-speech lang="en-US">
-                    <button><svg class="icon" style=" width: 21px; height: 21px; opacity: 0.5;" aria-hidden="true"><use xlink:href="#icon-sousuo"></use></svg></button>
+                <form class="search" action="https://www.google.com/search">
+                    <img class="se" src="./icon/google_1.png" title="Switch"></img>
+                    <input class="wd" type="text" name="wd" placeholder="My life is all about you~">
+                    <button class="s">
+                        <i style="font-size: 20px;" class="iconfont icon-sousuo"></i>
+                    </button>
                 </form>
-                
-                <ul>
-                    <a href="https://blog.holger.net.cn/"><li target="https://blog.holger.net.cn"><i style="background-image: url(https://blog.holger.net.cn/static/images/avatar.png);"></i>Blog</li></a>
-                    <a href="https://sns.holger.net.cn/"><li target="https://sns.holger.net.cn"><i style="background-image: url(https://sns.holger.net.cn/favicon.ico);"></i>SNS</li></a>
-                    <a href="https://rss.holger.net.cn/"><li data-s="blog" target="https://blog.holger.net.cn"><i style="background-image: url(https://rss.holger.net.cn/images/favicon.png);"></i>TTRSS</li></a>
-                    <li data-s="baidu" target="_blank"><i style="background-image: url(icon/baidu.svg);"></i>百度一下</li>
-                </ul>
+                <div class="search-engine" style="display: none;">
+                    <div class="search-engine-head">
+                        <strong class="search-engine-tit">Select Search Engine</strong>
+                    </div>
+                    <ul class="search-engine-list">
+                         <li class="se-li" url="https://www.baidu.com/s" name="wd" img="./icon/baidu.ico"><img src="./icon/baidu.ico"></img>百度</li>
+                         <li class="se-li" url="https://www.google.com/search" name="q" img="./icon/google_1.png"><img src="./icon/google_1.png"></img>Google</li>
+                         <li class="se-li" url="https://cn.bing.com/search" name="q" img="./icon/bing.ico"><img src="./icon/bing.ico"></img>必应</li>
+                         <li class="se-li" url="https://www.dogedoge.com/results" name="q" img="./icon/doge_ico.png"><img src="./icon/doge_ico.png"></img>多吉</li>
+                         <li class="se-li" url="https://mijisou.com" name="q" img="./icon/mijisou.png"><img src="./icon/mijisou.png"></img>秘迹</li>
+                         <li class="se-li" url="https://seeres.com/search" name="q" img="./icon/seeres.png"><img src="./icon/seeres.png"></img>seeres*</li>
+                    </ul>
+                </div>
+                <div class="quick-div">
+                    <ul class="quick-ul">
+                        <li class="quick" data-s="bilibili" target="_blank" title="哔哩哔哩 (゜-゜)つロ 干杯~">
+                            <a href="https://www.bilibili.com/">
+                                <i style="background-image: url(./icon/bilibili.png);"></i>
+                                哔哩哔哩
+                            </a>
+                        </li>
+                        <li class="quick" data-s="github" target="_blank" title="GitHub">
+                            <a href="https://github.com/">
+                                <i style="background-image: url(./icon/github.ico);"></i>
+                                GitHub
+                            </a>
+                        </li>
+                        <li class="quick" data-s="v2ex" target="_blank" title="V2EX">
+                            <a href="https://www.v2ex.com/">
+                                <i style="background-image: url(./icon/v2ex.png);"></i>
+                                V2EX
+                            </a>
+                        </li>
+                        <li class="quick" data-s="steam" target="_blank" title="Steam">
+                            <a href="https://store.steampowered.com/">
+                                <i style="background-image: url(./icon/steam.ico);"></i>
+                                Steam
+                            </a>
+                        </li>
+                        <li class="quick" data-s="scp" target="_blank" title="控制，收容，保护">
+                            <a href="http://scp-wiki-cn.wikidot.com/">
+                                <i style="background-image: url(./icon/scp.png);"></i>
+                                scp基金会
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="foot">温馨提示：回车使用Google搜索引擎，点击百度一下使用百度搜索</div>
+        <script async>  
+            fetch('https://v1.hitokoto.cn')  
+            .then(function (res){  
+            return res.json();  
+            })  
+            .then(function (data) {  
+            var hitokoto = document.getElementById('hitokoto');  
+            hitokoto.innerText = data.hitokoto;   
+            var from = document.getElementById('from');  
+            from.innerText = data.from;  
+            })  
+            .catch(function (err) {  
+            console.error(err);  
+            })  
+        </script>  
         </div>
-        <div class="foot">© 2020 Powered by <a href="https://blog.holger.net.cn/about/">Holger</a>, Designed by 歪歪喂. All rights reserved.</div>
+        <div class="hitokoto">
+        <p id="hitokoto">😀 Loading...</p>——「<span id="from">😀 Loading...</span>」
+        </div>
+        <div class="foot">  
+           Minimalist Index by
+            <a href="https://blog.holger.net.cn/about/" target="_blank" ><b>Holger</b>
+            </a>
+        </div>
     </div>
-    <!--
+    <!--搜索框和书签 end-->
+
+<!--
 作者:D.Young
 主页：https://yyv.me/
 github：https://github.com/5iux/sou
-日期：20200324
+日期：2019-07-26
 版权所有，请勿删除
+❶❷❸❹❺❻❼❽❾❿
+由 yeetime 修改
+github：https://github.com/yeetime/sou2
+日期：2019-12-13
 -->
 </body>
-
 </html>
