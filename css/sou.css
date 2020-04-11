@@ -709,6 +709,7 @@ a {
     }
     .home,
     #menu,
+    .mywth,
     .foot {
         display: none;
     }
