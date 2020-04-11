@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>重磅消息 ｜ Aqqle 宣布旗下所有操作系统、软件开源</title>
+      <link href="/posts/aqqle-is-now-open-source/"/>
+      <url>/posts/aqqle-is-now-open-source/</url>
+      
+        <content type="html"><![CDATA[<p>几天前，Aqqle 便释出了想要积极加入开源社区的信号，在重金招募 Open Source Program Engineer。众所周知，作为全球最大的封闭生态环境（软硬件），Aqqle旗下的大部分产品都属于闭源。闭源自然有闭源的好处：从未被在其他设备上安装过的aaiOS是当之无愧的最<strong>持久</strong>系统，aiPhone 6S 在安装 aaiOS 13 后甚至还能再战半年，而相比许多同时代的安桌机型，早已成为历史的遗物。但是，这样的环境也有弊端，相对高昂的价格使 Aqqle 失去了大批发展中国家用户，作为一家盈利的商业公司，这样的做法未免有失其准则。</p><p>近些天，尽管 Aqqle 的保密措施一向严格，但被称作科技节春晚的苹果核年度发布会被泄露的越来越多，甚至还有在 aiPhone 7 上跑安桌的现象产生，而且其最大的竞争对手<em>微软</em>近期在开源方面也有很大动作，自从收购了<a href="https://holger.net.cn/go?url=https://github.com" target="_blank" rel="noopener"> GitHub </a>，微软拥抱开源的想法越来越强烈，可是，苹果核好像有些坐不住了，提前在2020年4月1日释出了<strong>惊天动地泣鬼神</strong>的重大消息—— Aqqle 全系软硬件转向开源社区。</p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://blog.holger.net.cn/static/images/articles/2020/04/apple.webp"  alt="Aqqle mecOS 官网"></p><p>在其<a href="https://holger.net.cn/go?url=https://Aqqle.org" target="_blank" rel="noopener">官网</a>上， Aqqle 毫不掩饰的发布了自己拥抱开源的积极态度，同时上线了 <a href="https://github.com/Aqqle/mecos" target="_blank" rel="external nofollow noopener noreferrer">GitHub</a>。对于 Aqqle 突然转向开源社区，官方给出的评论只有八个大字：<strong>生死看淡 不服来干</strong>。相信很多人和我们一样对 Aqqle 突然拥抱开源有很大的疑惑，今天，我们有幸采访到了 Aqqle 内部高级工程师—— Cyberduck。Cyberduck是苹果内务处mecOS 部门的高级架构工程狮，长期负责处理 mecOS 每天遇到的成千上万的bug，为mecOS转型bugOS做出了巨大贡献，今天，我们就将对 Aqqle 拥抱开源的问题采访一下他：</p><div class="note default">            <p><strong>Q:</strong> 您好！今天突然得知 Aqqle 旗下的产品全线转入开源阵营，想请问一下您：苹果之前对待开源的态度是怎么样的？</p><p><strong>Cyberduck:</strong> 呢個啊，開源嘛，我嘅老朋友鮑爾默曾經講過，開源就系知識產權嘅癌症，呢個癌症嚟得急、來勢猛，我哋對開源嘅態度也系咁嘅。我哋公司內部采攞了嚴格嘅保密措施，把源代碼全部私有化。（CHS: 这个啊，开源嘛，我的老朋友鲍尔默曾经讲过，开源就是知识产权的癌症，这个癌症来得急、来势猛，我们对开源的态度也是这样的。我们公司内部采取了严格的保密措施，把源代码全部私有化）</p><p><strong>Q:</strong> 那是什么促使 Aqqle 转向了开源呢？</p><p><strong>Cyberduck:</strong> 呢依舊要講到鮑爾默了。呢小子自己嘴上咁講，卻仲系讓微軟全身心投入了開源。我哋唔想喺呢場戰役中失去利益，所以只好加入開源社區。(CHS: 这依旧要讲到鲍尔默了。这小子自己嘴上这样讲，却还是让微软全身心投入了开源。我们不想在这场战役中失去利益，所以只好加入开源社区。)</p><p><strong>Q:</strong> 所以从一定程度上讲，Aqqle 加入开源是迫不得已的？</p><p><strong>Cyberduck:</strong> 也唔全系。隨着mecOS、aiOS Bug越嚟越多，開源化嘅潮流越嚟越猛，我哋發現單靠一個唔對外開放嘅團隊嚟處理呢些問題實喺系太困難了。開源背後有一成個社區嚟驅動，而我哋過去只有一個團隊，而且團隊還要嚴格對外保密。(CHS: 也不全是。随着 mecOS、aiOS Bug 越来越多，开源化的潮流越来越猛，我们发现单靠一个不对外开放的团队来处理这些问题实在是太困难了。开源背后有一整个社区来驱动，而我们过去只有一个团队，而且团队还要严格对外保密。)</p><p><strong>Q:</strong> 您认为对于苹果来说，加入开源社区是一件好事还是坏事？</p><p><strong>Cyberduck:</strong> 我認為仲系一件好事嘅，第一系冇了保密嘅負擔，同時也會有更多嘅人嚟參與測試，參與Bug修復工作。近嚟mecOS嘅bug真系越嚟越多了，我覺得有一些無力回天了。(CHS: 我认为还是一件好事的，第一是没有了保密的负担，同时也会有更多的人来参与测试，参与 Bug 修复工作。近来 mecOS 的 bug 真是越来越多了，我觉得有一些无力回天了。)</p><p><strong>Q:</strong> 对于开源社区呢？</p><p><strong>Cyberduck:</strong> 呢個唔太好講。蘋果嘅加入對開源社區嚟講勢必系一大沖擊，但究竟系好系壞還很難下定論。(CHS: 这个不太好讲。苹果的加入对开源社区来讲势必是一大冲击，但究竟是好是坏还很难下定论。)</p><p><strong>Q:</strong> 您是否考虑跳槽到 WeBlog 工作？</p><p><strong>Cyberduck:</strong> 真嘅嘛！！呢個系我嘅畢生追求，能加入 WeBlog 工作實喺系我嘅榮幸，我嘅辭職信已經喺我嘅草稿箱里存了太久了。 Bingo～佢發出去了！(CHS: 真的嘛！！这个是我的毕生追求，能加入 WeBlog 工作实在是我的荣幸，我的辞职信已经在我的草稿箱里存了太久了。 Bingo～他发出去了！)</p>          </div><p>你对苹果核加入开源社区有怎样的看法？欢迎加入讨论～</p><hr><div class="note warning">            <p>本文完全虚构，如有雷同，纯属巧合。</p>          </div>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tech </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> aqqle </tag>
+            
+            <tag> April Fool&#39;s Day </tag>
+            
+            <tag> open-source </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2020天津中考资料共享平台</title>
+      <link href="/posts/2020%E5%A4%A9%E6%B4%A5%E4%B8%AD%E8%80%83%E8%B5%84%E6%96%99%E5%85%B1%E4%BA%AB/"/>
+      <url>/posts/2020%E5%A4%A9%E6%B4%A5%E4%B8%AD%E8%80%83%E8%B5%84%E6%96%99%E5%85%B1%E4%BA%AB/</url>
+      
+        <content type="html"><![CDATA[<h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>疫情当下，无数学生在线学习，国内各种网络环境不良（百度网盘限速、历史政治作业遭到审查）导致学业频频受阻。中考迫在眉睫，为提供一个良好的资源共享平台，特在 GitHub 上发布此 <a href="https://holger.net.cn/go?url=https://github.com/HolgerHuo/2020-Senior-High-Entrance-Examination" target="_blank" rel="noopener">Repository</a>。</p><h2 id="文件来源"><a href="#文件来源" class="headerlink" title="文件来源"></a>文件来源</h2><p>作为学而思的忠实粉丝，目前资料库中的大部分资源来自天津学而思分校所创立的公益群（因为学而思老师多次提及此群为公益，那么便把其中的资源视为以 <a href="https://holger.net.cn/go?url=https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 协议共享，在此重新发布在 GitHub 上。如果你手中有不存在版权的资料，欢迎以<a href="https://holger.net.cn/go?url=https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 进行共享。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>众志成城，齐心协力，相信全球可以抗击疫情，共同实现人类命运共同体，同时也希望广大考生化敌为友，实现资源共享，互帮互助，团结友爱</p><blockquote><p>附 GitHub Web 使用指南： <a href="https://holger.net.cn/go?url=https://github.com/lpd743663/learn-GitHub-Web" target="_blank" rel="noopener">https://github.com/lpd743663/learn-GitHub-Web</a></p><p>Gitee同步：<a href="https://gitee.com/holgerhuo/Senior-High-Entrance-Examination-2020" target="_blank" rel="external nofollow noopener noreferrer">https://gitee.com/holgerhuo/Senior-High-Entrance-Examination-2020</a></p></blockquote><p>Stay Safe.<br><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://blog.holger.net.cn/static/images/articles/2020/03/sharing.webp"  alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Announcement </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> learning </tag>
+            
+            <tag> COVID-19 </tag>
+            
+            <tag> 2019-nCov </tag>
+            
+            <tag> GitHub </tag>
+            
+            <tag> Senior High Entrance Examination </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Report for Cybergogo on how to collaborate effectively</title>
+      <link href="/posts/unlock-unit8-writing/"/>
+      <url>/posts/unlock-unit8-writing/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Report-for-Cybergogo-on-how-to-collaborate-effectively"><a href="#Report-for-Cybergogo-on-how-to-collaborate-effectively" class="headerlink" title="Report for Cybergogo on how to collaborate effectively"></a>Report for <strong>Cybergogo</strong> on how to collaborate effectively</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>As a relatively <em>new</em> start-up tech company, the vital task for <strong>Cybergogo</strong> is probably how to <em>coordinate</em> members in the most efficient way. The company is now bidding for a big deal and is busy preparing their proposal. They have to get their team most <em>productive</em> for the next six weeks. In this report, there will be some practical approaches to improve the team’s productivity. It seems that a fundamental while favorable reform is <em>necessary</em>.</p><h2 id="Body"><a href="#Body" class="headerlink" title="Body"></a>Body</h2><h3 id="Working-method"><a href="#Working-method" class="headerlink" title="Working method"></a>Working method</h3><p>The comprehensive performance <em>seems</em> restricted due to most employees working at home, <em>i.e.</em>, telecommute. In this way, they may not exchange information as quickly as possible, which means the team has become separated. To win the bid, it is recommended to <em>alter</em> the working mode to face-to-face instead of telecommuting during this period. Therefore, team members may come up with many <em>exhilarating</em> ideas by discussing together or brainstorming in the office, instead of on the telephone, or even worse, by E-mail, and <em>thus</em> their proposal will get more chance to be accepted.</p><h3 id="How-to-communicate"><a href="#How-to-communicate" class="headerlink" title="How to communicate"></a>How to communicate</h3><p>It is widely believed that a team at <em>approximately</em> the same age would work best. However, there are also some problems in <strong>Cybergogo</strong>, where team members are mainly under <em>35</em>. Training on how to communicate needs to be conducted in order to <em>maximize</em> productivity, in <em>which</em> the key is to create a comfortable working environment with moderate competing but <em>sufficient</em> admitting. According to the research carried out by both <em>Google</em> and <em>MIT</em> found that in effective groups, members usually speak for a roughly <em>equal</em> amount of time. And the reason for that is<em><a href="https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Group_Performance/Edmondson%20Psychological%20safety.pdf" target="_blank" rel="external nofollow noopener noreferrer">Psychological Safety</a></em>, which means people feel comfortable <em>voicing</em> their opinions and making suggestions for the project. If all the members can raise their notions <em>without</em> fearing others’ opinions, the team could be an <em>A</em>-<em>Team</em>.</p><h3 id="Using-Gestures"><a href="#Using-Gestures" class="headerlink" title="Using Gestures"></a>Using Gestures</h3><p>Another possible improvement <em>may</em> underlie gestures. The result also comes from the report conducted by <em>MIT</em>. When people talked with enthusiastic and energetic gestures, the conversation would possibly become more fluent and easier to understand. Thus, gestures may be an advantage for the overall efficiency. </p><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>The three possible improvements that can be made to <strong>Cybergogo</strong> are <em>face</em>-<em>to</em>-<em>face</em> <em>working</em>, <em>communicating</em> <em>tactics</em> and <em>using</em> <em>gestures</em>. These suggestions may be <em>apparent</em> and most people have already known, while to <em>enforce</em> these rules in real life seems difficult. So let’s see how <strong>Cybergogo</strong> will perform in the next six months. </p><blockquote><p>An essay report generated by Grammarly can be found <a href="https://holger.net.cn/static/docs/report.pdf" target="_blank" rel="noopener">here</a></p></blockquote><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://blog.holger.net.cn/static/images/articles/2020/03/productivity.webp"  alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Academic </category>
+          
+          <category> Essay </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> unlock </tag>
+            
+            <tag> collaboration </tag>
+            
+            <tag> team management </tag>
+            
+            <tag> advice </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>无言之美 &amp; 《寄武汉》</title>
+      <link href="/posts/l15-discussion-and-etc/"/>
+      <url>/posts/l15-discussion-and-etc/</url>
+      
+        <content type="html"><![CDATA[<h2 id="为了遇见你"><a href="#为了遇见你" class="headerlink" title="为了遇见你"></a>为了遇见你</h2><blockquote><p>浩瀚星海中/坚持一种梦</p><p>你手中的温暖/我好想触摸</p><p>茫茫人海中/我与谁相逢</p><p>你眼中的温柔/是否一切都为我</p></blockquote><p>整段文字并没有直接叙述你我之间的情愫，却饱含深情。<strong>你手中的温暖</strong>，能让我心中的冰川融化、能让极地中的斯科特走回大陆、能把爱带到这黑暗残酷的世界上，可我能做的，也不过是想触摸罢了。<strong>茫茫人海中</strong>，你我相逢，是上天安排的命运，<strong>你眼中的温柔</strong>一下就将我俘获，可这些有是否只是为我一个人的呢？</p><blockquote><p>为了遇见你/我珍惜自己</p><p>我穿越风和雨/只为了交出我的心</p><p>直到遇见你/我相信了命运</p><p>这未来值得去努力/为你</p></blockquote><p>为了与你相遇，我能做的只有<strong>珍惜自己</strong>。穿越无数风风雨雨，目的只有一个，就是把我的心交付给你。遇见你，我相信了命运，为了你，我有了努力的方向，对未来有了希望。</p><p>整篇歌词并没有直白的叙述男主对女主的追求与挚爱，也没有那些轰轰烈烈的誓言，所有的心意全部在这无言之美中。</p><p>《为了遇见你》written by 陈耀川</p><h2 id="《寄武汉》"><a href="#《寄武汉》" class="headerlink" title="《寄武汉》"></a>《寄武汉》</h2><blockquote><p>旧年尚存/疫情爆发/万人心系武汉</p><p>新春佳节/无心张灯结彩/人影涣散</p><p>春芽萌发/疫情泛滥/千人奔赴武汉</p><p>大雁归来/众志成城/欢乐重返武汉</p><p>written by Holger, Feb. 26, 2020</p></blockquote><p>武汉，我们与你同在</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Music </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> COVID-19 </tag>
+            
+            <tag> 诗词 </tag>
+            
+            <tag> 薛之谦 </tag>
+            
+            <tag> 无言之美 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《送柴侍御》中的意境</title>
+      <link href="/posts/l14-discussion/"/>
+      <url>/posts/l14-discussion/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>青山一道同云雨，明月何曾是两乡</p><p>——王昌龄《送柴侍御》</p></blockquote><p>这首诗虽没有直接叙述天下大同的情怀，但从<strong>明月</strong>中可以充分的感受到作者的天下即一家的思想。一个相同的月亮之下，每个人都情同手足。<strong>同云雨</strong>更体现出了其中一切的一切。</p><p>这次突如其来的疫情，更让这个地球村紧密的联系了起来。从武汉爆发，短短几个月内便传遍了全球，但大家并没有怨声载道，而是纷纷伸出了援手，共同努力抗击疫情，因为就像王昌龄所说的，<strong>青山一道同云雨</strong>，在这个地球上，所有的灾难都是要由每一个人共同承担的。</p><p>疫情出现后，我们的邻国日本第一时间向中国伸出了援助之手，捐赠了各种物资。在日本舞鹤市驰援大连的物资上，每个箱子外面都贴了用中文写的一句诗：<strong>青山一道同云雨，明月何曾是两乡</strong>。这样的情境下，诗的意境就非常清晰明朗了，<strong>青山一道同云雨</strong>无论多大的狂风暴雨，我们会一起分担，一起努力。<strong>明月何曾是两乡</strong>。只要你抬头望向星空，看到的都是同一个月亮，同一个月亮之下又有什么地域之分呢？我们尽管人分两地，却情同一心。通过这首诗，我们可以体会到中日两国人民的深厚情谊。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Life </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> COVID-2019 </tag>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>老薛的跨年晚会&amp;认真的雪粤语版</title>
+      <link href="/posts/%E8%80%81%E8%96%9B%E7%9A%84%E8%B7%A8%E5%B9%B4%E6%99%9A%E4%BC%9A%E8%AE%A4%E7%9C%9F%E7%9A%84%E9%9B%AA%E7%B2%A4%E8%AF%AD%E7%89%88/"/>
+      <url>/posts/%E8%80%81%E8%96%9B%E7%9A%84%E8%B7%A8%E5%B9%B4%E6%99%9A%E4%BC%9A%E8%AE%A4%E7%9C%9F%E7%9A%84%E9%9B%AA%E7%B2%A4%E8%AF%AD%E7%89%88/</url>
+      
+        <content type="html"><![CDATA[<p>好吧，我承认是我复习一天太无聊了，于是就随手刷了刷QQ音乐视频，就刷到了2020跨年薛之谦的经典动画主题曲串烧。我觉得跨年夜我错过了什么?</p><iframe src="//player.bilibili.com/player.html?aid=81566483&bvid=BV1hJ411b7FF&cid=139572063&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><p>From Bilibili</p><p>江苏卫视2020跨年晚会“实况”转播</p><p>小雪糕真的有一个好爸爸?</p><p>刷歌单还还发现了粤语版的认真的雪 ? 我越来越对我的粤语有自信了</p><iframe src="//player.bilibili.com/player.html?aid=82080285&bvid=BV1XJ41157Ns&cid=140447150&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><p>From Bilibili</p><p>薛之谦巡回演唱会香港站</p><blockquote><p>Reference：<a href="https://holger.net.cn/redirect.html?url=https://c.y.qq.com/base/fcgi-bin/u?__=vYcQX1x" target="_blank" rel="noopener">QQ音乐</a><br><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/03/13/2mE5Llv3poWhOZK.png"  alt></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Music </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 薛之谦 </tag>
+            
+            <tag> 2020跨年晚会 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Aim Writing 微软爱写作/秘塔写作猫 | 论文及作文的修改利器</title>
+      <link href="/posts/aim-writing-%E5%BE%AE%E8%BD%AF%E7%88%B1%E5%86%99%E4%BD%9C-%E7%A7%98%E5%A1%94%E5%86%99%E4%BD%9C%E7%8C%AB-%E8%AE%BA%E6%96%87%E5%8F%8A%E4%BD%9C%E6%96%87%E7%9A%84%E4%BF%AE%E6%94%B9%E5%88%A9%E5%99%A8/"/>
+      <url>/posts/aim-writing-%E5%BE%AE%E8%BD%AF%E7%88%B1%E5%86%99%E4%BD%9C-%E7%A7%98%E5%A1%94%E5%86%99%E4%BD%9C%E7%8C%AB-%E8%AE%BA%E6%96%87%E5%8F%8A%E4%BD%9C%E6%96%87%E7%9A%84%E4%BF%AE%E6%94%B9%E5%88%A9%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<div class="note default">            <p>更新于2020年3月31日：微软爱写作实际上也问题重重，连许多简单的单词和语法都无法识别，如果要修改英语作/论文建议使用 <a href="https://holger.net.cn/redirect.html?url=https://grammarly.com" target="_blank" rel="noopener">Grammarly</a></p>          </div><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>这两款软件，或者说是线上服务，均是我在<strong>小众软件</strong>上了解到的。两片推荐几乎是先后发布，我也在第一时间进行了试用，下面就对这两款服务进行以下测评。</p><blockquote><p><a href="https://holger.net.cn/redirect.html?url=https://www.appinn.com/microsoft-aim-writing/" target="_blank" rel="noopener">微软爱写作 from 小众软件</a></p><p><a href="https://holger.net.cn/redirect.html?url=https://www.appinn.com/xiezuocat-online/" target="_blank" rel="noopener">秘塔写作猫  from 小众软件</a></p></blockquote><h3 id="秘塔写作猫"><a href="#秘塔写作猫" class="headerlink" title="秘塔写作猫"></a>秘塔写作猫</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>中文写作无论是从修改还是从撰文上可以说都是风格各异。但<a href="https://xiezuocat.com/#/" target="_blank" rel="external nofollow noopener noreferrer">秘塔写作猫</a>号称可以准确识别出你的词风以及适度的修改。</p><p>对于免费版的用户，每日可以免费处理20,000字，对于非文字工作者来说可以说是绰绰有余了。同时官方还提供了Chrome插件来实现类似于Grammarly的实时修改功能，如果你不喜欢秘塔写作猫的内置编辑器，你也可以采用第三方编辑器（石墨文档、Office 365等等）+润色插件的模式来进行文章修改。</p><p><a href="https://sm.ms/image/6rh21Js5ufXi4NL" target="_blank" rel="external nofollow noopener noreferrer"><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/6rh21Js5ufXi4NL.png"  alt></a>   <a href="https://sm.ms/image/uiRP65qFMymfZ3z" target="_blank" rel="external nofollow noopener noreferrer"><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/uiRP65qFMymfZ3z.png"  alt></a>  </p><h4 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h4><p>众所周知，官方所提供的示例文档并没有太大的参考价值，于是我就直接将自己的一篇作文po了上去。我们先来看一下Grammarly给出的评分及建议：</p><p><a href="https://sm.ms/image/lor17iHZnFVsDJ8" target="_blank" rel="external nofollow noopener noreferrer"><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/lor17iHZnFVsDJ8.png"  alt></a>  </p><p>万岁！它觉得我作文写的好诶！！！我太开心了！我们再来看一下秘塔写作猫：</p><p><a href="https://sm.ms/image/4BfQGRjnkqOicvU" target="_blank" rel="external nofollow noopener noreferrer"><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/4BfQGRjnkqOicvU.png"  alt></a>  </p><p>这完全就是<a href="https://holger.net.cn/redirect.html?url=https://baike.baidu.com/item/%E2%80%9C%E7%B2%BE%E5%BD%A9%E6%9E%81%E4%BA%86%E2%80%9D%E5%92%8C%E2%80%9C%E7%B3%9F%E7%B3%95%E9%80%8F%E4%BA%86%E2%80%9D/3273930?fr=aladdin" target="_blank" rel="noopener">“精彩极了”和“糟糕透了”</a>嘛！ 两个服务给出的评分也太不一样了。Grammarly由于中文性能孱弱，对于中文几乎没有任何处理能力，就连最基本的改错字都没有，可以说连word都不如。秘塔写作猫则准确无误的挑出了所有的错别字以及错误使用的标点，并且只需要轻轻的点几下就可以完成更正。</p><p><a href="https://sm.ms/image/n4jK1qi76YFPcMe" target="_blank" rel="external nofollow noopener noreferrer"><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/n4jK1qi76YFPcMe.gif"  alt></a>  </p><p>可以看出，当上传或者撰写好文章后，我们可以非常简便的对文章中的错别字、标点、以及一些不恰当的单词进行修改。你可能会问了，这不是Word干的活吗？难道秘塔写作猫只能用来干这个？当然不。文风修改才是他的奇妙之处。当你点开上方的文风修改开关，一个新世界的大门正在缓缓打开（哐啷！）————</p><p>我们先不提文风和谁的文笔更好，就先从信达雅上面的信来说，我的文意已经混乱了。如果抛开把<strong>王老师</strong>改写成了<strong>王小姐</strong>， <strong>人生就更少了</strong>是什么鬼？？这个改动也太奇怪了吧。可以看得出，AI并没有读出我文章的意思（怪我写的太差咯），而只是对一些短句进行了简单的处理。</p><p>再来欣赏一下双语模式的翻译水平怎么样：</p><blockquote><p>王老师和其他毕业班老师相比十分与众不同。还未走入她的办公室，便听到清脆悦耳的音乐，接着感受到的，就是咖啡的醇香。听着那清脆悦耳的声音和悠扬的歌声回荡在办公室中，相映成趣，毫无违和感。我仿佛扫除了一身的疲惫，变得神清气爽起来。生活似乎也有了方向。</p><p>Mr. Wang is quite different from other seniors. Before she could get into her office, she heard the music, which was crisp and melodious, followed by the aroma of the coffee. Listening to the voice and melodious melodious melodious melodious voice echoed in the office, set each other off into fun, no sense of violation. I seem to sweep away the exhaustion of a body, become refreshed. Life seems to have a direction.</p></blockquote><p>似乎比有道翻译好了一点？</p><p><a href="https://sm.ms/image/WjFc5oL27OmzqtI" target="_blank" rel="external nofollow noopener noreferrer"><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/WjFc5oL27OmzqtI.png"  alt></a>  </p><p>最后剩下的功能便是这个文章分析功能了，既然我们已经体验过它的AI引擎，那么这个也就不必多说了。</p><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>秘塔写作猫可以说是国内版的Grammarly，对于错字、语法及标点错误，秘塔写作猫可以帮你轻松的修改过来，但对于修改文风、进行润色的<strong>繁杂任务</strong>，恐怕你还是需要一位语文老师的辅佐。</p><h3 id="微软爱写作"><a href="#微软爱写作" class="headerlink" title="微软爱写作"></a>微软爱写作</h3><h3 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h3><p><a href="https://holger.net.cn/redirect.html?url=https://app.mtutor.engkoo.com/englishwriting/" target="_blank" rel="noopener">微软爱写作</a>是微软为国人开发的一款英语论文专业的修改及润色工具，但是在UI设计及操作逻辑上都与秘塔写作猫非常的相似。</p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/cbk16XAlEoOr93V.png"  alt></p><p>!(<a href="https://i.loli.net/2020/02/23/P3t6vFlJCkaQn1x.png" target="_blank" rel="external nofollow noopener noreferrer">https://i.loli.net/2020/02/23/P3t6vFlJCkaQn1x.png</a>)</p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/FZP7jLR9eSIusoQ.png"  alt></p><p>点击开始体验便来到了微信扫码环节。这个服务本身是完全免费的，但需要微信扫码登录才行.第一次登陆的时候会让你选择你的写作水平是什么，以后会根据你所选择的水平进行给分。当然你也可以在新建文档的时候单独选择你的评分标准。不过需要注意的是，当你点击过分析文章后就不能再次选择评分标准了，只能通过新建一篇文章来更改。</p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/sFhJrRPLak1tBMy.png"  alt></p><p>微软爱写作提供了个人主页的页面，会有一个整体的写作风格信息以及趋势。</p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/YCEixhrwRVlXHns.png"  alt></p><h4 id="使用感受-1"><a href="#使用感受-1" class="headerlink" title="使用感受"></a>使用感受</h4><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/Erw5sKPAF7SVqUx.png"  alt></p><p>先放图片镇楼</p><p>我选用了之前发布过的两篇文章作为示例，一篇是<a href="https://holger.net.cn/2019/05/30/a-thriving-society-in-china/" target="_blank" rel="noopener">A Thriving Society in China</a>， 以及 <a href="https://holger.net.cn/2019/11/08/tal-subscription-or-reward/" target="_blank" rel="noopener">TAL | Subscription or Reward</a>。</p><p>微软爱写作并没有提供大致的编辑器模式，比如说标题与正文的格式，斜体及粗体等等，同时也并没有提供像Grammarly一样的插件，所以它的定位应该并不是一款编辑器而是单纯的检查工具。</p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/UF4rSWAnxate6PN.png"  alt></p><p>对于一些错字和替换的方法也和秘塔写作猫的逻辑一样，只需要点点点就可以了。</p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/rhnDFHc8bV6BQjY.png"  alt></p><p>微软写作猫对文章给出了一个依照雅思\托福考纲的分数，同时提供了一些小的建议，但是并没有推出<strong>词风、润色</strong>之类的服务。每种不同标准下的得分大体一致，只不过在<strong>四六级</strong>出现了不小的偏差。</p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/YzN3ruiag91C5yx.png"  alt></p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/UF4rSWAnxate6PN.png"  alt></p><h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><p>微软写作猫由于是英文论文的修改，所以难度上相较中文写作低了不少，给出的建议也相对容易一些，不过非常具有参考价值。同时微软写作猫也并没有字数处理限制，经常需要学术写作的可以使用这项服务来进行一些小的修改，同时参考一下自己的得分。</p><h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>无论是中文写作还是英文写作，这两款服务都可以提供一些基本的纠错功能。但对于更深层次的内容修改上，AI可能还是会稍逊风骚。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tech </category>
+          
+          <category> Review </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> academic </tag>
+            
+            <tag> AI </tag>
+            
+            <tag> tech </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>TAL | SUBSCRIPTION or REWARD</title>
+      <link href="/posts/tal-subscription-or-reward/"/>
+      <url>/posts/tal-subscription-or-reward/</url>
+      
+        <content type="html"><![CDATA[<h2 id="INTRODUCTION"><a href="#INTRODUCTION" class="headerlink" title="INTRODUCTION"></a><strong>INTRODUCTION</strong></h2><p>In order to keep customers stick to your product, you’ll have to <em>give benefits</em> to your existing customers. There are two popular ways to do this, one is <em>reward schemes</em> and the other is <em>subscription services</em>. </p><h3 id="Background-Information"><a href="#Background-Information" class="headerlink" title="Background Information"></a><strong>Background Information</strong></h3><p>Parents in <em>China</em> nowadays spend an <em>enormous</em> amount of money on their children, and one <em>crucial</em> part is education, which is often referred to as <em>Extra-Curriculum Courses</em>. The money mostly ends up at <strong>TAL,</strong> as it’s probably one of the most <em>experienced and capable</em> education institutions. (I WANT AD FEES!!) However, as more and more other cheaper institutions come out, TAL is losing its <em>competitiveness</em> on customer retention. <strong>TAL</strong> is now considering two strategies to tackle this dilemma, one, which has already been used right now, is to <em>give rewards</em> to its students, and the other is to take out <em>subscription services</em>. </p><p>This essay will describe the <em>advantages</em> and <em>disadvantages</em> of both strategies.</p><h2 id="Body"><a href="#Body" class="headerlink" title="Body"></a><strong>Body</strong></h2><h3 id="Reward-schemes"><a href="#Reward-schemes" class="headerlink" title="Reward schemes"></a><strong>Reward schemes</strong></h3><p>This <em>scheme</em>, which has been carried out for a long time, is to give students small prizes like some notebooks or schoolbags. Instead of giving rewards directly to customers, students gain <em>points</em> during classes and <em>redeem their rewards</em> afterward. This approach makes it <em>easier</em> for running this system and can <em>stimulate</em> the interests of learning. Furthermore, pushed by this sort of reward, students will <em>concentrate on</em> their studies without getting distracted so that they can learn <em>more</em> knowledge.</p><p>However, this method is <em>truly</em> effective in lower grades while it becomes less useful for higher grades. Unlike young teenagers who need rewards to <em>focus on</em> their studies, older students have <em>no</em> interest in getting so little gifts. They simply want to learn quietly and alone <em>without</em> interacting with teachers. Therefore, this approach becomes <em>incapable</em> of older students and they may easily <em>turn to</em> other educational institutions. </p><p>In this way, despite it is partly effective, <strong>TAL</strong> needs other ways to retain its customers.</p><h3 id="Subscription-services"><a href="#Subscription-services" class="headerlink" title="Subscription services"></a><strong>Subscription services</strong></h3><p>This way requires customers to <em>pay</em> for a little money and <em>TAL</em> would provide more <em>sophisticated</em> services such as <em>free consulting</em>. Customers will be <em>more likely</em> to stay in the <em>same</em> company if they pay for <em>long-term</em> services. <em>TAL</em> can also get more information from their customers in order to provide better services, which will result in a <em>Win-Win</em> solution. This method may <em>strengthen</em> the connections between <em>teachers</em> and <em>students</em>. Students won’t leave if they trust their teacher.</p><p>On the other hand, parents might be unwilling to pay extra money when they have already paid for the courses. Yet, this service can improve the learning achievements, parents are very difficult to give in. </p><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a><strong>Conclusion</strong></h2><p>It seems that both methods have their own benefits and drawbacks, so it’s better to combine different ways into a complete customer retention system. In the future, TAL may consider using both ways to regain its losing customers.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Academic </category>
+          
+          <category> Essay </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> academic </tag>
+            
+            <tag> unlock </tag>
+            
+            <tag> comparison </tag>
+            
+            <tag> education </tag>
+            
+            <tag> tal </tag>
+            
+            <tag> thesis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>macOS Mojave 浅谈</title>
+      <link href="/posts/1738/"/>
+      <url>/posts/1738/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2019/07/15/5d2c7dc06868b96674.jpg"  alt="System Info"></p><p>笔者手上有一台2014年中的MacBook Pro作为平时码字的工具，最初两三年一直使用的macOS。从Yosemite时代一直到Sierra，被macOS独树一帜的风格以及出色的稳定性所折服。但是由于种种原因，macOS响应速度越来越缓慢、只有一台苹果设备所导致的生态链不完善、以及Office 365支持过于羸弱促使我由macOS切换到了盗版Win 10。几天前，正好到了手机重置的时刻，心血来潮又刷回到了最新的macOS Mojave。到现在刚好也用了一整天了，浅谈一下使用感受。  </p><h2 id="安装时的一点小插曲"><a href="#安装时的一点小插曲" class="headerlink" title="安装时的一点小插曲"></a>安装时的一点小插曲</h2><p>由于笔者之前安装Win10时抹掉了整个硬盘，在安装macOS的时候只能使用网络恢复。然而使用长城宽带重试了三四遍重新安装都无法下载组件，最后切换到联通宽带才得以解决。<br>熬过了一个小时的安装过程，登陆iCloud又出现了问题。由于不知何时开启了Apple ID的双重认证，登陆时就一本正经的向我所谓的 <strong>受信任设备</strong> 发送了验证码，然而笔者已然说过，这台MBP是我唯一苹果生态下的产品，这个验证码当然收不到了。最后不得已只能新建了一个本地账户，想要先升级到Mojave，然而在App Store中又需要输入验证码。最后和苹果客服打了半个多小时的电话才得以解决。有着强迫症的笔者认为多了一个本地账户的macOS是不 <strong>Purified</strong> ，所以又重新抹了一遍硬盘全新安装?。</p><h2 id="依旧是那个macOS"><a href="#依旧是那个macOS" class="headerlink" title="依旧是那个macOS"></a>依旧是那个macOS</h2><p>随着那熟悉的<strong>duang～</strong>，久违的macOS又出现在了我的视线。Dock、 Finder等应用悉数出现在我面前。一切都是那么熟悉，一切又是那么陌生。</p><h2 id="使用初感"><a href="#使用初感" class="headerlink" title="使用初感"></a>使用初感</h2><h3 id="终于支持OneDrive按需下载了！！！"><a href="#终于支持OneDrive按需下载了！！！" class="headerlink" title="终于支持OneDrive按需下载了！！！"></a>终于支持OneDrive按需下载了！！！</h3><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2019/07/15/5d2c7de351aeb10379.jpg"  alt="Files On-Demand"></p><p>Windows上早已推出的按需下载功能可以有效的节省磁盘空间，特别是对于使用256G SSD甚至是128G的MBA用户。在最新的正式版macOS Mojave中，OneDrive终于支持了这一功能（理论上来讲，文件系统同是APFS的High Sierra也应该支持）。美中不足的是，Photos等原生应用并不支持串流OneDrive中的视频。当然了，这毕竟是苹果的生态，Photos支持的是iCloud，就像Windows中支持OneDrive一样。</p><h3 id="耳目一新的App-Store"><a href="#耳目一新的App-Store" class="headerlink" title="耳目一新的App Store"></a>耳目一新的App Store</h3><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2019/07/15/5d2c7e122ccf293899.jpg"  alt="App Store"></p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2019/07/15/5d2c7e4f363be85664.jpg"  alt="Editor&#39;s Choice"></p><p>终于，App Store进化了！相比于之前主页仅有几个少的可怜的滚动推荐，App Store在首页加入了超大占比的Banner，同时整合在左侧的侧边栏也更加符合时下审美。  </p><p>类似于Play Store中Editor’s Choice的应用推荐可以帮助用户更加快捷的找到心仪的应用，只可惜App Store中的应用体量依旧不够庞大，希望在打通了iOS和macOS之后能够有所改观。</p><h3 id="macOS的触控板-Windows永远也赶不上"><a href="#macOS的触控板-Windows永远也赶不上" class="headerlink" title="macOS的触控板 Windows永远也赶不上"></a>macOS的触控板 Windows永远也赶不上</h3><p>在用惯了Windows 10的双指翻页之后，五指捏合、四指切换虚拟桌面等再熟悉不过的操作再一次清晰了起来。尽管Windows中最近加入了Precision TouchBar驱动，有许多功能还是只有macOS才能体验得到。双指放大缩小、全方位移动图片\PDF让我彻底摆脱了鼠标的束缚。一般操作只需要键盘即可完工，只有当连上机械键盘码字时才有可能用到无线鼠标。</p><h2 id="整体感受"><a href="#整体感受" class="headerlink" title="整体感受"></a>整体感受</h2><p>距离安装完Mojave已经过去两天了。这两天里，无论是用Chrome浏览浏览网页（真的要感谢Chrome插件所提供的跨平台支持，我在浏览习惯上并没有太大改变），还是用MWeb进行码字（MWeb真心赞），抑或是用自带的Terminal配置服务器，macOS都给我带来了超凡的体验。如下便是我使用macOS的一些感想。</p><h3 id="Pros"><a href="#Pros" class="headerlink" title="Pros"></a>Pros</h3><h4 id="Time-Machine备份服务"><a href="#Time-Machine备份服务" class="headerlink" title="Time Machine备份服务"></a>Time Machine备份服务</h4><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2019/07/15/5d2c7e784cdde21424.jpg"  alt="Time Machine"></p><p>尽管当今的操作系统出现什么Bug的几率极其渺小，不只是什么强迫症所迫的我每一个操作系统都会使用备份服务（Windows是Dism+还原点），macOS所提供的Time Machine给我提供了完全无缝的备份体验。你随手用着电脑，连上一块外置硬盘（我所采用的是sparseimage备份到Windows的方案），顺便再插上电源，你的电脑就开始备份了。几分钟一次的增量同步丝毫不会占用过多的空间，到现在我的备份也不过27G。</p><h4 id="内置的应用吊打一切第三方"><a href="#内置的应用吊打一切第三方" class="headerlink" title="内置的应用吊打一切第三方"></a>内置的应用吊打一切第三方</h4><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2019/07/15/5d2c7e9c9223a93998.png"  alt="Terminal"></p><p>macOS内置的各大应用都是可圈可点的，比如：Terminal。无论是作为Unix的Terminal进行系统部署，抑或是利用ssh连接远程桌面，terminal都能带来完美的无缝体验。不需要第三方应用就可以原生支持ssh客户端以及ftp等服务的Terminal应该是各大系统的目标了（Windows Terminal在我的台式机上怎么也打不开?）。  </p><h4 id="耗电、稳定性···MBP就得用macOS"><a href="#耗电、稳定性···MBP就得用macOS" class="headerlink" title="耗电、稳定性···MBP就得用macOS"></a>耗电、稳定性···MBP就得用macOS</h4><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2019/07/15/5d2c7ec9b3fa945003.png"  alt="System Usage"></p><p>习惯了Windows一直插电使用用回macOS之后，几乎再也不用担心找不到电源线了。一天使用之后，第二天早餐前插上电源，吃过早餐就还你一个充满活力的MBP，这恐怕也只有在MBP上的macOS才能做到了。<br>此外，使用macOS之后散热器就被我扔到了角落。平时载着Chrome十几个网页再加上一个VSCode或者是MWeb，后台听着QQ音乐，同步着OneDrive，温度也不过四五十度。  </p><h4 id="macOS-UI整合度高"><a href="#macOS-UI整合度高" class="headerlink" title="macOS UI整合度高"></a>macOS UI整合度高</h4><p>Windows下，各大应用软件的UI各不相同，甚至采用的安装器也不同（Install Wizard、自解压等等），这就导致增加了大量的学习成本。然而macOS确是高度整合，大部分的应用UI几乎都一致（当然，这也被一部分用户所诟病）。</p><h3 id="Cons"><a href="#Cons" class="headerlink" title="Cons"></a>Cons</h3><h4 id="无法匹配的键盘"><a href="#无法匹配的键盘" class="headerlink" title="无法匹配的键盘"></a>无法匹配的键盘</h4><p>由于系统原因，macOS与Windows平台上的键盘并不一致，比如Windows上的Alt变为了Command，这就涉及了快捷键的问题（Ctrl+C变为了Command+C）。使用过程中，经常会出现想要复制时按下了Control+c却实际上没有任何操作直到粘贴时才发现。<br>更加鬼畜的是，连上机械键盘之后，很多键位都无法使用比如Home，End。在敲代码时造成了一定的不便。这其中最难以接受的还是Command和Alt不能被识别为同一键位。这样在截图时无法使用机械键盘，只能将已经慵懒放松的双手从机械键盘移到笔记本键盘上进行截图。</p><h4 id="有些开源软件无法适配"><a href="#有些开源软件无法适配" class="headerlink" title="有些开源软件无法适配"></a>有些开源软件无法适配</h4><p>比如笔者在日常非常高频的一款图书管理软件Calibre在运行时经常时运行10分钟后崩溃掉（或许是软件自身原因，因为更新前并无此状况），这就导致Calibre抓取RSS的任务无法顺利完成，不过这也促使我寻找了在Kindle上更加合适的RSS阅读方式Reabble（这是后话）。<br>初步判定此类软件bug是由于跨平台使用同一代码不同编译器导致的（Calibre基于Python开发），希望在下一版本中能够有所改观。</p><h4 id="OneDrive同步会出现莫名其妙的权限问题"><a href="#OneDrive同步会出现莫名其妙的权限问题" class="headerlink" title="OneDrive同步会出现莫名其妙的权限问题"></a>OneDrive同步会出现莫名其妙的权限问题</h4><p>当笔者使用OneDrive同步相册、Calibre书库，或者是LastPass的数据库时，Windows上出现了极其令人蛋疼的无法删除现象。有一天笔者舒舒服服的打着游戏的时候，OneDrive提示我：OneDrive Cannot Access to Your OneDrive Folder. Please Reconfigure it. 打开查看之后果然如此，我连打都打不开！右键属性发现所有人竟然是别看了，什么也没有，所有人上什么都没有！试遍了所有文件暴力删除工具都没有（Unlocker）。差点就以为要格式化硬盘才能解决，最后抱着侥幸心理（交警Holger上线？？）重启了电脑，总算解决了问题。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>无论是macOS、Windows还是Linux，每一款系统都有它的优点。不置可否的是，每一台设备，都会有它对应适宜的操作系统，这也就是为什么我会选择用回了macOS。</p><hr><blockquote><p>总编辑时间：&gt;1h</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tech </category>
+          
+          <category> Review </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> macOS </tag>
+            
+            <tag> Mojave </tag>
+            
+            <tag> os </tag>
+            
+            <tag> review </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>A Thriving Society in China</title>
+      <link href="/posts/a-thriving-society-in-china/"/>
+      <url>/posts/a-thriving-society-in-china/</url>
+      
+        <content type="html"><![CDATA[<p>As the latest universal two-child policy taking effects in China, the birth rate has been incredibly expanded, and the problem of the aging population seems less serious. This article will analyze the possible demographic distribution in 2020, and also the problems and benefits of it.</p><p>This is the diagram that reveals the birth rates in China, which apparently shows an enormous growth of the birth rate. There is likely to be a youth bulge based on the trend, though it seems to be a less aggressive aging population for less than one-tenth in a whole for about 3 years. The population keeps growing slowly from 1.321 billion to 1.380 billion. Although the birth rate keeps growing, the aging population will still increase to nearly one fifth in 2020 as predicted.</p><p>Although there seems no big problem with “youth bulge”, the heavy education cost may result in higher taxation in the future. Furthermore, the increasing youth generation may also lead to harsh education competition. For instance, our parents’ generations seldom had extra-curriculum courses while teenagers are filled with them. This kind of stress may lead to depression and even suicides, which will bring negative effects to society. More likely our government will optimize this system by building more qualified schools. In contrast, the youth bulge means a lot more workforce in our society, for which we embrace a more creative and dynamic social environment.</p><p>When the young generations grow up, elderly people will probably be better-taken care of. Our people will have more time to relax due to cheaper labor cost and this will enhance the family bonds between generations. Our society will become thriving and prospering.</p><p>Just like every coin has two sides, a larger population means less land and jobs. The government will have to cope with housing problems and unemployment. Housing prices will increase and people may not able to afford new houses. The social health system may face real challenges due to high medical costs.</p><p>Despite the situations we discussed above, there seem more problems to deal with because of the universal two-child policy. In the coming years, Chinese youngsters must work hard to fulfill The Chinese Dream.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Academic </category>
+          
+          <category> Essay </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> academic </tag>
+            
+            <tag> statistics </tag>
+            
+            <tag> unlock </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[精品应用]|纯纯写作，如你所愿</title>
+      <link href="/posts/%E7%B2%BE%E5%93%81%E5%BA%94%E7%94%A8%E7%BA%AF%E7%BA%AF%E5%86%99%E4%BD%9C%EF%BC%8C%E5%A6%82%E4%BD%A0%E6%89%80%E6%84%BF/"/>
+      <url>/posts/%E7%B2%BE%E5%93%81%E5%BA%94%E7%94%A8%E7%BA%AF%E7%BA%AF%E5%86%99%E4%BD%9C%EF%BC%8C%E5%A6%82%E4%BD%A0%E6%89%80%E6%84%BF/</url>
+      
+        <content type="html"><![CDATA[<p><strong>引入</strong></p><p>尽管国内安卓生态混乱，有很多国产毒瘤软件。但酷安上的精品国产软件依旧可圈可点。纯纯写作，便是其中的一款。</p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/h3dVQwKLWTuRl4I.jpg"  alt></p><p>「来自Google Play Store的截图」</p><p><strong>使用体验</strong></p><p>这款软件主打的Never lose your content 让你在不知不觉中备份着你的文档，无论风吹雨打，手机突然关机，甚至爆炸（前提是设置了云端备份），你从不会丢失你的内容    作为码字软件，相比于其他产品诸如WPS或Word，这款软件完美的诠释了它的初心<strong>纯</strong>。就像其名称所说_纯纯写作_，这款软件仅支持纯文本写作和Markdown代码写作（可预览，但非类似于typora的所见即所得）。作为日常码字，记录一下随笔，写一写日记实在是再适合不过了。（唯一的缺点是不支持图片）其中以书+分类+章节的三段式划分也很好的将文章加以分类。</p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/eBkSjtRam56hzxC.jpg"  alt></p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/DB4wI68Wq1FPTGn.jpg"  alt></p><p>在Ideas Capsule的作者团队中就有许多热衷于使用手机创作的同学，但是WPS莫名的bug很容易击退作者的灵感。而其中的Typewriter模式简直就是创作诗的最佳拍档。  </p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/WdEsoLC69VYmRbF.png"  alt></p><p>「请原谅作者的语文功底」</p><p>本文便是在手机上使用<em>纯纯写作</em>以Markdown编写的。</p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/eBkSjtRam56hzxC.jpg"  alt></p><p><strong>界面</strong>  </p><p>作者还是为数不多的几个为应用适配MD2的优秀开发者，同时还可以对编辑器背景进行修改。免费的有各种精选配色以及来自unsplash的图片，解锁高级版即可自行更换壁纸。</p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/AOmdg4385ouaDxk.png"  alt="grammarly.com">  </p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/DrTHsUa4BnYqICg.jpg"  alt="MD2"></p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/AJszkEqQK6M5u4H.png"  alt></p><p>「丰富多彩的壁纸」</p><p><strong>配置及备份</strong></p><p>这篇软件的配置可谓是少之又少，除去字体大小、设置指纹备份、markdown配置等再无其他冗杂配置项目。</p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/lJuxVcMWDAeNCtF.jpg"  alt></p><p>「使用指纹解锁应用真的十分贴心」  </p><p>应用支持WebDav协议网盘备份（国内可采用坚果云，应用内有详细教程)以及Dropbox同步，不仅可以同步整本书就连编辑历史记录也会同步。作者在这里采用的是Dropbox，可以说在不知不觉中就备份完成了。</p><p>Markdown创作时的快捷工具栏也十分使用，可以自己配置。  </p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/wGDSonsLC7IN3JT.png"  alt></p><p><strong>小结</strong>  </p><p>这款软件可以说是手机码字必备。作为一款国人开发的精品软件，可以通过8元购买高级版来支持作者（非刚需，本文介绍内容均不需购买）。除本文介绍内容之外，其他诸如<strong>时光机</strong>等功能同样值得探索。</p><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/Oeh2a3Nf9LgJ5Kl.png"  alt></p><p>「可以记录即使灵感和一些小指令的时光机」</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tech </category>
+          
+          <category> Android </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> App </tag>
+            
+            <tag> Markdown </tag>
+            
+            <tag> Material Design </tag>
+            
+            <tag> Notes </tag>
+            
+            <tag> Pure Writer </tag>
+            
+            <tag> 纯纯写作 </tag>
+            
+            <tag> 安卓应用 </tag>
+            
+            <tag> 手机 </tag>
+            
+            <tag> 绿色应用 </tag>
+            
+            <tag> 写作 </tag>
+            
+            <tag> 精品应用 </tag>
+            
+            <tag> 应用 </tag>
+            
+            <tag> 安卓 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[惊艳翻唱] | 《婚礼的祝福》</title>
+      <link href="/posts/20/"/>
+      <url>/posts/20/</url>
+      
+        <content type="html"><![CDATA[<p>这首歌的原唱是陈奕迅，蒙面唱将猜猜猜中，薛之谦、刘维翻唱。本身就是一首经典名曲，经过薛式情歌的二次加工变得情味更加浓厚。</p><blockquote><p>“时间一秒一秒一秒<br>倒数计时<br>往事一幕一幕一幕<br>突然静止<br>婚礼上，回忆着曾经一切的一切，在这一刻悄然静止。<br>“我干杯<br>你随意<br>这是个残酷的喜剧<br>我的人生早留在你那里<br>我却还要故作潇洒地</p></blockquote><p>男主角贡献出了自己的全部，自己的心早已不在搏动，那就干脆留给女主吧。一纸请帖到来，只得送上自己婚礼的祝福。<br>薛之谦独特的声线更加适合这首深情地情歌，他那沙哑的嗓音，给我们带来了一种沧桑无奈、时过境迁、物是人非之感。</p><blockquote><p>”我的请贴是你的喜贴<br>你要的一切<br>如今都变成我的心碎<br>你总是太清醒<br>我始终喝不醉<br>连祝福你还逼我给</p></blockquote><p>主角本应是我，却变成了对方的婚礼。然而面对自己的爱人，尽管嫁给了别人，却还要忍着泪水送上自己的祝福。<br>这样的一首苦情歌，在老薛的演绎下又焕发了新的生机。薛之谦翻唱的其他经典作品也值得细细品味，在未来的文章我也会做赏析。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Music </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《灵魂摆渡人》引发的思考</title>
+      <link href="/posts/%E7%81%B5%E9%AD%82%E6%91%86%E6%B8%A1%E4%BA%BA-%E5%BC%95%E5%8F%91%E7%9A%84%E6%80%9D%E8%80%83/"/>
+      <url>/posts/%E7%81%B5%E9%AD%82%E6%91%86%E6%B8%A1%E4%BA%BA-%E5%BC%95%E5%8F%91%E7%9A%84%E6%80%9D%E8%80%83/</url>
+      
+        <content type="html"><![CDATA[<p>在我的生活中，给予我最大帮助、经常为我的生活指点迷津的人莫过于老师。然而了解我的人都知道，我与我的小学老师有很深的“情结”，与中学的老师却没那么深厚。但是，今天的语文课，却彻底的改变了我的看法。<br><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/qz5rlAdSB9yowf8.png"  alt>  </p><blockquote><p>（至今依旧后悔因为来到小外参加开学典礼而错过了小学最重要的毕业典礼，不知道当时谁说的，以后就在小外混了，来哪个显而易见。现在却觉得，这句话可真扯。毕业典礼是小学最重要的仪式，也是最后一个大家聚在一起的机会。现在想想没能参加毕业典礼而来到小外听没有用的讲座真是人生中的一大遗憾）（而且不来参加开学典礼的有的是）</p></blockquote><p>刚开始接触周老师的时候，其实关系并没有那么的密切。不知道是不是因为隔了一层楼的缘故，基本上下课之后，便和周老师再无联络，更不会说有什么灵魂上的交谈。<br>尽管相处的时间微乎其微，周老师脸上的微笑依旧给了我很大触动。无论在哪里见到周老师，她的微笑总能让每一同学扫去一身的疲惫，阳光洒满心田。</p><p>其实来到小外，我的英语功底并不好。和那些在学而思、华英多年学习的同学相比，我简直是菜的一批，甚至连国际音标都没有学过，英语的一点优势，也是因为小学英语老师所带动出来的。但是周老师一直都是耐心地教导我们，把我们放置在同一起跑线上，从没有区别对待。<br>和其他老师相比，周老师的课堂更加生动有趣。第一节课开始，课堂就以小组形式排成了区别于传统教学方式的课堂，甚至到现在我都以为，这是小外的传统，而不会想到是周老师的良苦用心。而且，周老师让我们发背课文的视频是我至今仍觉得最好的背课文以及检查背课文的方法。不像在课堂面对面的背课文，在家里背课文丝毫不会感到紧张，而对流利程度的严苛也丝毫不会降低背课文的品质。<br>但是我对周老师的认知，也就仅限于此了。似乎，周老师就这样一直默默地陪伴在我们的生活之中，直到······</p><p>上了一周任老师代课的英语课后，我们开始感到不对劲了。我们纷纷猜测，周老师到底怎么了。同学们众说纷纭，但都十分担心周老师。有几个同学甚至整日整夜的担心着周老师。</p><p>直到再后来，我们听说，周老师离开我们，是因为怀孕了。我们都松了一口气，却又莫名的惆怅。对于我，却还有一丝怨恨，对于就这样不辞而别，离开了班集体。于是，既然知道了周老师安然无恙，她便这样的悄无声息的消失在了我们的生活之中。</p><p>到了今天的语文课，经老师为我们带来的一篇作文，再次将周老师拉回了我们的视线。那是八班一位同学所写的满含深情的作文，也是一篇让很多同学为之动容，令经老师课堂落泪的作文，更是这篇作文，改变了我对周老师的看法，使我重新认识了周老师。<br>作文回忆了周老师和八班的点点滴滴的师生时光。作文中描绘的并不像是一位老师，而是一位无时无刻不在关注我们的好友。周老师就是八班同学的摆渡人，也是我们的摆渡人。八班同学班会课一封封书信，周老师认真阅读后写下的一笔一划，让我这个或许有些多愁善感的男生忍不住落泪了。我后悔没能在七年级的时候认识一个真正的周老师，后悔下课之后便消失在周老师的关爱之中（，后悔没能和八班分在一层）。<br>回想和周老师一切的一切，那时候，周老师经常会对我说，你真的很努力，我很希望能有你这样一个孩子，你的父母一定很为你骄傲。我从没有耐心地听过周老师；记得有一次单元测，我出乎意料的取得了97分的高分，周老师脸上洋溢着欣慰而又骄傲的笑容；又或许，是好友离开学校去美国学习是对我的安慰，我再一次流下了泪水，后悔没能认识一个真正的周老师，一个无时无刻不在为我们加油助威，为我们的成就自豪的老师，也为之前对周老师的误解感到自责。</p><p>周老师就是每个人心目中的灵魂摆渡人。</p><p>课上经老师说昨天晚上有感而发随手写了一篇文章，许多同学大为不解。我觉得，当有了灵感，特别是有了真情实感，写作文，或者说任何问题，都会像行云流水般流畅。而这也引起了我们几位同学对命题作文的一点讨论。命题作文限制了我们的写作思路，对于那些我们并没有素材，我们并没有任何感觉的题目，写不好完全合理，逼着写出来当然是没有灵魂的作文。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Life </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[体育知识] | 拔河中的技巧</title>
+      <link href="/posts/%E4%BD%93%E8%82%B2%E7%9F%A5%E8%AF%86-%E6%8B%94%E6%B2%B3%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A7/"/>
+      <url>/posts/%E4%BD%93%E8%82%B2%E7%9F%A5%E8%AF%86-%E6%8B%94%E6%B2%B3%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A7/</url>
+      
+        <content type="html"><![CDATA[<p>所有参战队员须着具有高摩擦力的鞋，佩戴防滑手套，穿着长袖上衣。<br>每人按站位在绳索两侧将绳索夹在大臂下，手掌向上，重心放低，采取半蹲姿势。合力方向一致向队伍尾部，力量略微偏向地面。<br>比赛时注意裁判口令，开始后立即按照指挥队员一齐发力，对方如果力量占优就再次放低重心，尽量维持，并在对方发力点间隔一起用力，打乱对方节奏。<br>所有人力的方向应该一致，不能向绳两边发力。一起听从指挥左右左右按照方向摇动绳索打乱对方节奏，但必须要保证力的方向一致。<br>指挥同学负责观察对方队员节奏，找出漏洞，根据对方节奏在对方不发力时组织一起进攻。在对方出现如队员摔倒，合力方向不一致，或者有人重心不稳，队伍溃散情况发生时，发动总攻，同时将情况转告其他指挥。<br>负责喊口号，以“一二一二”为主，同时辅以一些激励性语言，在有可能的情况下尽可能调动同学们的全部力量。<br>挥旗，通过手势指挥队伍，同时观察本班队员情况，如果有摔倒等重心不稳的情况及时施以帮助并短暂中断比赛进程，催化调整速度。<br>指挥同学必须齐心协力，找到默契，口号不能有冲突。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Sports </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《灵异妙探》｜ 一部打动灵魂的美剧</title>
+      <link href="/posts/psych/"/>
+      <url>/posts/psych/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/vtqbf2ny5QDFcrG.png"  alt="USA Network官方宣传">  </p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>相信四班的小伙伴们已经欣赏到了我对这部美剧进行的课前演讲，显而易见，这部美剧对于我来说意义非同小可，可以说，它陪伴了我都过了小学美好的四年时光，那时的乐趣基本全部寄托在这部美剧上了。</p><h2 id="人物介绍"><a href="#人物介绍" class="headerlink" title="人物介绍"></a>人物介绍</h2><h3 id="Shawn-Spencer"><a href="#Shawn-Spencer" class="headerlink" title="Shawn Spencer"></a>Shawn Spencer</h3><p>作为剧中的通灵侦探，Shawn的推理能力过人，而通灵却不敢恭维了。他办起案来认真负责一丝不苟，生活上却着实是一个逗逼。Shawn对爱情极其专一，并且十分浪漫。从第一眼见到Juliet便从第一季追到了大电影，最终终于修得了正果。<br>Shawn的父亲是一名退休警察，从小便培养Shawn出这份惊人的推理能力以及敏锐的观察力，可父子之间的关系总会是磕磕绊绊。Shawn手上戴着的表中的一个计时器专门用来记录父子之间最长不说话时长。可Shawn对父亲的爱依旧伟大。在第六季最后一集中，Shawn的父亲遭到枪击，Shawn再也没办法控制住自己的理智，在办案中砸碎了多块玻璃，甚至大闹枪厂。<br><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/SaCq3POU6j8ZJKD.png"  alt></p><h3 id="Burton-Guster"><a href="#Burton-Guster" class="headerlink" title="Burton Guster"></a>Burton Guster</h3><p>作为Shawn的好基友，Gus充当着“神奇脑袋”（并不是Magic Five）的作用——及将Shawn接收到的“灵魂交流”转换为人类语言。尽管他的推理能力并不出色，可他和Shawn的相互配合却使这部剧情笑点满满。<br>Shawn和Gus之间的深刻情谊让每一个人都羡慕。在第八季最后一集中，Shawn离开Santa Barbara去寻找Juliet O’Hara，留下了一张告别DVD，深刻的回忆了自己和Gus的过往情深。<br>Gus毅然决然离开了自己的工作，追随着Shawn，自豪地说：“我现在是一个冒险家，是一个拥有着15年友谊的探险者”说完便和Shawn拥抱在了一起。看完这一幕的我早已泪流满面，这种友谊令所有人都羡慕。<br><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/J2PIpBLoxvw9GMr.png"  alt><br>Lassie 以及其它带给我欢乐的人员<br>这部剧中每一个小角色都有自己的一席之地，都有自己的笑料，也同样拥有令我们学习的品质。作为警长的Lassiter将自己的职责视为自己的底线，保卫着国家与人民。<br><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/8SdaGPvTCgHs947.png"  alt="Lassie在知道Shawn不知如何向Gus开口表明去找Juliet时给予了爱的抱抱">  </p><h2 id="亮点"><a href="#亮点" class="headerlink" title="亮点"></a>亮点</h2><p>这部剧最大的亮点应该属于它奇特的编剧，严谨的推理，以及形式的多姿多样了（一部音乐剧，一部大电影，甚至还有一集恐怖色彩浓重）。这部剧运用了丰富的拍摄手法让每一位观众都身临其境，感同身受，尽管没有过多的特效，却让每一位观众震撼。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/TxN4Eb2KVjvzHXs.png"  alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Life </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Psych </tag>
+            
+            <tag> 灵异妙探 </tag>
+            
+            <tag> movies </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>真的爱你 ｜ 母亲节快乐！</title>
+      <link href="/posts/%E7%9C%9F%E7%9A%84%E7%88%B1%E4%BD%A0-%E6%AF%8D%E4%BA%B2%E8%8A%82%E5%BF%AB%E4%B9%90/"/>
+      <url>/posts/%E7%9C%9F%E7%9A%84%E7%88%B1%E4%BD%A0-%E6%AF%8D%E4%BA%B2%E8%8A%82%E5%BF%AB%E4%B9%90/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://sm.ms/image/9A7lomv8Jr1ax2Q" target="_blank" rel="external nofollow noopener noreferrer"><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/9A7lomv8Jr1ax2Q.png"  alt></a></p><pre><code>母亲节在5月的第二个星期日，是全世界母亲的节日。在这一天，妈妈通常会收到康乃馨作为礼物。而歌颂母亲的歌曲也有很多。 香港顶级摇滚乐队Beyond就曾推出过一首致敬母亲的歌曲，真的爱你（i love you, mom）。这首歌由梁美薇作词，黄家驹作曲，摇滚风满满，却又不乏对母亲的真情，歌颂了母爱的伟大，歌词包含了对母爱的感恩和对母亲的祝福。  </code></pre><p><a href="https://sm.ms/image/9A7lomv8Jr1ax2Q" target="_blank" rel="external nofollow noopener noreferrer"></a><a href="https://sm.ms/image/oS75Kc3h1wtMvNQ" target="_blank" rel="external nofollow noopener noreferrer"><img src="/static/images/server/loading.gif" class="lazyload" data-src="https://i.loli.net/2020/02/23/oS75Kc3h1wtMvNQ.png"  alt></a></p><p>Beyond的歌曲几乎首首都是经典，这一首当然不会意外，一经发布便被广为传唱，翻唱版本众多，甚至还有通过红石电路打造出的MC风红石音乐。</p><blockquote><p>“无法可修饰的一对手  带出温暖永远在背后</p><p>纵使啰嗦始终关注  不懂珍惜太内疚”</p></blockquote><p>从母亲的双手写起，曾记否，是谁用自己的双手带领我们前进，走向人生巅峰；是谁一点一点抚育我们长大。这一双手，承载着太多太多。</p><blockquote><p>“沉醉于音阶她不赞赏  母亲的爱却永未退让</p><p>决心冲开心中挣扎  亲恩终可报答”</p></blockquote><p>尽管有自己的理想，母亲虽无同好，却有付出自己的全部支持孩子，奉献出自己的一切。</p><blockquote><p>“春风化雨暖透我的心  一生眷顾无言地送赠”</p></blockquote><p>形象的比喻，生动地写出了母亲所扮演的角色。母亲温柔的话语仿佛沁人心脾的春雨，温暖了我们的心窝。</p><p>这一首歌，便是Beyond对母亲的感恩。在母亲节，放下手机，陪陪自己最亲爱的人，感恩她母亲对自己的无私奉献。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Life </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>🌟春分，那些你知道的和你不知道的</title>
+      <link href="/posts/%E6%98%A5%E5%88%86%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+      <url>/posts/%E6%98%A5%E5%88%86%E9%82%A3%E4%BA%9B%E4%BA%8B/</url>
+      
+        <content type="html"><![CDATA[<p>昨天刚刚经历了春分，今天又是月考，官菌祝大家月考顺利！关于春分，你又了解了多少呢？<br>春分是大家耳熟能详的二十四节气之一，意味着春天的正式开始。这一节气是由我国人定义的，主要用于农业生产，它代表着春耕的开始，在这一天，各地都开始忙碌起来，准备播（yue)种（kao）。与此同时，人们吃春菜，放风筝，进行春祭。有诗云：吃春菜，相见欢，炎黄儿女尽开颜。除了这种种习俗，春分在天文学上究竟代表着什么呢？<br>这一天，太阳位于黄经0°（春分点），直射赤道，全球各地除极地的昼夜几乎是等长的，而在南北两极，春分这一天，太阳整日都在地平线上。此后，随着太阳直射点的继续北移，北极附近开始为期6个月的极昼，范围逐渐扩大；南极附近开始为期6个月的极夜，范围逐渐扩大。春分过后，太阳直射点继续由赤道向北半球推移，北半球各地开始昼长夜短，即一天中白昼长于黑夜；南半球各地开始昼短夜长，即一天中白昼短于黑夜。故春分也称升分。 不仅仅在地球，其他星球上，也会有“昼夜平分日”，因为没有四季之分，故不能被称为春分。其中的一个例子便是土星。土星平均每14.7年便会迎来一次昼夜平分日。最近的春分是在2009年8月11日，其下一个将于2025年5月6日发生。而火星最近的昼夜平分点是2018年5月22日（北方秋季），下一个将是2019年3月23日（北方春季）。<br>听完官菌的介绍，大家对春分又有什么新的了解吗？下次土星春分日到来时，你便可以拿起手中的望远镜，观测仅剩下一条细线的土星光环！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Academic </category>
+          
+          <category> Astronomy </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>甘德与甘式占星</title>
+      <link href="/posts/%E7%94%98%E5%BE%B7%E4%B8%8E%E7%94%98%E5%BC%8F%E5%8D%A0%E6%98%9F/"/>
+      <url>/posts/%E7%94%98%E5%BE%B7%E4%B8%8E%E7%94%98%E5%BC%8F%E5%8D%A0%E6%98%9F/</url>
+      
+        <content type="html"><![CDATA[<p>作为先秦时期著名的天文学家，甘德以其甘式占星而闻名于世，他的天文学贡献同其占星活动是相辅相成的。<br>生于战国，甘德并没有留下过多的个人信息，却著有《天文星占》8卷、《岁星经》等传世名作。他与石申各自写出的天文学著作的结合《甘石星经》，是现存世界上最早的天文学著作。<br>甘德作为天文学家的最大成就便是发现木星的卫星，他发现了火星和金星的逆行现象，还建立了行星会合周期的概念，并著有关于木星的专著《岁星经》。甘德早伽利略近两千年，而且在没有望远镜的条件，仅凭肉眼就发现了木星的卫星，这真是一个奇迹。<br>甘德作为天文学家一生任劳任怨，致力于天文事业，是我国天文学的先驱，在当时和对后世都产生了重大影响。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Academic </category>
+          
+          <category> Astronomy </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>🌟张衡与张衡星</title>
+      <link href="/posts/%E5%BC%A0%E8%A1%A1%E6%98%9F/"/>
+      <url>/posts/%E5%BC%A0%E8%A1%A1%E6%98%9F/</url>
+      
+        <content type="html"><![CDATA[<p>张衡是我国古代著名的天文学家，与此同时还是东汉时期伟大的数学家、发明家、地理学家、文学家。身兼数职的他样样精通，在中国历史上起到了不可磨灭的先驱作用。张衡发明了地动仪，开创了古代灾难预测的先河。其浑天仪也是天文观测中必不可少的参考工具。<br>张衡在汉赋发展史中具有巨大贡献，较全面地继承了前代赋家的赋心与表现手法，一生留下了九篇诗歌。张衡还制作过两件神奇的器物。一件是可以自转的机械；一件是能在天上飞翔的自动飞行器，可见掌握着高明的机械技术。<br>《历代名画记》中有关于张衡这样的记载：张衡听说建州浦城水中有豕身人首的怪兽，于是前往画它。但这个怪兽怕人画它，所以不出来。张衡于是扔掉纸笔，怪兽就出来了，他悄悄地用足趾画下怪兽的行状。能用足趾写生，这虽然是种传说，但也可见当时张衡的画名是不低的。由此可见，张衡在绘画方面也有极高的造诣。<br>张衡为中国天文学、机械技术、地震学的发展作出了杰出的贡献，被后人誉为“科圣”，联合国天文组织将月球背面的一个环形山命名为“张衡环形山”，太阳系中的1802号小行星命名为“张衡星”。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Academic </category>
+          
+          <category> Astronomy </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
