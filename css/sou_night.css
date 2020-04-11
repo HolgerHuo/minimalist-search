@@ -75,7 +75,7 @@ a {
     position: relative;
     width: 120px;
     height: 120px;
-    margin: 20px auto;
+    margin: 5px auto;
     background: url(../static/images/avatar_night.png) no-repeat center/cover;
 }
 
