@@ -147,6 +147,7 @@ a {
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .con .sou ul li {
@@ -186,7 +187,7 @@ a {
 
 .foot {
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     z-index: 1000;
     text-align: center;
     width: 100%;
@@ -404,7 +405,7 @@ svg.icon {
     }
 
     .con .shlogo {
-        width: 320px;
+        width: 100px;
         height: 100px;
     }
 
