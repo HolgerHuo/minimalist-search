@@ -473,7 +473,7 @@ svg.icon {
         position: absolute;
         left: 10px;
         top: 10px;
-        background: url(icon/lg.svg) no-repeat center/cover;
+        background: url(icon/g.svg) no-repeat center/cover;
         border-radius: 50%;
         overflow: hidden;
     }
