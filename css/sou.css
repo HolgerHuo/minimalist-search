@@ -264,6 +264,7 @@ a {
     margin: 0 auto;
     width: 100%;
     justify-content: left;
+    overflow: hidden;
 }
 
 
@@ -767,7 +768,7 @@ a {
 }
 .hitokoto{
     position: absolute;
-    margin-top: 100px;
+    margin-top: 50px;
     z-index: 1000;
     text-align: center;
     width: 100%;
