@@ -8,6 +8,9 @@ github：https://github.com/5iux/sou
 由 yeetime 修改
 github：https://github.com/yeetime/sou2
 日期：2019-12-13
+Modified by Holger Huo
+https://blog.holger.net.cn/
+Apr.11 2020
 */
 
 $(document).ready(function() {
@@ -31,7 +34,7 @@ $(document).ready(function() {
         },
         '3':{
             id      :3,
-            title   :"必应",
+            title   :"Bing CN",
             url     :"https://cn.bing.com/search",
             name    :"q",
             img     :"./icon/bing.ico",
@@ -243,14 +246,14 @@ $(document).ready(function() {
 
         var num = /^\+?[1-9][0-9]*$/;
         if (!num.test(key)){
-            alert("顺序："+key+" 不是正数数！");
+            alert("Sequence "+key+" is invalid!");
             return;
         }
 
         var se_list = getSeList();
 
         if (se_list[key]) {
-            alert("顺序:"+key+" 已有数据，不可用");
+            alert("Sequence "+key+" has been taken!");
             return;
         }
 
@@ -295,9 +298,9 @@ $(document).ready(function() {
         var se_default = getSeDefault();
         var key = $(this).val();
         if (key==se_default){
-            alert("默认搜索引擎不可删除！");
+            alert("Cannot delete default search engine!");
         } else {
-            var r = confirm("顺序 "+key+" 是否删除！");
+            var r = confirm("Delete sequence "+key+" ?");
             if (r) {
                 var se_list = getSeList();
                 delete se_list[key];
@@ -309,7 +312,7 @@ $(document).ready(function() {
 
     //恢复预设搜索引擎
     $(".set_se_list_preinstall").click(function () {
-         var r=confirm("现有设置和数据将被清空！");
+         var r=confirm("Current settings will be removed! (You'd better backup before performing this)");
          if (r) {
              setSeList (se_list_preinstall);
              Cookies.set('se_default', 1, { expires: 36500 });
@@ -388,14 +391,14 @@ $(document).ready(function() {
 
         var num = /^\+?[1-9][0-9]*$/;
         if (!num.test(key)){
-            alert("顺序："+key+" 不是正数数！");
+            alert("Sequence "+key+" is invalid!");
             return;
         }
 
         var quick_list = getQuickList();
 
         if (quick_list[key]) {
-            alert("顺序:"+key+" 已有数据，不可用");
+            alert("Sequence "+key+" has been taken!");
             return;
         }
 
@@ -420,7 +423,7 @@ $(document).ready(function() {
 
     //恢复预设快捷方式
     $(".set_quick_list_preinstall").click(function () {
-         var r=confirm("现有设置和数据将被清空！");
+         var r=confirm("Current settings will be removed! (You'd better backup before performing this)");
          if (r) {
              setQuickList (quick_list_preinstall);
              setQuickInit();
@@ -446,7 +449,7 @@ $(document).ready(function() {
 
         var key = $(this).val();
 
-        var r = confirm("顺序 "+key+" 是否删除！");
+        var r = confirm("Delete sequence "+key+" ?");
         if (r) {
             var quick_list = getQuickList();
             delete quick_list[key];
@@ -474,15 +477,15 @@ $(document).ready(function() {
         try {
             var mydata = JSON.parse(json);
         } catch (e) {
-            alert("数据解析异常");
+            alert("Invalid backup!");
             black;
         }
         if (typeof mydata != 'object') {
-            alert("数据格式错误");
+            alert("Invalid format!");
             black;
         }
 
-        if(confirm("当前数据将被覆盖！是否继续导入？")){
+        if(confirm("Current settings will be erased, continue?")){
             setSeList(mydata["se"]);
             if (mydata["se_default"]) {
                 Cookies.set('se_default', mydata["se_default"], {expires: 36500});
@@ -494,7 +497,7 @@ $(document).ready(function() {
             setSeInit();
             setQuickInit();
 
-            alert("导入成功");
+            alert("Success!");
         }
 
     });

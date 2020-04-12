@@ -1,3 +1,9 @@
+/*
+Dark-mode listener
+Modified by Holger Huo
+https://blog.holger.net.cn/
+Apr.11 2020
+*/
 const hasNativePrefersColorScheme =
         window.matchMedia('(prefers-color-scheme)').media !== 'not all';
 let theme_value = localStorage.getItem('theme'),
