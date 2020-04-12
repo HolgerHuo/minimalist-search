@@ -158,9 +158,9 @@ a {
 }
 
 .con .sou form .wd:focus {
-    background: #fff;
-    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-    border-color: #fff
+    background: #fdfdfd;
+    box-shadow: 0 1px 6px 0 #fdfdfd;
+    border-color: #fdfdfd
 }
 
 .sou form .s {
