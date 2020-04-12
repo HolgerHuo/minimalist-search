@@ -148,6 +148,7 @@ input.wd {
 
 .con .sou form .wd {
     width: 100%;
+    text-overflow: ellipsis;
     height: 100%;
     display: block;
     border: 1px solid #353535;
