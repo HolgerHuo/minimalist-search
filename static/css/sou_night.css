@@ -151,6 +151,7 @@ input.wd {
     height: 100%;
     display: block;
     border: 1px solid #353535;
+    background: #353535;
     border-radius: 25px;
     line-height: 100%;
     text-indent: 55px;
