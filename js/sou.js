@@ -139,10 +139,12 @@ $(document).ready(function() {
             if ($(".se").is(e.target)) {
                 seList();
                 $(".search-engine").show();
+                $(".hitokoto").hide();
             }
         }else{
             if (!$(".search-engine").is(e.target) && $(".search-engine").has(e.target).length === 0) {
                 $(".search-engine").hide();
+                $(".hitokoto").show();
             }
         }
     });
