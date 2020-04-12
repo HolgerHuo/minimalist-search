@@ -24,13 +24,13 @@ body {
 }
 
 h3 {
-    color: #d2d2d2;
+    color: #BBBBBB;
 }
 
 html {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
-    color: #000;
+    color: #AAAAAA;
 }
 
 .search,
@@ -49,7 +49,7 @@ input:focus::-moz-placeholder { color:transparent; }
 input:focus:-ms-input-placeholder { color:transparent; }
 
 .wd::-webkit-input-placeholder {
-    color: #8f8b8a;
+    color: #AAAAAA;
     letter-spacing: 2px;
     font-size: 16px;
 }
@@ -62,7 +62,7 @@ li {
 
 a {
     text-decoration: none;
-    color: rgb(143, 139, 139);
+    color: #BBBBBB;
 }
 
 #content {
@@ -132,7 +132,7 @@ a {
     font-size: 22px;
     line-height: 40px;
     border-radius: 50%;
-    color: rgb(99, 96, 96);
+    color: #AAAAAA;
 }
 
 .sou form .se:hover {
@@ -142,7 +142,7 @@ a {
 }
 
 input.wd {
-    color: #8f8b8a;
+    color: #AAAAAA;
     background: #353535;
 }
 
@@ -186,7 +186,7 @@ input.wd {
     background: rgb(31, 31, 31);
     padding: 15px 0px 0px 0px;
     border-radius: 5px;
-    box-shadow: 0px 5px 20px 0px #3b3b3b;
+    box-shadow: 0px 5px 20px 0px #0e0e0e;
     transition: all 0.5s;
     display: none;
     z-index: 1001
@@ -203,7 +203,7 @@ input.wd {
     float: left;
     margin: 0;
     font-size: 14px;
-    color: rgb(165, 165, 165);
+    color: #BBBBBB;
 }
 
 .search-engine ul {
@@ -246,7 +246,7 @@ input.wd {
     left: 15px;
     padding: 5px 10px 5px 10px;
     margin: 0 10px 10px 0;
-    background: #777;
+    background: #333;
     color: rgb(216, 214, 214);
     cursor: pointer;
     list-style: none;
@@ -282,9 +282,9 @@ input.wd {
     left: 30px;
     float: left;
     -webkit-tap-highlight-color: transparent;
-    background: rgb(44, 42, 42);
+    background: rgb(58, 56, 56);
     font-size: 16px;
-    color: rgb(179, 177, 177);
+    color: #AAAAAA;
     text-overflow:ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -477,7 +477,7 @@ input.wd {
     transition: 0.4s all linear;
     height: 100%;
     display: block;
-    color: rgb(110, 110, 110);
+    color: #BBBBBB;
     font-weight: 500;
     background: #293550;
     text-align: left;
@@ -513,7 +513,7 @@ input.wd {
     text-align: left;
     text-indent: 10px;
     /*border-bottom: 1px dashed #dedede;*/
-    color: #fff;
+    color: #aaa;
     font-size: 18px;
     font-weight: bold;
 }
