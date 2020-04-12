@@ -67,7 +67,7 @@ $(document).ready(function() {
         '1':{
             title   :"Blog",
             url     :"https://blog.holger.net.cn/",
-            img     :"./static/images/avatar-300x300.webp",
+            img     :"https://i.holger.net.cn/static/images/avatar-300x300.webp",
             explain :"Holger's Blog",
         },
         '2':{
