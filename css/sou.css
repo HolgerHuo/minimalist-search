@@ -275,7 +275,7 @@ a {
     background: #eee;
     font-size: 16px;
     color: #777;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     line-height: 40px;
