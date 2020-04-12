@@ -1,6 +1,6 @@
 'use strict';
 
-var precacheConfig = [["./css/sou_night.css"],["./css/sou.css"],["./font_1230786_swt4kkie8ym/iconfont.js"],["./font_1614281/iconfont.css"],["./font_1230786_swt4kkie8ym/iconfont.css"],["./js/darkmode.js"],["./js/sou.js"],["./js/js.cookie.js"],["./js/jQuery.rTabs.js"],["./js/jquery-3.4.1.min.js"],["./static/images/avatar-300x300.webp"],["./static/images/server/apple-touch-icon.png"]];
+var precacheConfig = [["./css/sou_night.css"],["./css/sou.css"],["./css/font_1230786_swt4kkie8ym/iconfont.js"],["./css/font_1614281/iconfont.css"],["./css/font_1230786_swt4kkie8ym/iconfont.css"],["./js/darkmode.js"],["./js/sou.js"],["./js/js.cookie.js"],["./js/jQuery.rTabs.js"],["./js/jquery-3.4.1.min.js"],["./static/images/avatar-300x300.webp"],["./static/images/server/apple-touch-icon.png"]];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
 
 
