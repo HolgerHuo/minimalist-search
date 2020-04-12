@@ -23,6 +23,10 @@ body {
     background: rgb(0, 0, 0);
 }
 
+h3 {
+    color: #d2d2d2;
+}
+
 html {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
@@ -423,7 +427,7 @@ input.wd {
 
 .tab-nav a.current {
     background: rgba(0, 27, 26, 0.28);
-    color: #fff;
+    color: #dedbdb;
 }
 
 .tab-con {
@@ -524,7 +528,7 @@ input.wd {
 .set_blocks_title {
     font-size: 14px;
     background-color: rgb(65, 110, 152);
-    color: #fff;
+    color: #d2d2d2;
     padding: 10px 15px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -533,6 +537,8 @@ input.wd {
 .set_blocks_content {
     font-size: 14px;
     padding: 10px 15px;
+    background: #5d89b3;
+    color: #ccc;
 }
 
 .set_blocks_content table {
@@ -635,7 +641,8 @@ input.wd {
 }
 
 .my_data textarea {
-    width:100%
+    width:100%;
+    background: #565656;
 }
 
 
