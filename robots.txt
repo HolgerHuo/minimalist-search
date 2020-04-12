@@ -1,12 +1,11 @@
 User-agent: *
 Allow: /
 
-
-Disallow: /js/
-Disallow: /css/
 Disallow: /2019/
 Disallow: /2020/
 Disallow: /go/
-Disallow: /icon/
 Disallow: /static/
+Disallow: /static/js
+Disallow: /static/css
+Disallow: /static/icon
 Disallow: /static/images

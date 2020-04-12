@@ -22,7 +22,7 @@ $(document).ready(function() {
             title   :"Google",
             url     :"https://www.google.com/search",
             name    :"q",
-            img     :"./icon/google_1.png",
+            img     :"./static/icon/google_1.png",
 
         },
         '2':{
@@ -30,35 +30,35 @@ $(document).ready(function() {
             title   :"百度",
             url     :"https://www.baidu.com/s",
             name    :"wd",
-            img     :"./icon/baidu.ico",
+            img     :"./static/icon/baidu.ico",
         },
         '3':{
             id      :3,
             title   :"Bing CN",
             url     :"https://cn.bing.com/search",
             name    :"q",
-            img     :"./icon/bing.ico",
+            img     :"./static/icon/bing.ico",
         },
         '4':{
             id      :4,
             title   :"多吉",
             url     :"https://www.dogedoge.com/results",
             name    :"q",
-            img     :"./icon/doge_ico.png",
+            img     :"./static/icon/doge_ico.png",
         },
         '5':{
             id      :5,
             title   :"秘迹",
             url     :"https://mijisou.com",
             name    :"q",
-            img     :"./icon/mijisou.png",
+            img     :"./static/icon/mijisou.png",
         },
         '6':{
             id      :6,
             title   :"seeres*",
             url     :"https://seeres.com/search",
             name    :"q",
-            img     :"./icon/seeres.png",
+            img     :"./static/icon/seeres.png",
         },
     };
 
@@ -80,19 +80,19 @@ $(document).ready(function() {
         '3':{
             title   :"V2EX",
             url     :"https://www.v2ex.com/",
-            img     :"./icon/v2ex.png",
+            img     :"./static/icon/v2ex.png",
             explain :"V2EX",
         },
         '4':{
             title   :"Steam",
             url     :"https://store.steampowered.com/",
-            img     :"./icon/steam.ico",
+            img     :"./static/icon/steam.ico",
             explain :"Steam",
         },
         '5':{
             title   :"GitHub",
             url     :"https://github.com/",
-            img     :"./icon/github.ico",
+            img     :"./static/icon/github.ico",
             explain :"GitHub",
         },
     };

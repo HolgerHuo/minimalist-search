@@ -92,7 +92,7 @@ a {
     width: 120px;
     height: 120px;
     margin: 5px auto;
-    background: url(../static/images/avatar-300x300.webp) no-repeat center/cover;
+    background: url("avatar-300x300.webp") no-repeat center/cover;
 }
 
 .con .shlogo a {

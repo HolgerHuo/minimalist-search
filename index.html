@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <script async type="text/javascript" src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="./css/sou.css">
-    <link id="daily-theme" rel="stylesheet" href="./css/sou.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" data-original-media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
-    <link id="dark-theme" rel="stylesheet" href="./css/sou_night.css" media="(prefers-color-scheme: dark)" data-original-media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="static/css/sou.css">
+    <link id="daily-theme" rel="stylesheet" href="static/css/sou.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" data-original-media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+    <link id="dark-theme" rel="stylesheet" href="static/css/sou_night.css" media="(prefers-color-scheme: dark)" data-original-media="(prefers-color-scheme: dark)">
     <link rel="manifest" href="/manifest.json">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet"> <!--引用Google Fonts Josefin Sans-->
+    <!--load sw.js ©️holger-->
     <script async>'use strict';'serviceWorker'in navigator&&navigator.serviceWorker.register('service-worker.js').then(function(a){a.onupdatefound=function(){var b=a.installing;b.onstatechange=function(){switch(b.state){case'installed':navigator.serviceWorker.controller?console.log('New or updated content is available.'):console.log('Content is now available offline!');break;case'redundant':console.error('The installing service worker became redundant.');}}}}).catch(function(a){console.error('Error during service worker registration:',a)});
     </script>
+    <!--load sw.js end-->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143771561-3"></script>
     <script async>
@@ -59,14 +61,14 @@
     <meta name="browsermode" content="application"><!--UC应用模式-->
     <meta name="x5-fullscreen" content="true"><!--QQ强制全屏-->
     <meta name="x5-page-mode" content="app"><!--QQ应用模式-->
-    <script src="./js/jquery-3.4.1.min.js"></script>
-    <script src="./js/jQuery.rTabs.js"></script>
-    <script src="./js/js.cookie.js"></script>
-    <script src="./js/sou.js"></script>
-    <script async src="./js/darkmode.js"></script>
-    <link rel="stylesheet" href="./css/font_1230786_swt4kkie8ym/iconfont.css">
-    <link rel="stylesheet" href="./css/font_1614281/iconfont.css">
-    <script async src="./css/font_1230786_swt4kkie8ym/iconfont.js"></script>
+    <script src="static/js/jquery-3.4.1.min.js"></script>
+    <script src="static/js/jQuery.rTabs.js"></script>
+    <script src="static/js/js.cookie.js"></script>
+    <script src="static/js/sou.js"></script>
+    <script async src="static/js/darkmode.js"></script>
+    <link rel="stylesheet" href="static/css/font_1230786_swt4kkie8ym/iconfont.css">
+    <link rel="stylesheet" href="static/css/font_1614281/iconfont.css">
+    <script async src="static/css/font_1230786_swt4kkie8ym/iconfont.js"></script>
 </head>
 <body>
 
@@ -392,7 +394,7 @@
                 <div class="tab-con-item">
 
                     <div class="me">
-                        <p><img src="./icon/user.png"></p>
+                        <p><img src="static/icon/user.png"></p>
                     </div>
                     <div class="my_data">
                         <hr>
@@ -423,7 +425,7 @@
            <div class="shlogo"></div>
             <div class="sou">
                 <form target="_blank" class="search" action="https://www.google.com/search">
-                    <img class="se" src="./icon/google_1.png" title="Switch"></img>
+                    <img class="se" src="static/icon/google_1.png" title="Switch"></img>
                     <input id="search_placeholder" class="wd" type="text" name="wd" placeholder="My life is all about you~">
                     <button class="s">
                         <i style="font-size: 20px;" class="iconfont icon-sousuo"></i>
@@ -434,12 +436,12 @@
                         <strong class="search-engine-tit">Select Search Engine</strong>
                     </div>
                     <ul class="search-engine-list">
-                         <li class="se-li" url="https://www.baidu.com/s" name="wd" img="./icon/baidu.ico"><img src="./icon/baidu.ico"></img>百度</li>
-                         <li class="se-li" url="https://www.google.com/search" name="q" img="./icon/google_1.png"><img src="./icon/google_1.png"></img>Google</li>
-                         <li class="se-li" url="https://cn.bing.com/search" name="q" img="./icon/bing.ico"><img src="./icon/bing.ico"></img>Bing CN</li>
-                         <li class="se-li" url="https://www.dogedoge.com/results" name="q" img="./icon/doge_ico.png"><img src="./icon/doge_ico.png"></img>多吉</li>
-                         <li class="se-li" url="https://mijisou.com" name="q" img="./icon/mijisou.png"><img src="./icon/mijisou.png"></img>秘迹</li>
-                         <li class="se-li" url="https://seeres.com/search" name="q" img="./icon/seeres.png"><img src="./icon/seeres.png"></img>seeres*</li>
+                         <li class="se-li" url="https://www.baidu.com/s" name="wd" img="static/icon/baidu.ico"><img src="static/icon/baidu.ico"></img>百度</li>
+                         <li class="se-li" url="https://www.google.com/search" name="q" img="static/icon/google_1.png"><img src="static/icon/google_1.png"></img>Google</li>
+                         <li class="se-li" url="https://cn.bing.com/search" name="q" img="static/icon/bing.ico"><img src="static/icon/bing.ico"></img>Bing CN</li>
+                         <li class="se-li" url="https://www.dogedoge.com/results" name="q" img="static/icon/doge_ico.png"><img src="static/icon/doge_ico.png"></img>多吉</li>
+                         <li class="se-li" url="https://mijisou.com" name="q" img="static/icon/mijisou.png"><img src="static/icon/mijisou.png"></img>秘迹</li>
+                         <li class="se-li" url="https://seeres.com/search" name="q" img="static/icon/seeres.png"><img src="static/icon/seeres.png"></img>seeres*</li>
                     </ul>
                 </div>
                 <div class="quick-div">
@@ -458,19 +460,19 @@
                         </li>
                         <li class="quick" data-s="scp" target="_blank" title="GitHub">
                             <a target=_blank rel="nofollow" href="https://github.com">
-                                <i style="background-image: url(./icon/github.ico);"></i>
+                                <i style="background-image: url(static/icon/github.ico);"></i>
                                 GitHub
                             </a>
                         </li>
                         <li class="quick" data-s="v2ex" target="_blank" title="V2EX">
                             <a rel="nofollow" href="https://www.v2ex.com/">
-                                <i style="background-image: url(./icon/v2ex.png);"></i>
+                                <i style="background-image: url(static/icon/v2ex.png);"></i>
                                 V2EX
                             </a>
                         </li>
                         <li class="quick" data-s="steam" target="_blank" title="Steam">
                             <a target=_blank rel="nofollow" href="https://store.steampowered.com/">
-                                <i style="background-image: url(./icon/steam.ico);"></i>
+                                <i style="background-image: url(static/icon/steam.ico);"></i>
                                 Steam
                             </a>
                         </li>
@@ -513,43 +515,14 @@
                 });
         </script>
         <script async>
-            var maxTime = 3000;
-            var timeoutInterval = 5;
-
-            var usedTime = 0;
-            var isManualFocus = false;
-            function check() {
-                if (!isManualFocus && document.activeElement.tagName.toLowerCase() == "input") {
-                    console.log("BLURRED");
-                    document.activeElement.blur();
-                }
-                usedTime += timeoutInterval;
-                if (usedTime < maxTime) {
-                    window.setTimeout(check, timeoutInterval);
-                }
-            }
-            check();
-
-
-            document.body.addEventListener("click", function (evt) {
-                if (evt.target.tagName == "INPUT") {
-                    console.log("MANUAL CLICK");
-                    isManualFocus = true;
-                }
-            });
-
-            document.body.addEventListener("keydown", function (evt) {
-                isManualFocus = true;
-            });
         </script>
         <!--今日诗词 placeholder end-->
         </div>
         <div class="foot">  
            ©️ 2020 Minimalist Index by
             <a href="https://blog.holger.net.cn/about/" target="_blank" ><b>Holger</b></a><p> Ver. 0.3.0<pss><a href='http://i.holger.net.cn' target='_blank'> </a>&nbsp;&nbsp;<ping></ping></pss></p>
-            <script>
-                var _0x8d31=["\x68\x74\x74\x70\x3A\x2F\x2F\x68\x6F\x6C\x67\x65\x72\x2E\x6E\x65\x74\x2E\x63\x6E","\x70\x69\x6E\x67\x2B\x2B","\x6C\x65\x6E\x67\x74\x68","\x54\x65\x73\x74\x69\x6E\x67\x2E\x2E\x2E","\x68\x74\x6D\x6C","\x70\x69\x6E\x67","\x66\x69\x6E\x64","\x65\x71","\x70\x73\x73","\x3C\x69\x6D\x67\x20\x73\x72\x63\x3D\x27\x68\x74\x74\x70\x73\x3A\x2F\x2F\x69\x2E\x68\x6F\x6C\x67\x65\x72\x2E\x6E\x65\x74\x2E\x63\x6E\x2F\x70\x69\x6E\x67\x27\x20\x77\x69\x64\x74\x68\x3D\x27\x31\x27\x20\x68\x65\x69\x67\x68\x74\x3D\x27\x31\x27\x20\x6F\x6E\x65\x72\x72\x6F\x72\x3D\x27\x61\x75\x74\x6F\x74\x65\x73\x74\x28","\x29\x27\x20\x73\x74\x79\x6C\x65\x3D\x27\x64\x69\x73\x70\x6C\x61\x79\x3A\x6E\x6F\x6E\x65\x27\x3E","\x61\x70\x70\x65\x6E\x64","\x6D\x73","\x74\x65\x78\x74"];var ping=1,urlList=[_0x8d31[0]];setInterval(_0x8d31[1],100);newRequest();function newRequest(){for(var _0x9121x4=0;_0x9121x4< urlList[_0x8d31[2]];_0x9121x4++){$(_0x8d31[8])[_0x8d31[7]](_0x9121x4)[_0x8d31[6]](_0x8d31[5])[_0x8d31[4]](_0x8d31[3]);$(_0x8d31[8])[_0x8d31[7]](_0x9121x4)[_0x8d31[6]](_0x8d31[5])[_0x8d31[11]](_0x8d31[9]+ _0x9121x4+ _0x8d31[10])}}function autotest(_0x9121x4){$(_0x8d31[8])[_0x8d31[7]](_0x9121x4)[_0x8d31[6]](_0x8d31[5])[_0x8d31[13]](ping* 10+ _0x8d31[12])}
-            </script>
+            <script async src="static/js/latency.js"></script>
+            <script async src="static/js/defocus.js"></script>
         </div>
     </div>
     <!--搜索框和书签 end-->
