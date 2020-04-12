@@ -4,4 +4,9 @@ Allow: /
 
 Disallow: /js/
 Disallow: /css/
-Disallow: /lib/
+Disallow: /2019/
+Disallow: /2020/
+Disallow: /go/
+Disallow: /icon/
+Disallow: /static/
+Disallow: /static/images
