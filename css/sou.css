@@ -47,6 +47,11 @@ html {
     background: none;
 }
 
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
 .wd::-webkit-input-placeholder {
     color: #ccc;
     letter-spacing: 2px;

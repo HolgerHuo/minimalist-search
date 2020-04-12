@@ -20,7 +20,7 @@ body {
     height: 100%;
     position: relative;
     overflow: hidden;
-    background: rgb(0, 0, 0);
+    background: #202020;
 }
 
 h3 {
@@ -43,8 +43,13 @@ html {
     background: none;
 }
 
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
 .wd::-webkit-input-placeholder {
-    color: rgb(99, 96, 96);
+    color: #8f8b8a;
     letter-spacing: 2px;
     font-size: 16px;
 }
@@ -137,14 +142,15 @@ a {
 }
 
 input.wd {
-    color: #b5b2b2;
+    color: #8f8b8a;
+    background: #353535;
 }
 
 .con .sou form .wd {
     width: 100%;
     height: 100%;
     display: block;
-    border: 1px solid rgb(99, 96, 96);
+    border: 1px solid #353535;
     border-radius: 25px;
     line-height: 100%;
     text-indent: 55px;
