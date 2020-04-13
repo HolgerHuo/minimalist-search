@@ -1,6 +1,22 @@
 'use strict';
 
-var precacheConfig = [["static/css/sou_night.css"],["static/css/sou.css"],["static/css/font_1230786_swt4kkie8ym/iconfont.js"],["static/css/font_1614281/iconfont.css"],["static/css/font_1230786_swt4kkie8ym/iconfont.css"],["static/js/darkmode.js"],["static/js/sou.js"],["static/js/js.cookie.js"],["static/js/jQuery.rTabs.js"],["static/js/latency.js"],["static/js/defocus.js"],["static/js/jquery-3.4.1.min.js"],["./static/images/avatar-300x300.webp"],["./static/images/server/apple-touch-icon.png"]];
+var precacheConfig = [
+  ["static/css/sou_night.css"],
+  ["static/css/sou.css"],
+  ["static/css/font_1230786_swt4kkie8ym/iconfont.js"],
+  ["static/css/font_1614281/iconfont.css"],
+  ["static/css/font_1230786_swt4kkie8ym/iconfont.css"],
+  ["static/js/darkmode.js"],
+  ["static/js/sou.js"],
+  ["static/js/js.cookie.js"],
+  ["static/js/jQuery.rTabs.js"],
+  ["static/js/latency.js"],
+  ["static/js/defocus.js"],
+  ["static/js/jquery-3.4.1.min.js"],
+  ["./static/images/avatar-300x300.webp"],
+  ["./static/images/avatar_night.png"],
+  ["./static/images/server/apple-touch-icon.png"]
+];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
 
 
