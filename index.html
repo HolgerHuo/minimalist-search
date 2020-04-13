@@ -31,9 +31,27 @@
     <link rel="manifest" href="static/manifest.json">
     <script type="text/javascript" src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <!--load sw.js ©️holger-->
-    <script async>'use strict';'serviceWorker'in navigator&&navigator.serviceWorker.register('service-worker.js').then(function(a){a.onupdatefound=function(){var b=a.installing;b.onstatechange=function(){switch(b.state){case'installed':navigator.serviceWorker.controller?console.log('New or updated content is available.'):console.log('Content is now available offline!');break;case'redundant':console.error('The installing service worker became redundant.');}}}}).catch(function(a){console.error('Error during service worker registration:',a)});
+    <script async>
+        'use strict';
+        'serviceWorker' in navigator && navigator.serviceWorker.register('static/js/service-worker.js').then(function(a) {
+            a.onupdatefound = function() {
+                var b = a.installing;
+                b.onstatechange = function() {
+                    switch (b.state) {
+                        case 'installed':
+                            navigator.serviceWorker.controller ? console.log('New or updated content is available.') : console.log('Content is now available offline!');
+                            break;
+                        case 'redundant':
+                            console.error('The installing service worker became redundant.');
+                    }
+                }
+            }
+        }).catch(function(a) {
+            console.error('Error during service worker registration:', a)
+        });
     </script>
     <!--load sw.js end-->
+    <!-- analytics -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143771561-3"></script>
     <script async>
@@ -43,8 +61,6 @@
 
     gtag('config', 'UA-143771561-3');
     </script>
-    <script async src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>  
-    <script async src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>  
     <script async>
         var _hmt = _hmt || [];
         (function() {
@@ -54,6 +70,7 @@
           s.parentNode.insertBefore(hm, s);
         })();
     </script>   
+    <!-- analytics end-->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <link rel="icon" href="./static/images/avatar-300x300.webp" sizes="192x192" />
