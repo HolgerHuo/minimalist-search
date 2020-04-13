@@ -665,11 +665,6 @@ a.quick_div_a {
         width: 100px;
         height: 100px;
     }
-    .con .sou form .wd:focus {
-        background: #f1f1f1;
-        box-shadow: none;
-        border-color: #ccc
-    }
     .con .sou form button {
         border-radius: 25px;
     }
