@@ -248,6 +248,12 @@ a {
     left: 1px;
 }
 
+ul.quick-ul {
+    justify-content: center;
+    display: flex;
+    margin-right: 70px;
+}
+
 .search-engine-list li {
     float: left;
     width: 80px;
@@ -667,6 +673,11 @@ a.quick_div_a {
 @media (max-width: 720px) {
     .con {
         top: 0px;
+    }
+    ul.quick-ul {
+        justify-content: center;
+        display: flex;
+        margin-right: 0px;
     }
     .con .shlogo {
         width: 100px;

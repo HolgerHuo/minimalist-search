@@ -651,6 +651,12 @@ a.quick_div_a {
     background-color: #599cff;
 }
 
+ul.quick-ul {
+    justify-content: center;
+    display: flex;
+    margin-right: 70px;
+}
+
 .me {
     text-align: center;
     color: #fff;
@@ -668,6 +674,11 @@ a.quick_div_a {
 
 
 @media (max-width: 720px) {
+    ul.quick-ul {
+        justify-content: center;
+        display: flex;
+        margin-right: 0px;
+    }
     .con {
         top: 0px;
     }
