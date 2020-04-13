@@ -347,8 +347,8 @@ $(document).ready(function() {
         for (var i in quick_list) {
             html += "<li class='quick' target='_blank' title='"+quick_list[i]['explain']+"'>\
                         <a class='quick_div_a' target=_blank href='"+quick_list[i]['url']+"'>\
-                            <i style='background-image: url("+quick_list[i]['img']+");'></i>\
-                            "+quick_list[i]['title']+"\
+                            <i style='background-image: url("+quick_list[i]['img']+");'></i><div id='txtq'>\
+                            "+quick_list[i]['title']+"\</div>\
                         </a>\
                      </li>";
         }
