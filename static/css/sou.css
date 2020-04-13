@@ -274,7 +274,9 @@ a {
     overflow: hidden;
 }
 
-
+a.quick_div_a {
+    font-size: 14px;
+}
 
 .quick {
     width: 17%;
