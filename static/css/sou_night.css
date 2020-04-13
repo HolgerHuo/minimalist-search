@@ -338,7 +338,7 @@ input.wd {
     top: 5px;
     z-index: 2000000;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s ease-in-out;
 }
 
 #menu i {
@@ -409,7 +409,7 @@ input.wd {
     right: 0px;
     z-index: 2000;
     background: #222d46;
-    transition: 0.3s all linear;
+    transition: 0.5s all ease-in-out;
 }
 
 .side.closed {
