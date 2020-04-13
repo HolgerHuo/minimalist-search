@@ -23,7 +23,7 @@
 
 - 增加深色模式（跟随系统）
 
-  ![此GIF上的配色已过时](/Users/holgerhuo/Desktop/darkmode.gif)
+  ![此GIF上的配色已过时](https://github.com/HolgerHuo/Minimalist-Index/raw/master/static/images/darkmode.gif)
 
 ## 计划
 
