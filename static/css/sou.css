@@ -146,22 +146,33 @@ a {
 }
 
 .con .sou form .wd {
-    width: 100%;
+    width: 90%;
     height: 100%;
     text-overflow: ellipsis;
     display: block;
-    border: 1px solid #fbfbfb;
-    background: #fbfbfb;
-    border-radius: 25px;
     line-height: 100%;
     text-indent: 55px;
     font-size: 18px;
 }
 
 .con .sou form .wd:focus {
+    background: transparent;
+}
+
+.con .sou form {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fbfbfb;
+    background: #fbfbfb;
+    border-radius: 25px;
+}
+
+.con .sou form:hover {
     background: #fdfdfd;
     box-shadow: 0 1px 6px 0 #fdfdfd;
     border-color: #fdfdfd
+    border: 1px solid #fdfdfd;
+    border-radius: 25px;
 }
 
 .sou form .s {
