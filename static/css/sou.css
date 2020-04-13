@@ -170,7 +170,7 @@ a {
 .con .sou form:hover {
     background: #fdfdfd;
     box-shadow: 0 1px 6px 0 #fdfdfd;
-    border-color: #fdfdfd
+    border-color: #fdfdfd;
     border: 1px solid #fdfdfd;
     border-radius: 25px;
 }
