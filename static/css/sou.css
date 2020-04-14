@@ -691,7 +691,7 @@ a.quick_div_a {
         width: 220px;
     }
     .con .sou ul li {
-        width: 100px;
+        width: 23%;
         font-size: 12px;
     }
     .quick{
@@ -700,6 +700,52 @@ a.quick_div_a {
     .home,
     #menu {
         top: 5px;
+    }
+    ul{
+        margin-left: 25px !important;
+    }
+}
+@media (max-width: 609px) {
+    .con .sou ul li {
+        width: 22% !important;
+    }
+    ul{
+        margin-left: 30px !important;
+    }
+}
+@media (max-width: 514px) {
+    .con .sou ul li {
+        width: 31% !important;
+    }
+    ul{
+        margin-left: 15px !important;
+    }
+}
+@media (max-width: 514px) {
+    ul{
+        margin-left: auto !important;
+    }
+}
+@media (max-width: 400px) {
+    ul{
+    margin: auto !important;
+    width: fit-content;
+    }
+    .con .sou ul li {
+        width: 50px !important;
+        margin: 10px;
+        height: 50px !important;
+        border-radius: 25px;
+    }
+    .quick i {
+        width: 50px !important; 
+        height: 50px !important;
+    }
+    .con .sou ul li {
+        margin: 5px !important;
+    }
+    div#txtq{
+        display: none !important;
     }
 }
 
