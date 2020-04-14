@@ -722,7 +722,7 @@ a.quick_div_a {
         margin-left: 30px !important;
     }
 }
-@media (max-width: 514px) {
+@media (max-width: 455px) {
     .con .sou ul li {
         width: 31% !important;
     }
