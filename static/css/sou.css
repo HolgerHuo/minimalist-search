@@ -671,6 +671,13 @@ a.quick_div_a {
 
 
 @media (max-width: 720px) {
+    div#txtq {
+        display: none !important;
+    }
+    .quick{
+        width: 40px !important;
+        margin: 5px 10px !important;
+    }
     .con {
         top: 0px;
     }

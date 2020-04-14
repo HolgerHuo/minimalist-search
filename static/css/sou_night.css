@@ -715,6 +715,13 @@ ul.quick-ul {
     #menu {
         top: 5px;
     }
+    div#txtq {
+        display: none !important;
+    }
+    .quick{
+        width: 40px !important;
+        margin: 5px 10px !important;
+    }
 }
 
 @media (max-height: 420px) {
