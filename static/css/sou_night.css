@@ -724,14 +724,9 @@ a.quick_div_a {
         margin-left: 15px !important;
     }
 }
-@media (max-width: 514px) {
-    ul{
-        margin-left: auto !important;
-    }
-}
 @media (max-width: 400px) {
     ul{
-    margin: auto !important;
+    margin: 10px !important;
     width: fit-content;
     }
     .con .sou ul li {
