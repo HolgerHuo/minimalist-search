@@ -693,6 +693,7 @@ a.quick_div_a {
     .con .sou ul li {
         width: 23%;
         font-size: 12px;
+        max-width: 116px;
     }
     .quick{
         left: 0px;
@@ -703,6 +704,11 @@ a.quick_div_a {
     }
     ul{
         margin-left: 25px !important;
+    }
+}
+@media (max-width: 698px) {
+    .con .sou ul li {
+        width: 18.5%;
     }
 }
 @media (max-width: 609px) {
