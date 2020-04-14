@@ -754,8 +754,9 @@ a.quick_div_a {
 @media screen and (orientation:portrait) {
     @media (max-width: 550px) {
         ul{
-        margin-left: 10px !important;
-        width: fit-content;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            width: fit-content;
         }
         .con .sou ul li {
             width: 50px !important;
