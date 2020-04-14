@@ -732,7 +732,7 @@ a.quick_div_a {
 }
 @media (max-width: 400px) {
     ul{
-    margin: 10px !important;
+    margin-left: 10px !important;
     width: fit-content;
     }
     .con .sou ul li {
