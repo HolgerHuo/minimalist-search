@@ -750,6 +750,32 @@ a.quick_div_a {
     }
 }
 
+/* portrait */
+@media screen and (orientation:portrait) {
+    @media (max-width: 550px) {
+        ul{
+        margin-left: 10px !important;
+        width: fit-content;
+        }
+        .con .sou ul li {
+            width: 50px !important;
+            margin: 10px;
+            height: 50px !important;
+            border-radius: 25px;
+        }
+        .quick i {
+            width: 50px !important; 
+            height: 50px !important;
+        }
+        .con .sou ul li {
+            margin: 5px !important;
+        }
+        div#txtq{
+            display: none !important;
+        }
+    }
+}
+
 @media (max-height: 420px) {
     .con {
         margin: 0;
