@@ -48,11 +48,13 @@ if(Cookies.get('theme')!=="1"&&Cookies.get('theme')!=="0"){
     }
     window.addEventListener('colorschemechange', (e) => {
         if(e.detail.colorScheme == "dark"){
-            $("#theme-switch-icon").attr("src", "static/icon/icon-dark.svg")
+            if(Cookies.get('theme')!=="1"&&Cookies.get('theme')!=="0"){
+            $("#theme-switch-icon").attr("src", "static/icon/icon-dark.svg")}
             Cookies.set('theme',3, { expires: 1 });
         }
         if(e.detail.colorScheme == "daily"){
-            $("#theme-switch-icon").attr("src", "static/icon/icon-light.svg")
+            if(Cookies.get('theme')!=="1"&&Cookies.get('theme')!=="0"){
+            $("#theme-switch-icon").attr("src", "static/icon/icon-light.svg")}
             Cookies.set('theme',2, { expires: 1 });
         }
     });
