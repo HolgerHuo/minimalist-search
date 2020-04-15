@@ -841,7 +841,7 @@ a.quick_div_a {
     height: 20px;
     line-height: 20px;
     cursor: pointer;
-    z-index: 100;
+    z-index: 1;
     height: 22px;
 }
 .mywth {
