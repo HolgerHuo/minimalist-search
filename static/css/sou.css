@@ -802,6 +802,7 @@ a.quick_div_a {
     }
     .home,
     #menu,
+    .theme-switch,
     .mywth,
     .foot {
         display: none;
