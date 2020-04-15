@@ -29,7 +29,7 @@
     <link id="dark-theme" rel="stylesheet" href="static/css/sou_night.css" media="(prefers-color-scheme: dark)" data-original-media="(prefers-color-scheme: dark)">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet"> <!--引用Google Fonts Josefin Sans-->
     <link rel="manifest" href="static/manifest.json">
-    <script type="text/javascript" src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script async type="text/javascript" src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <!--load sw.js ©️holger-->
     <script async>
         'use strict';
@@ -526,7 +526,7 @@
             })  
         </script>  
         <!--今日诗词 placeholder copyright holger-->
-        <script>
+        <script async>
               jinrishici.load(function(result) {
                 var telecopy =  result.data.content;
                 var cursor = "|";
@@ -541,8 +541,6 @@
                         }
                     }, 100);
                 });
-        </script>
-        <script async>
         </script>
         <!--今日诗词 placeholder end-->
         </div>
