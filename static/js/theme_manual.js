@@ -25,14 +25,15 @@ initTheme();
 $(document).ready(function(){
   theme = Cookies.get('theme');
   $("#theme-switch").click(function() {
-    if(theme =='1' || theme == '3'){
-        Cookies.set('theme',0, { expires: 1 });
-        themeLight();
-        $("#theme-switch-icon").attr("src", "static/icon/icon-light.svg");
-    }if(theme == "0" || theme == '2'){
+    if(theme == "0" || window.matchMedia('(prefers-color-scheme: light)').matches){
       Cookies.set('theme', '1', { expires: 1 });
       themeDark();
       $("#theme-switch-icon").attr("src", "static/icon/icon-dark.svg");
+    }
+    else if (theme == "1" || window.matchMedia('(prefers-color-scheme: dark)').matches){
+        Cookies.set('theme',0, { expires: 1 });
+        themeLight();
+        $("#theme-switch-icon").attr("src", "static/icon/icon-light.svg");
     }
     initThemeSwitch();
   });
