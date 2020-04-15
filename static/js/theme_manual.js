@@ -26,11 +26,11 @@ $(document).ready(function(){
   theme = Cookies.get('theme');
   $("#theme-switch").click(function() {
     if(theme =='1' || theme == '3'){
-        Cookies.set('theme',0);
+        Cookies.set('theme',0, { expires: 1 });
         themeLight();
         $("#theme-switch-icon").attr("src", "static/icon/icon-light.svg");
     }if(theme == "0" || theme == '2'){
-      Cookies.set('theme', '1', { expires: 3650});
+      Cookies.set('theme', '1', { expires: 1 });
       themeDark();
       $("#theme-switch-icon").attr("src", "static/icon/icon-dark.svg");
     }
