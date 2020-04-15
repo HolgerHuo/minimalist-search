@@ -1,3 +1,6 @@
+/*
+    Copyright 2020 Holger https://holger.net.cn Under GPLv3.0 @ https://github.com/holgerhuo/minimalist-search
+*/
 const hasNativePrefersColorScheme =
         window.matchMedia('(prefers-color-scheme)').media !== 'not all';
 let theme_value = localStorage.getItem('theme'),

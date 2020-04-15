@@ -1,4 +1,4 @@
-# Minimalist Index
+# Minimalist Search
 
 一个纯HTML+CSS+JS的极简起始页 [https://i.holger.net.cn](https://i.holger.net.cn) 。
 
@@ -23,8 +23,8 @@
 
 - 增加深色模式（跟随系统）
 
-  ![此GIF上的配色已过时](https://github.com/HolgerHuo/Minimalist-Index/raw/master/static/images/darkmode.gif)
-
+  ![此GIF上的配色已过时](https://github.com/HolgerHuo/minimalist-search/raw/master/static/images/darkmode.gif)
+> 此图中配色以过时
 ## 计划
 
 - [ ] 搜索记录
@@ -33,7 +33,7 @@
 
 ## 下载地址
 
-[Releases](https://github.com/HolgerHuo/Minimalist-Index/releases)
+[Releases](https://github.com/HolgerHuo/minimalist-search/releases)
 
 ------
 
