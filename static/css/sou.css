@@ -866,3 +866,10 @@ a.quick_div_a {
     line-height: 28px;
     font-size: 15px;
 }
+
+.theme-switch{
+    top: 20.5px;
+    right: 75px;
+    position: absolute!important;
+    z-index: 2;
+}
