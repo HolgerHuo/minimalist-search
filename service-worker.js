@@ -8,7 +8,6 @@ var precacheConfig = [
   ["static/css/font_1230786_swt4kkie8ym/iconfont.css"],
   ["static/js/theme_auto.js"],
   ["static/js/theme_manual.js"],
-  ["static/js/sou.js"],
   ["static/js/js.cookie.js"],
   ["static/js/jQuery.rTabs.js"],
   ["static/js/latency.js"],
