@@ -71,10 +71,10 @@ $(document).ready(function() {
             explain :"Holger's Blog",
         },
         '2':{
-            title   :"SNS",
-            url     :"https://sns.holger.net.cn",
-            img     :"https://sns.holger.net.cn/favicon.ico",
-            explain :"Notre Monde",
+            title   :"Island",
+            url     :"https://mast.dragon-fly.club",
+            img     :"https://mast.dragon-fly.club/favicon.ico",
+            explain :"Island 岛屿 | 一座属于你的岛屿",
 
         },
         '3':{
