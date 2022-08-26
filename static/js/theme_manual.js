@@ -1,6 +1,6 @@
 /* manual switch*/
 /*
-    Copyright 2020 Holger https://holger.net.cn Under GPLv3.0 @ https://github.com/holgerhuo/minimalist-search
+    Copyright 2020 Holger https://holger.one Under GPLv3.0 @ https://github.com/holgerhuo/minimalist-search
 */
 function themeDark(){$('head').append('<link rel="stylesheet" href="static/css/sou_night.css" />');}
 function themeLight(){$('head').append('<link rel="stylesheet" href="static/css/sou.css" />');}

@@ -17,7 +17,7 @@ var precacheConfig = [
   ["./static/images/avatar_night.png"],
   ["./static/images/server/apple-touch-icon.png"]
 ];
-var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
+var cacheName = 'sw-precache-v4--' + (self.registration ? self.registration.scope : '');
 
 
 var ignoreUrlParametersMatching = [/^utm_/];

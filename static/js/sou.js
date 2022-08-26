@@ -9,7 +9,7 @@ github：https://github.com/5iux/sou
 github：https://github.com/yeetime/sou2
 日期：2019-12-13
 Modified by Holger Huo
-https://blog.holger.net.cn/
+https://holger.one/
 Apr.11 2020
 */
 
@@ -66,8 +66,8 @@ $(document).ready(function() {
     var quick_list_preinstall = {
         '1':{
             title   :"Blog",
-            url     :"https://blog.holger.net.cn/",
-            img     :"https://i.holger.net.cn/static/images/avatar-300x300.webp",
+            url     :"https://holger.one/",
+            img     :"https://mravatar.r669.live/avatar/holgerhuo@dragon-fly.club?no-cache=true&proxied=true",
             explain :"Holger's Blog",
         },
         '2':{
