@@ -67,7 +67,7 @@ $(document).ready(function() {
         '1':{
             title   :"Blog",
             url     :"https://holger.one/",
-            img     :"https://mravatar.r669.live/avatar/holgerhuo@dragon-fly.club?no-cache=true&proxied=true",
+            img     :"https://mravatar.dragoncloud.win/avatar/holgerhuo@dragon-fly.club?no-cache=true&proxied=true",
             explain :"Holger's Blog",
         },
         '2':{
