@@ -2,329 +2,238 @@
 <!--
     Copyright 2022 Holger https://holger.one Under GPLv3.0 @ https://github.com/holgerhuo/minimalist-search
 -->
-<html lang="en-US">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
-    <!--begin seo-->
-    <script async defer data-website-id="321054be-150e-4cdf-a192-237959fe72d9"
-        src="https://stats.dragon-fly.club/umami.js"></script>
-    <script defer data-domain="i.holger.net.cn" src="https://report.dragoncloud.win/js/script.outbound-links.file-downloads.tagged-events.js"></script>
-    <meta name="copyright" content="©️ 2022 Holger GPLv3.0">
-    <meta name="author" content="Holger" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="copyright" content="© 2025 Holger GPLv3.0">
+    <meta name="author" content="Holger">
     <title>Minimalist Search - A homepage for everyone</title>
     <meta name="keywords" content="aggregator,index,homepage,start,开始界面,网站聚合,主页,网址大全,网址导航">
-    <meta name="description"
-        content="Minimalist Search - A clean, simple, comprehensive homepage for everyone! With all common sites hidden in sidebar, fully customized quick navigation, choose your favorite search engine, and dark-mode ready!">
-    <!-- / FB Open Graph -->
-    <meta property="og:type" content="article">
+    <meta name="description" content="Minimalist Search - A clean, simple, comprehensive homepage for everyone! With all common sites hidden in sidebar, fully customized quick navigation, choose your favorite search engine, and dark-mode ready!">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://i.holger.net.cn">
     <meta property="og:title" content="Minimalist Search - A homepage for everyone">
-    <meta property="og:description"
-        content="Minimalist Search - A clean, simple, comprehensive homepage for everyone! With all common sites hidden in sidebar, fully customized quick navigation, choose your favorite search engine, and dark-mode ready!">
+    <meta property="og:description" content="Minimalist Search - A clean, simple, comprehensive homepage for everyone! With all common sites hidden in sidebar, fully customized quick navigation, choose your favorite search engine, and dark-mode ready!">
     <meta property="og:image" content="./static/images/avatar.png">
     <meta property="og:site_name" content="Minimalist Search - A homepage with all websites you want!">
-    <!-- / FB Open Graph end -->
-    <!-- / Twitter Cards -->
+    
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Minimalist Search - A homepage for everyone">
-    <meta name="twitter:description"
-        content="Minimalist Search - A clean, simple, comprehensive homepage for everyone! With all common sites hidden in sidebar, fully customized quick navigation, choose your favorite search engine, and dark-mode ready!">
+    <meta name="twitter:description" content="Minimalist Search - A clean, simple, comprehensive homepage for everyone! With all common sites hidden in sidebar, fully customized quick navigation, choose your favorite search engine, and dark-mode ready!">
     <meta name="twitter:image" content="./static/images/avatar.png">
-    <!-- / Twitter Cards end -->
-    <!--seo end-->
-    <!--link external resources-->
-    <link rel="stylesheet" href="static/css/sou.css?new">
-    <link id="daily-theme" rel="stylesheet" href="static/css/sou.css?new"
-        media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
-        data-original-media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
-    <link id="dark-theme" rel="stylesheet" href="static/css/sou_night.css?new" media="(prefers-color-scheme: dark)"
-        data-original-media="(prefers-color-scheme: dark)">
+    
+    <!-- Security & Performance -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    
+    <!-- PWA & Mobile App Settings -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    
+    <!-- Icons & Manifest -->
+    <link rel="icon" href="./static/images/avatar-300x300.webp" sizes="192x192">
+    <link rel="apple-touch-icon" href="./static/images/server/apple-touch-icon.png">
+    <link rel="shortcut icon" href="./static/images/avatar-300x300.webp">
+    <meta name="msapplication-TileImage" content="./static/images/avatar-300x300.webp">
+    <link rel="manifest" href="static/manifest.json">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="static/css/sou.css">
+    <link id="daily-theme" rel="stylesheet" href="static/css/sou.css" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+    <link id="dark-theme" rel="stylesheet" href="static/css/sou_night.css" media="(prefers-color-scheme: dark)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
-    <!--引用Google Fonts Josefin Sans-->
-    <link rel="manifest" href="static/manifest.json?new">
-    <script type="text/javascript" src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <!-- analytics -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <link rel="stylesheet" href="static/css/font_1230786_swt4kkie8ym/iconfont.css">
+    <link rel="stylesheet" href="static/css/font_1614281/iconfont.css">
+    
+    <!-- Analytics -->
+    <script async defer data-website-id="321054be-150e-4cdf-a192-237959fe72d9" src="https://stats.dragon-fly.club/umami.js"></script>
+    <script defer data-domain="i.holger.net.cn" src="https://report.dragoncloud.win/js/script.outbound-links.file-downloads.tagged-events.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GP2P9TXKQ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-2GP2P9TXKQ');
     </script>
-    <!-- analytics end-->
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-transform" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="icon" href="./static/images/avatar-300x300.webp" sizes="192x192" />
-    <link rel="apple-touch-icon-precomposed" href="./static/images/server/apple-touch-icon.png" />
-    <meta name="msapplication-TileImage" content="./static/images/avatar-300x300.webp" />
-    <link rel="shortcut icon" href="./static/images/avatar-300x300.webp" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="full-screen" content="yes">
-    <!--UC强制全屏-->
-    <meta name="browsermode" content="application">
-    <!--UC应用模式-->
-    <meta name="x5-fullscreen" content="true">
-    <!--QQ强制全屏-->
-    <meta name="x5-page-mode" content="app">
-    <!--QQ应用模式-->
-    <script src="https://cdn.dragoncloud.win/libs/jquery/3.4.1/jquery-3.4.1.min.js"></script>
-    <script src="static/js/jQuery.rTabs.js"></script>
-    <script src="static/js/js.cookie.js"></script>
-    <script src="static/js/sou.js?new"></script>
-    <script async src="static/js/theme_auto.js"></script>
-    <script async src="static/js/theme_manual.js"></script>
-    <link rel="stylesheet" href="static/css/font_1230786_swt4kkie8ym/iconfont.css">
-    <link rel="stylesheet" href="static/css/font_1614281/iconfont.css">
-    <script async src="static/css/font_1230786_swt4kkie8ym/iconfont.js"></script>
+    
+    <!-- Main Application Script -->
+    <script defer src="static/js/sou.js"></script>
+    
+    <!-- Theme Scripts -->
+    <script defer src="static/js/theme_auto.js"></script>
+    <script defer src="static/js/theme_manual.js"></script>
+    
+    <!-- Icon Fonts & External Scripts -->
+    <script defer src="static/css/font_1230786_swt4kkie8ym/iconfont.js"></script>
+    <script defer src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 </head>
 
 <body>
+    <!-- Theme Toggle -->
     <div class="top-right theme-switch">
-        <a id="theme-switch">
-            <img id="theme-switch-icon" src="static/icon/icon-light.svg" width="20" height="20" title=""
-                aria-expanded="true">
+        <a id="theme-switch" aria-label="Toggle theme">
+            <img id="theme-switch-icon" src="static/icon/icon-light.svg" width="20" height="20" alt="Theme icon">
         </a>
     </div>
-    <!-- 侧栏 -->
-    <div id="menu"><i></i></div>
-    <div class="side closed">
-
-        <div class="tab-nav j-tab-nav">
-
-            <a href="javascript:void(0);" class="current">Sites</a>
-
-            <a href="javascript:void(0);">Settings</a>
-
-            <a href="javascript:void(0);">Backup</a>
-
-        </div>
+    
+    <!-- Sidebar Toggle -->
+    <div id="menu" aria-label="Toggle menu"><i></i></div>
+    
+    <!-- Sidebar -->
+    <aside class="side closed">
+        <nav class="tab-nav j-tab-nav">
+            <a href="#sites" class="current">Sites</a>
+            <a href="#settings">Settings</a>
+            <a href="#backup">Backup</a>
+        </nav>
 
         <div class="tab-con">
-
             <div class="j-tab-con">
-                <!--书签-->
+                <!-- Bookmarks -->
                 <div class="tab-con-item" style="display:block;">
-
                     <div class="list">
                         <ul>
-                            <!------>
-                            <li class="title"><i class="iconfont icon-youxiang"></i>Emails</li>
-                            <li><a rel="nofollow" href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><i
-                                        class="iconfont icon-gmail" style="color: #f03;"></i>Gmail</a></li>
-                            <li><a rel="nofollow" href="https://outlook.live.com/mail/" target="_blank"><i
-                                        class="iconfont icon-windows" style="color: #059;"></i>Hotmail</a></li>
-                            <li><a rel="nofollow" href="https://exmail.qq.com" target="_blank"><i
-                                        class="iconfont icon-QQ" style="color: #059;"></i>Exmail</a></li>
-                            <li><a rel="nofollow" href="https://mail.163.com/" target="_blank"><i
-                                        class="iconfont icon-wangyi" style="color: #169;"></i>网易邮箱</a></li>
-                            <li><a rel="nofollow" href="https://mail.sina.com.cn/" target="_blank"><i
-                                        class="iconfont icon-xinlang" style="color: #e6162d;"></i>新浪邮箱</a></li>
-                            <li><a rel="nofollow" href="https://mail.qq.com/" target="_blank"><i
-                                        class="iconfont icon-QQ" style="color: #f05;"></i>QQ邮箱</a></li>
-                            <li><a rel="nofollow" href="https://qiye.aliyun.com/" target="_blank"><i
-                                        class="iconfont icon-yunyouxiang" style="color: #f15534;"></i>阿里邮箱</a></li>
-                            <!------>
-                            <li class="title"><i class="iconfont icon-msg"></i>SNS</li>
-                            <li><a href="https://mast.dragon-fly.club" target="_blank"><i class="iconfont "
-                                        style="color: #e6162d;"></i>Island 岛屿</a></li>
-                            <li><a rel="nofollow" href="https://www.weibo.com" target="_blank"><i
-                                        class="iconfont icon-weibo" style="color: #e6162d;"></i>微博</a></li>
-                            <li><a rel="nofollow" href="https://www.zhihu.com/" target="_blank"><i
-                                        class="iconfont icon-zhihu" style="color: #0084ff;"></i>知乎</a></li>
-                            <li><a rel="nofollow" href="https://www.douban.com/" target="_blank"><i
-                                        class="iconfont icon-douban" style="color: #072;"></i>豆瓣</a></li>
-                            <li><a rel="nofollow" href="https://www.instagram.com" target="_blank"><i
-                                        class="iconfont icon-instagram" style="color: #93009f;"></i>Instagram</a></li>
-                            <li><a rel="nofollow" href="https://www.twitter.com" target="_blank"><i
-                                        class="iconfont icon-twitter" style="color: #00bcff;"></i>Twitter</a></li>
-                            <li><a rel="nofollow" href="https://www.facebook.com" target="_blank"><i
-                                        class="iconfont icon-facebook" style="color: #4267b2;"></i>Facebook</a></li>
-                            <!------>
-                            <li class="title"><i class="iconfont icon-shipin"></i>Media</li>
-                            <li><a rel="nofollow" href="https://www.youtube.com/" target="_blank"><i
-                                        class="iconfont icon-youtube" style="color:#f03;"></i>Youtube</a></li>
-                            <li><a rel="nofollow" href="https://v.qq.com/" target="_blank"><i
-                                        class="iconfont icon-tengxunshipin" style="color:#2a0;"></i>腾讯视频</a></li>
-                            <li><a rel="nofollow" href="https://www.youku.com/" target="_blank"><i
-                                        class="iconfont icon-youku" style="color:#09e;"></i>优酷</a></li>
-                            <li><a rel="nofollow" href="https://www.iqiyi.com/" target="_blank"><i
-                                        class="iconfont icon-aiqiyi" style="color:#1d0;"></i>爱奇艺</a></li>
-                            <li><a rel="nofollow" href="http://www.zmz2019.com/" target="_blank"><i
-                                        class="iconfont icon-zimu" style="color: #067;"></i>字幕组</a></li>
-                            <li><a rel="nofollow" href="http://www.acfun.cn/index.html" target="_blank"><i
-                                        class="iconfont icon-acfun" style="color:#f33;"></i>ACFUN</a></li>
-                            <li><a rel="nofollow" href="https://www.bilibili.com/" target="_blank"><i
-                                        class="iconfont icon-bili" style="color:#09e;"></i>哔哩哔哩</a></li>
-                            <li><a rel="nofollow" href="/movies/" target="_blank"><i class="iconfont icon-yunbo"
-                                        style="color:#0bf;"></i>影视搜索</a>
-                            </li>
-                            <li><a rel="nofollow" href="/tv/" target="_blank"><i class="iconfont icon-dianshi"
-                                        style="color:#9ae;"></i>直播电视</a>
-                            </li>
-                            <li><a rel="nofollow" href="https://music.yyv.me/" target="_blank"><i
-                                        class="iconfont icon-yinle" style="color:#f4a;"></i>音乐解析</a></li>
-                            <!------>
-                            <li class="title"><i class="iconfont icon-gouwuche"></i>Shopping</li>
-                            <li><a rel="nofollow" href="https://www.taobao.com" target="_blank"><i
-                                        class="iconfont icon-taobao" style="color: #ff6019;"></i>淘宝网</a></li>
-                            <li><a rel="nofollow" href="https://dyartstyle.com/juhuasuan/" target="_blank"><i
-                                        class="iconfont icon-juhuasuan" style="color: #E61414;"></i>聚划算</a></li>
-                            <li><a rel="nofollow" href="https://dyartstyle.com/temai/" target="_blank"><i
-                                        class="iconfont icon-temai" style="color: #ff6019;"></i>淘宝特卖</a></li>
-                            <li><a rel="nofollow"
-                                    href="https://mobile.yangkeduo.com/duo_cms_mall.html?pid=8742514_71211367&cpsSign=CM_190605_8742514_71211367_92fdd9f7fb637fec599bf556f263ed1f&duoduo_type=2&launch_wx=1"
-                                    title="拼多多手机端专属商城，超低价商品火热抢购中，更有超多大额优惠券持续发放，一键立抢>>" target="_blank"><i
-                                        class="iconfont icon-99" style="color: #f83e3e;"></i>拼多多</a></li>
-                            <li><a rel="nofollow" href="https://www.jd.com" target="_blank"><i
-                                        class="iconfont icon-jingdong" style="color: #e33333;"></i>京东</a></li>
-                            <li><a rel="nofollow" href="https://www.suning.com/" target="_blank"><i
-                                        class="iconfont icon-suning" style="color: #f90;"></i>苏宁易购</a></li>
-                            <li><a rel="nofollow" href="http://you.163.com/" target="_blank"><i
-                                        class="iconfont icon-yanxuan" style="color: #B4A078;"></i>网易严选</a></li>
-                            <li><a rel="nofollow" href="https://www.amazon.cn/" target="_blank"><i
-                                        class="iconfont icon-amazon" style="color: #fc9b18;"></i>亚马逊</a></li>
-                            <li><a rel="nofollow" href="http://www.dangdang.com/" target="_blank"><i
-                                        class="iconfont icon-dangdang" style="color: #ff2832;"></i>当当</a></li>
-                            <li><a rel="nofollow" href="https://wat.dyartstyle.com/" target="_blank"><i
-                                        class="iconfont icon-wat" style="color: #fe2e52;"></i>吾爱淘</a></li>
-                            <!------>
-                            <li class="title"><i class="iconfont icon-sheji"></i>UX</li>
-                            <li><a rel="nofollow" href="https://web.yyv.me/" target="_blank"><i
-                                        class="iconfont icon-daohang1"></i>设计导航</a></li>
-                            <li><a rel="nofollow" href="https://www.pinterest.com/" target="_blank"><i
-                                        class="iconfont icon-pinterest" style="color:#e02;"></i>Pinterest</a></li>
-                            <li><a rel="nofollow" href="https://www.behance.net/" target="_blank"><i
-                                        class="iconfont icon-behance" style="color:#56f;"></i>Behance</a></li>
-                            <li><a rel="nofollow" href="https://www.dribbble.com/" target="_blank"><i
-                                        class="iconfont icon-dribbble" style="color:#e48;"></i>Dribbble</a></li>
-                            <li><a rel="nofollow" href="https://huaban.com/" target="_blank"><i
-                                        class="iconfont icon-huaban" style="color:#f06;"></i>花瓣</a></li>
-                            <li><a rel="nofollow" href="https://www.zcool.com.cn/" target="_blank"><i
-                                        class="iconfont icon-zhanku" style="color:#f90;"></i>站酷</a></li>
-                            <li><a rel="nofollow" href="https://www.iconfont.cn/" target="_blank"><i
-                                        class="iconfont icon-iconfont" style="color: #ff6019;"></i>阿里图标</a></li>
-                            <li><a rel="nofollow" href="https://www.iconfinder.com/" target="_blank"><i
-                                        class="iconfont icon-eye"></i>IconFinder</a></li>
-                            <li><a rel="nofollow" href="https://uiiiuiii.com/" target="_blank"><i
-                                        class="iconfont icon-jiaocheng" style="color:#0aa;"></i>优设教程</a></li>
-                            <!------>
-                            <li class="title"><i class="iconfont icon-ai-tool"></i>Widgets</li>
-                            <li><a rel="nofollow" href="/ip/" target="_blank"><i class="iconfont icon-wangluo"
-                                        style="color: #02f;"></i>IP查询</a>
-                            </li>
-                            <li><a rel="nofollow" href="https://translate.google.cn/?hl=zh-CN" target="_blank"><i
-                                        class="iconfont icon-fanyi" style="color: #02f;"></i>谷歌翻译</a></li>
-                            <li><a rel="nofollow" href="http://www.slimego.cn/" target="_blank"><i
-                                        class="iconfont icon-shilaimu" style="color: #0f89c2;"></i>史莱姆</a></li>
-                            <li><a rel="nofollow" href="https://gugeji.com/" target="_blank"><i
-                                        class="iconfont icon-google" style="color:#4285f4"></i>镜像</a></li>
-                            <li><a rel="nofollow" href="https://feedly.com" target="_blank"><i
-                                        class="iconfont icon-feedly" style="color: #11dd00;"></i>Feedly</a></li>
-                            <li><a rel="nofollow" href="https://pan.baidu.com" target="_blank"><i
-                                        class="iconfont icon-baiduyun" style="color: #148bfe;"></i>百度网盘</a></li>
-                            <li><a rel="nofollow" href="https://www.baiduwp.com" target="_blank"><i
-                                        class="iconfont icon-cloud-download" style="color: #148bfe;"></i>网盘解析</a></li>
-                            <li><a rel="nofollow" href="https://www.mdeditor.com/" target="_blank"><i
-                                        class="iconfont icon-md" style="color:#09f;"></i>MD编辑器</a></li>
-                            <li><a rel="nofollow" href="https://miku.tools/" target="_blank"><i
-                                        class="iconfont icon-ai-tool"></i>Miku工具</a></li>
-                            <li><a rel="nofollow" href="http://cubic-bezier.com" target="_blank"><i
-                                        class="iconfont icon-quxian" style="color: #f08;"></i>贝赛尔曲线</a></li>
-                            <li><a rel="nofollow" href="/base64/" target="_blank"><i class="iconfont icon-base64"
-                                        style="color:#1d0;"></i>Base64</a>
-                            </li>
-                            <li><a rel="nofollow" href="https://javascriptobfuscator.com/Javascript-Obfuscator.aspx"
-                                    target="_blank"><i class="iconfont icon-jshunxiao"
-                                        style="color: #48c;"></i>JS混淆器</a>
-                            </li>
-                            <li><a rel="nofollow" href="https://ping.pe" target="_blank"><i
-                                        class="iconfont icon-wangluo1" style="color:#1d0;"></i>Ping.pe</a></li>
-                            <li><a rel="nofollow" href="https://ping.chinaz.com/" target="_blank"><i
-                                        class="iconfont icon-pingup" style="color:#2361ad;"></i>站长Ping</a></li>
-                            <li><a rel="nofollow" href="https://apkdl.in/" target="_blank"><i
-                                        class="iconfont icon-anzhuo" style="color:#094;"></i>APK下载</a></li>
-                            <!------>
-                            <li class="title"><i class="iconfont icon-kongzhitai"></i>Dev</li>
-                            <li><a rel="nofollow" href="http://www.w3school.com.cn/" target="_blank"><i
-                                        class="iconfont icon-h5" style="color:#c03;"></i>W3school</a></li>
-                            <li><a rel="nofollow" href="https://github.com/" target="_blank"><i
-                                        class="iconfont icon-github"></i>Github</a></li>
-                            <li><a rel="nofollow" href="https://codepen.io/" target="_blank"><i
-                                        class="iconfont icon-codepen"></i>Codepen</a></li>
-                            <li><a rel="nofollow" href="https://www.52pojie.cn/" target="_blank"><i
-                                        class="iconfont icon-theater-masks" style="color:#f03;"></i>吾爱破解</a></li>
-                            <li><a rel="nofollow" href="https://segmentfault.com/" target="_blank"><i
-                                        class="iconfont icon-msg" style="color:#096;"></i>SF思否</a></li>
-                            <li><a rel="nofollow" href="https://cdnjs.com/" target="_blank"><i
-                                        class="iconfont icon-cdnjs" style="color: #e52;"></i>CdnJs</a></li>
-                            <li><a rel="nofollow" href="https://fontawesome.com/icons?d=gallery&m=free"
-                                    target="_blank"><i class="iconfont icon-font-awesome" style="color: #4af;"></i>Font
-                                    A.</a></li>
-                            <li><a rel="nofollow" href="https://msdn.itellyou.cn/" target="_blank"><i
-                                        class="iconfont icon-windows" style="color: #48c;"></i>MSDN下载</a></li>
-                            <li><a rel="nofollow" href="https://dash.cloudflare.com/" target="_blank"><i
-                                        class="iconfont icon-cloudflare" style="color: #f37f20;"></i>C. flare</a></li>
-                            <li><a rel="nofollow" href="https://www.swiper.com.cn/" target="_blank"><i
-                                        class="iconfont icon-S" style="color:#065fe3;"></i>Swiper</a></li>
+                            <!-- Emails -->
+                            <li class="title"><i class="iconfont icon-youxiang" aria-hidden="true"></i>Emails</li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><i class="iconfont icon-gmail" style="color: #f03;" aria-hidden="true"></i>Gmail</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://outlook.live.com/mail/" target="_blank"><i class="iconfont icon-windows" style="color: #059;" aria-hidden="true"></i>Hotmail</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://exmail.qq.com" target="_blank"><i class="iconfont icon-QQ" style="color: #059;" aria-hidden="true"></i>Exmail</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://mail.163.com/" target="_blank"><i class="iconfont icon-wangyi" style="color: #169;" aria-hidden="true"></i>网易邮箱</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://mail.sina.com.cn/" target="_blank"><i class="iconfont icon-xinlang" style="color: #e6162d;" aria-hidden="true"></i>新浪邮箱</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://mail.qq.com/" target="_blank"><i class="iconfont icon-QQ" style="color: #f05;" aria-hidden="true"></i>QQ邮箱</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://qiye.aliyun.com/" target="_blank"><i class="iconfont icon-yunyouxiang" style="color: #f15534;" aria-hidden="true"></i>阿里邮箱</a></li>
+                            
+                            <!-- SNS -->
+                            <li class="title"><i class="iconfont icon-msg" aria-hidden="true"></i>SNS</li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.weibo.com" target="_blank"><i class="iconfont icon-weibo" style="color: #e6162d;" aria-hidden="true"></i>微博</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.zhihu.com/" target="_blank"><i class="iconfont icon-zhihu" style="color: #0084ff;" aria-hidden="true"></i>知乎</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.douban.com/" target="_blank"><i class="iconfont icon-douban" style="color: #072;" aria-hidden="true"></i>豆瓣</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.instagram.com" target="_blank"><i class="iconfont icon-instagram" style="color: #93009f;" aria-hidden="true"></i>Instagram</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.twitter.com" target="_blank"><i class="iconfont icon-twitter" style="color: #00bcff;" aria-hidden="true"></i>Twitter</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.facebook.com" target="_blank"><i class="iconfont icon-facebook" style="color: #4267b2;" aria-hidden="true"></i>Facebook</a></li>
+                            
+                            <!-- Media -->
+                            <li class="title"><i class="iconfont icon-shipin" aria-hidden="true"></i>Media</li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.youtube.com/" target="_blank"><i class="iconfont icon-youtube" style="color:#f03;" aria-hidden="true"></i>Youtube</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://v.qq.com/" target="_blank"><i class="iconfont icon-tengxunshipin" style="color:#2a0;" aria-hidden="true"></i>腾讯视频</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.youku.com/" target="_blank"><i class="iconfont icon-youku" style="color:#09e;" aria-hidden="true"></i>优酷</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.iqiyi.com/" target="_blank"><i class="iconfont icon-aiqiyi" style="color:#1d0;" aria-hidden="true"></i>爱奇艺</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.zmz2019.com/" target="_blank"><i class="iconfont icon-zimu" style="color: #067;" aria-hidden="true"></i>字幕组</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.acfun.cn/index.html" target="_blank"><i class="iconfont icon-acfun" style="color:#f33;" aria-hidden="true"></i>ACFUN</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.bilibili.com/" target="_blank"><i class="iconfont icon-bili" style="color:#09e;" aria-hidden="true"></i>哔哩哔哩</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="/movies/" target="_blank"><i class="iconfont icon-yunbo" style="color:#0bf;" aria-hidden="true"></i>影视搜索</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="/tv/" target="_blank"><i class="iconfont icon-dianshi" style="color:#9ae;" aria-hidden="true"></i>直播电视</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://music.yyv.me/" target="_blank"><i class="iconfont icon-yinle" style="color:#f4a;" aria-hidden="true"></i>音乐解析</a></li>
+                            
+                            <!-- Shopping -->
+                            <li class="title"><i class="iconfont icon-gouwuche" aria-hidden="true"></i>Shopping</li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.taobao.com" target="_blank"><i class="iconfont icon-taobao" style="color: #ff6019;" aria-hidden="true"></i>淘宝网</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://dyartstyle.com/juhuasuan/" target="_blank"><i class="iconfont icon-juhuasuan" style="color: #E61414;" aria-hidden="true"></i>聚划算</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://dyartstyle.com/temai/" target="_blank"><i class="iconfont icon-temai" style="color: #ff6019;" aria-hidden="true"></i>淘宝特卖</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://mobile.yangkeduo.com/duo_cms_mall.html?pid=8742514_71211367&cpsSign=CM_190605_8742514_71211367_92fdd9f7fb637fec599bf556f263ed1f&duoduo_type=2&launch_wx=1" title="拼多多手机端专属商城，超低价商品火热抢购中，更有超多大额优惠券持续发放，一键立抢>>" target="_blank"><i class="iconfont icon-99" style="color: #f83e3e;" aria-hidden="true"></i>拼多多</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.jd.com" target="_blank"><i class="iconfont icon-jingdong" style="color: #e33333;" aria-hidden="true"></i>京东</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.suning.com/" target="_blank"><i class="iconfont icon-suning" style="color: #f90;" aria-hidden="true"></i>苏宁易购</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://you.163.com/" target="_blank"><i class="iconfont icon-yanxuan" style="color: #B4A078;" aria-hidden="true"></i>网易严选</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.amazon.cn/" target="_blank"><i class="iconfont icon-amazon" style="color: #fc9b18;" aria-hidden="true"></i>亚马逊</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.dangdang.com/" target="_blank"><i class="iconfont icon-dangdang" style="color: #ff2832;" aria-hidden="true"></i>当当</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://wat.dyartstyle.com/" target="_blank"><i class="iconfont icon-wat" style="color: #fe2e52;" aria-hidden="true"></i>吾爱淘</a></li>
+                            
+                            <!-- UX -->
+                            <li class="title"><i class="iconfont icon-sheji" aria-hidden="true"></i>UX</li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://web.yyv.me/" target="_blank"><i class="iconfont icon-daohang1" aria-hidden="true"></i>设计导航</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.pinterest.com/" target="_blank"><i class="iconfont icon-pinterest" style="color:#e02;" aria-hidden="true"></i>Pinterest</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.behance.net/" target="_blank"><i class="iconfont icon-behance" style="color:#56f;" aria-hidden="true"></i>Behance</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.dribbble.com/" target="_blank"><i class="iconfont icon-dribbble" style="color:#e48;" aria-hidden="true"></i>Dribbble</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://huaban.com/" target="_blank"><i class="iconfont icon-huaban" style="color:#f06;" aria-hidden="true"></i>花瓣</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.zcool.com.cn/" target="_blank"><i class="iconfont icon-zhanku" style="color:#f90;" aria-hidden="true"></i>站酷</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.iconfont.cn/" target="_blank"><i class="iconfont icon-iconfont" style="color: #ff6019;" aria-hidden="true"></i>阿里图标</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.iconfinder.com/" target="_blank"><i class="iconfont icon-eye" aria-hidden="true"></i>IconFinder</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://uiiiuiii.com/" target="_blank"><i class="iconfont icon-jiaocheng" style="color:#0aa;" aria-hidden="true"></i>优设教程</a></li>
+                            
+                            <!-- Widgets -->
+                            <li class="title"><i class="iconfont icon-ai-tool" aria-hidden="true"></i>Widgets</li>
+                            <li><a rel="nofollow noopener noreferrer" href="/ip/" target="_blank"><i class="iconfont icon-wangluo" style="color: #02f;" aria-hidden="true"></i>IP查询</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://translate.google.cn/?hl=zh-CN" target="_blank"><i class="iconfont icon-fanyi" style="color: #02f;" aria-hidden="true"></i>谷歌翻译</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.slimego.cn/" target="_blank"><i class="iconfont icon-shilaimu" style="color: #0f89c2;" aria-hidden="true"></i>史莱姆</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://gugeji.com/" target="_blank"><i class="iconfont icon-google" style="color:#4285f4" aria-hidden="true"></i>镜像</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://feedly.com" target="_blank"><i class="iconfont icon-feedly" style="color: #11dd00;" aria-hidden="true"></i>Feedly</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://pan.baidu.com" target="_blank"><i class="iconfont icon-baiduyun" style="color: #148bfe;" aria-hidden="true"></i>百度网盘</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.baiduwp.com" target="_blank"><i class="iconfont icon-cloud-download" style="color: #148bfe;" aria-hidden="true"></i>网盘解析</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.mdeditor.com/" target="_blank"><i class="iconfont icon-md" style="color:#09f;" aria-hidden="true"></i>MD编辑器</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://miku.tools/" target="_blank"><i class="iconfont icon-ai-tool" aria-hidden="true"></i>Miku工具</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://cubic-bezier.com" target="_blank"><i class="iconfont icon-quxian" style="color: #f08;" aria-hidden="true"></i>贝赛尔曲线</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="/base64/" target="_blank"><i class="iconfont icon-base64" style="color:#1d0;" aria-hidden="true"></i>Base64</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://javascriptobfuscator.com/Javascript-Obfuscator.aspx" target="_blank"><i class="iconfont icon-jshunxiao" style="color: #48c;" aria-hidden="true"></i>JS混淆器</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://ping.pe" target="_blank"><i class="iconfont icon-wangluo1" style="color:#1d0;" aria-hidden="true"></i>Ping.pe</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://ping.chinaz.com/" target="_blank"><i class="iconfont icon-pingup" style="color:#2361ad;" aria-hidden="true"></i>站长Ping</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://apkdl.in/" target="_blank"><i class="iconfont icon-anzhuo" style="color:#094;" aria-hidden="true"></i>APK下载</a></li>
+                            
+                            <!-- Dev -->
+                            <li class="title"><i class="iconfont icon-kongzhitai" aria-hidden="true"></i>Dev</li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.w3school.com.cn/" target="_blank"><i class="iconfont icon-h5" style="color:#c03;" aria-hidden="true"></i>W3school</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://github.com/" target="_blank"><i class="iconfont icon-github" aria-hidden="true"></i>Github</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://codepen.io/" target="_blank"><i class="iconfont icon-codepen" aria-hidden="true"></i>Codepen</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.52pojie.cn/" target="_blank"><i class="iconfont icon-theater-masks" style="color:#f03;" aria-hidden="true"></i>吾爱破解</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://segmentfault.com/" target="_blank"><i class="iconfont icon-msg" style="color:#096;" aria-hidden="true"></i>SF思否</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://cdnjs.com/" target="_blank"><i class="iconfont icon-cdnjs" style="color: #e52;" aria-hidden="true"></i>CdnJs</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank"><i class="iconfont icon-font-awesome" style="color: #4af;" aria-hidden="true"></i>Font A.</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://msdn.itellyou.cn/" target="_blank"><i class="iconfont icon-windows" style="color: #48c;" aria-hidden="true"></i>MSDN下载</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://dash.cloudflare.com/" target="_blank"><i class="iconfont icon-cloudflare" style="color: #f37f20;" aria-hidden="true"></i>C. flare</a></li>
+                            <li><a rel="nofollow noopener noreferrer" href="https://www.swiper.com.cn/" target="_blank"><i class="iconfont icon-S" style="color:#065fe3;" aria-hidden="true"></i>Swiper</a></li>
                         </ul>
                     </div>
-
                 </div>
-                <!--书签 end-->
-                <!--设置-->
+                <!-- Bookmarks end -->
+                
+                <!-- Settings -->
                 <div class="tab-con-item">
-
                     <div class="set">
-                        <!--搜索引擎设置-->
+                        <!-- Search Engine Settings -->
                         <div class="set_blocks">
-                            <div class="set_blocks_title">
-                                Search Engines
-                            </div>
+                            <div class="set_blocks_title">Search Engines</div>
                             <div class="set_blocks_content">
                                 <div class="se_list">
                                     <table class="se_list_table">
-                                        <tr>
-                                            <td><span class="iconfont iconhome"></span></td>
-                                            <td>百度</td>
-                                            <td>
-                                                <button class="set_se_default" value="baidu"><span
-                                                        class="iconfont iconstrore-add"></span></button>
-                                                &nbsp;
-                                                <button class="edit_se" value="baidu"><span
-                                                        class="iconfont iconbook-edit"></span></button>
-                                                &nbsp;
-                                                <button class="delete_se" value="baidu"><span
-                                                        class="iconfont icondelete"></span></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td>Google</td>
-                                            <td>
-                                                <button class="set_se_default" value="google"><span
-                                                        class="iconfont iconstrore-add"></span></button>
-                                                &nbsp;
-                                                <button class="edit_se" value="google"><span
-                                                        class="iconfont iconbook-edit"></span></button>
-                                                &nbsp;
-                                                <button class="delete_se" value="google"><span
-                                                        class="iconfont icondelete"></span></button>
-                                            </td>
-                                        </tr>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="iconfont iconhome" aria-hidden="true"></span></td>
+                                                <td>百度</td>
+                                                <td>
+                                                    <button class="set_se_default" value="baidu" aria-label="Set as default"><span class="iconfont iconstrore-add" aria-hidden="true"></span></button>
+                                                    <button class="edit_se" value="baidu" aria-label="Edit"><span class="iconfont iconbook-edit" aria-hidden="true"></span></button>
+                                                    <button class="delete_se" value="baidu" aria-label="Delete"><span class="iconfont icondelete" aria-hidden="true"></span></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Google</td>
+                                                <td>
+                                                    <button class="set_se_default" value="google" aria-label="Set as default"><span class="iconfont iconstrore-add" aria-hidden="true"></span></button>
+                                                    <button class="edit_se" value="google" aria-label="Edit"><span class="iconfont iconbook-edit" aria-hidden="true"></span></button>
+                                                    <button class="delete_se" value="google" aria-label="Delete"><span class="iconfont icondelete" aria-hidden="true"></span></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                     </table>
                                 </div>
                                 <div class="se_add_preinstall">
-                                    <button class="set_se_list_add"><span class="icon iconfont icontianjia"></span>Add
-                                        new</button>
-                                    <button class="set_se_list_preinstall"><span
-                                            class="icon iconfont iconjinggao"></span>Reset</button>
+                                    <button class="set_se_list_add"><span class="icon iconfont icontianjia" aria-hidden="true"></span>Add new</button>
+                                    <button class="set_se_list_preinstall"><span class="icon iconfont iconjinggao" aria-hidden="true"></span>Reset</button>
                                 </div>
                                 <div class="add_content se_add_content" style="display:none;">
                                     <div class="from_items">
@@ -355,44 +264,37 @@
                                 </div>
                             </div>
                         </div>
-                        <!--搜索引擎设置 end-->
-                        <!--快捷方式设置-->
+                        <!-- Search Engine Settings end -->
+                        
+                        <!-- Shortcuts Settings -->
                         <div class="set_blocks">
-                            <div class="set_blocks_title">
-                                Shortcuts
-                            </div>
+                            <div class="set_blocks_title">Shortcuts</div>
                             <div class="set_blocks_content">
                                 <div class="quick_list">
                                     <table class="quick_list_table">
-                                        <tr>
-                                            <td>1.&nbsp;</td>
-                                            <td>Holger's Blog</td>
-                                            <td>
-                                                <button class="edit_quick" value="1"><span
-                                                        class="iconfont iconbook-edit"></span></button>
-                                                &nbsp;
-                                                <button class="delete_quick" value="1"><span
-                                                        class="iconfont icondelete"></span></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2.&nbsp;</td>
-                                            <td>Island 岛屿</td>
-                                            <td>
-                                                <button class="edit_quick" value="2"><span
-                                                        class="iconfont iconbook-edit"></span></button>
-                                                &nbsp;
-                                                <button class="delete_quick" value="2"><span
-                                                        class="iconfont icondelete"></span></button>
-                                            </td>
-                                        </tr>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.&nbsp;</td>
+                                                <td>Holger's Blog</td>
+                                                <td>
+                                                    <button class="edit_quick" value="1" aria-label="Edit"><span class="iconfont iconbook-edit" aria-hidden="true"></span></button>
+                                                    <button class="delete_quick" value="1" aria-label="Delete"><span class="iconfont icondelete" aria-hidden="true"></span></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2.&nbsp;</td>
+                                                <td>Island 岛屿</td>
+                                                <td>
+                                                    <button class="edit_quick" value="2" aria-label="Edit"><span class="iconfont iconbook-edit" aria-hidden="true"></span></button>
+                                                    <button class="delete_quick" value="2" aria-label="Delete"><span class="iconfont icondelete" aria-hidden="true"></span></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                     </table>
                                 </div>
                                 <div class="se_add_preinstall">
-                                    <button class="set_quick_list_add"><span
-                                            class="icon iconfont icontianjia"></span>Add new</button>
-                                    <button class="set_quick_list_preinstall"><span
-                                            class="icon iconfont iconjinggao"></span>Reset</button>
+                                    <button class="set_quick_list_add"><span class="icon iconfont icontianjia" aria-hidden="true"></span>Add new</button>
+                                    <button class="set_quick_list_preinstall"><span class="icon iconfont iconjinggao" aria-hidden="true"></span>Reset</button>
                                 </div>
                                 <div class="add_content quick_add_content" style="display:none;">
                                     <div class="from_items">
@@ -418,64 +320,72 @@
                                     </div>
                                 </div>
                             </div>
-                            <script async
-                                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8416537563860536"
-                                crossorigin="anonymous"></script>
-                            <!-- Minimalist Search Ad -->
-                            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8416537563860536"
-                                data-ad-slot="4117176855" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                            <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>
                         </div>
-                        <!--快捷方式设置 end-->
+                        <!-- Shortcuts Settings end -->
                     </div>
-
                 </div>
-                <!--设置 end-->
-                <!--我的-->
+                <!-- Settings end -->
+                
+                <!-- Backup -->
                 <div class="tab-con-item">
-
                     <div class="me">
-                        <p><img src="static/icon/user.png"></p>
+                        <p><img src="static/icon/user.png" alt="User icon"></p>
                     </div>
                     <div class="my_data">
                         <hr>
-                        <br>
                         <h3>Backup</h3>
-                        <textarea id="data_txt"></textarea>
-                        <br>
+                        <textarea id="data_txt" aria-label="Backup data"></textarea>
                         <button id="my_data_in">Import</button>
                         <button id="my_data_out">Export</button>
                     </div>
                 </div>
-                <!--我的 end-->
+                <!-- Backup end -->
             </div>
-
         </div>
-
-
-    </div>
-    <!-- 侧栏 end -->
-    <!--和风天气插件-->
-    <div class="mywth" style="width: 320px;">
+    </aside>
+    <!-- Sidebar end -->
+    
+    <!-- Weather Widget -->
+    <!--<div class="mywth" style="width: 320px;">
         <div id="he-plugin-simple"></div>
-        <script
-            async>WIDGET = { CONFIG: { "modules": "01234", "background": 5, "tmpColor": "4A4A4A", "tmpSize": "12", "cityColor": "4A4A4A", "citySize": "12", "aqiSize": "12", "weatherIconSize": "16", "alertIconSize": "14", "padding": "0px 5px 5px 0px", "shadow": "1", "language": "auto", "borderRadius": 5, "fixed": "false", "vertical": "middle", "horizontal": "left", "key": "5e9773d40306432e915cb9093c9f6369" } }</script>
+        <script>
+            WIDGET = {
+                CONFIG: {
+                    "modules": "01234",
+                    "background": 5,
+                    "tmpColor": "4A4A4A",
+                    "tmpSize": "12",
+                    "cityColor": "4A4A4A",
+                    "citySize": "12",
+                    "aqiSize": "12",
+                    "weatherIconSize": "16",
+                    "alertIconSize": "14",
+                    "padding": "0px 5px 5px 0px",
+                    "shadow": "1",
+                    "language": "auto",
+                    "borderRadius": 5,
+                    "fixed": "false",
+                    "vertical": "middle",
+                    "horizontal": "left",
+                    "key": "5e9773d40306432e915cb9093c9f6369"
+                }
+            }
+        </script>
         <script async src="https://widget.heweather.net/simple/static/js/he-simple-common.js?v=1.1"></script>
-    </div>
-    <!--和风天气插件-->
-    <!--搜索框和书签 end-->
-    <div id="content">
+    </div>-->
+    <!-- No longer works, need new key -->
+    <!-- Weather Widget end -->
+    
+    <!-- Main Content -->
+    <main id="content">
         <div class="con">
             <div class="shlogo"></div>
             <div class="sou">
                 <form target="_blank" class="search" action="https://www.google.com/search">
-                    <img class="se" src="static/icon/google_1.png" title="Switch"></img>
-                    <input id="search_placeholder" class="wd" type="text" name="wd"
-                        placeholder="My life is all about you~">
-                    <button class="s">
-                        <i style="font-size: 20px;" class="iconfont icon-sousuo"></i>
+                    <img class="se" src="static/icon/google_1.png" alt="Search engine icon" title="Switch">
+                    <input id="search_placeholder" class="wd" type="text" name="wd" placeholder="My life is all about you~" aria-label="Search">
+                    <button class="s" type="submit" aria-label="Search">
+                        <i style="font-size: 20px;" class="iconfont icon-sousuo" aria-hidden="true"></i>
                     </button>
                 </form>
                 <div class="search-engine" style="display: none;">
@@ -483,49 +393,43 @@
                         <strong class="search-engine-tit">Select Search Engine</strong>
                     </div>
                     <ul class="search-engine-list">
-                        <li class="se-li" url="https://www.baidu.com/s" name="wd" img="static/icon/baidu.ico"><img
-                                src="static/icon/baidu.ico"></img>百度</li>
-                        <li class="se-li" url="https://www.google.com/search" name="q" img="static/icon/google_1.png">
-                            <img src="static/icon/google_1.png"></img>Google</li>
-                        <li class="se-li" url="https://cn.bing.com/search" name="q" img="static/icon/bing.ico"><img
-                                src="static/icon/bing.ico"></img>Bing CN</li>
-                        <li class="se-li" url="https://www.dogedoge.com/results" name="q"
-                            img="static/icon/doge_ico.png"><img src="static/icon/doge_ico.png"></img>多吉</li>
-                        <li class="se-li" url="https://mijisou.com" name="q" img="static/icon/mijisou.png"><img
-                                src="static/icon/mijisou.png"></img>秘迹</li>
-                        <li class="se-li" url="https://seeres.com/search" name="q" img="static/icon/seeres.png"><img
-                                src="static/icon/seeres.png"></img>seeres*</li>
+                        <li class="se-li" url="https://www.baidu.com/s" name="wd" img="static/icon/baidu.ico"><img src="static/icon/baidu.ico" alt="Baidu">百度</li>
+                        <li class="se-li" url="https://www.google.com/search" name="q" img="static/icon/google_1.png"><img src="static/icon/google_1.png" alt="Google">Google</li>
+                        <li class="se-li" url="https://cn.bing.com/search" name="q" img="static/icon/bing.ico"><img src="static/icon/bing.ico" alt="Bing">Bing CN</li>
+                        <li class="se-li" url="https://www.dogedoge.com/results" name="q" img="static/icon/doge_ico.png"><img src="static/icon/doge_ico.png" alt="DogeDoge">多吉</li>
+                        <li class="se-li" url="https://mijisou.com" name="q" img="static/icon/mijisou.png"><img src="static/icon/mijisou.png" alt="Mijisou">秘迹</li>
+                        <li class="se-li" url="https://seeres.com/search" name="q" img="static/icon/seeres.png"><img src="static/icon/seeres.png" alt="Seeres">seeres*</li>
                     </ul>
                 </div>
                 <div class="quick-div">
                     <ul class="quick-ul">
-                        <li class="quick" data-s="bilibili" target="_blank" title="Holger's Blog">
-                            <a target=_blank href="https://holger.one">
-                                <i style="background-image: url(https://mravatar.dragoncloud.win/avatar/holgerhuo@dragon-fly.club?no-cache=true&proxied=true);"></i>
+                        <li class="quick" data-s="bilibili" title="Holger's Blog">
+                            <a target="_blank" rel="noopener noreferrer" href="https://holger.one">
+                                <i style="background-image: url(https://mravatar.dragoncloud.win/avatar/holgerhuo@dragon-fly.club?no-cache=true&proxied=true);" aria-hidden="true"></i>
                                 Blog
                             </a>
                         </li>
-                        <li class="quick" data-s="github" target="_blank" title="Island">
-                            <a target=_blank href="https://mast.dragon-fly.club/">
-                                <i style="background-image: url(https://mast.dragon-fly.club/favicon.ico);"></i>
+                        <li class="quick" data-s="github" title="Island">
+                            <a target="_blank" rel="noopener noreferrer" href="https://mast.dragon-fly.club/">
+                                <i style="background-image: url(https://island-media.icu/favicon.ico);" aria-hidden="true"></i>
                                 SNS
                             </a>
                         </li>
-                        <li class="quick" data-s="scp" target="_blank" title="GitHub">
-                            <a target=_blank rel="nofollow" href="https://github.com">
-                                <i style="background-image: url(static/icon/github.ico);"></i>
+                        <li class="quick" data-s="scp" title="GitHub">
+                            <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com">
+                                <i style="background-image: url(static/icon/github.ico);" aria-hidden="true"></i>
                                 GitHub
                             </a>
                         </li>
-                        <li class="quick" data-s="v2ex" target="_blank" title="V2EX">
-                            <a rel="nofollow" href="https://www.v2ex.com/">
-                                <i style="background-image: url(static/icon/v2ex.png);"></i>
+                        <li class="quick" data-s="v2ex" title="V2EX">
+                            <a target="_blank" rel="nofollow noopener noreferrer" href="https://www.v2ex.com/">
+                                <i style="background-image: url(static/icon/v2ex.png);" aria-hidden="true"></i>
                                 V2EX
                             </a>
                         </li>
-                        <li class="quick" data-s="steam" target="_blank" title="Steam">
-                            <a target=_blank rel="nofollow" href="https://store.steampowered.com/">
-                                <i style="background-image: url(static/icon/steam.ico);"></i>
+                        <li class="quick" data-s="steam" title="Steam">
+                            <a target="_blank" rel="nofollow noopener noreferrer" href="https://store.steampowered.com/">
+                                <i style="background-image: url(static/icon/steam.ico);" aria-hidden="true"></i>
                                 Steam
                             </a>
                         </li>
@@ -535,7 +439,7 @@
                     <p id="hitokoto">😀 Loading...</p>——「<span id="from">😀 Loading...</span>」
                 </div>
             </div>
-            <script async>
+            <script>
                 fetch('https://v1.hitokoto.cn')
                     .then(function (res) {
                         return res.json();
@@ -548,38 +452,46 @@
                     })
                     .catch(function (err) {
                         console.error(err);
-                    })  
+                    })
             </script>
-            <!--今日诗词 placeholder copyright holger-->
+            <!-- Jinrishici placeholder -->
             <script>
-                jinrishici.load(function (result) {
-                    var telecopy = result.data.content;
-                    var cursor = "|";
-                    var teletype = document.getElementById("search_placeholder");
-                    teletype.placeholder = cursor;
-                    var counter = 0;
-                    var timer = setInterval(function () {
-                        teletype.placeholder = telecopy.substr(0, counter) + cursor;
-                        counter++;
-                        if (counter === telecopy.length + 1) {
-                            clearInterval(timer);
-                        }
-                    }, 100);
-                });
+                // Wait for jinrishici to load
+                (function checkJinrishici() {
+                    if (typeof jinrishici !== 'undefined') {
+                        jinrishici.load(function (result) {
+                            var telecopy = result.data.content;
+                            var cursor = "|";
+                            var teletype = document.getElementById("search_placeholder");
+                            if (teletype) {
+                                teletype.placeholder = cursor;
+                                var counter = 0;
+                                var timer = setInterval(function () {
+                                    teletype.placeholder = telecopy.substr(0, counter) + cursor;
+                                    counter++;
+                                    if (counter === telecopy.length + 1) {
+                                        clearInterval(timer);
+                                    }
+                                }, 100);
+                            }
+                        });
+                    } else {
+                        // Retry after a short delay if jinrishici hasn't loaded yet
+                        setTimeout(checkJinrishici, 100);
+                    }
+                })();
             </script>
-            <!--今日诗词 placeholder end-->
+            <!-- Jinrishici placeholder end -->
         </div>
-        <div class="foot">
-            ©️ 2020 Minimalist Search by
-            <a href="https://mast.dragon-fly.club/@holgerhuo" target="_blank"><b>Holger</b></a>
-            <p> v0.4-beta<pss><a href='http://i.holger.net.cn' target='_blank'> </a>&nbsp;&nbsp;<ping></ping>
-                </pss>
-            </p>
+        <footer class="foot">
+            © 2020 Minimalist Search by
+            <a href="https://mast.dragon-fly.club/@holgerhuo" target="_blank" rel="noopener noreferrer"><b>Holger</b></a>
+            <p>v0.4-beta<pss><a href="https://i.holger.net.cn" target="_blank" rel="noopener noreferrer"> </a>&nbsp;&nbsp;<ping></ping></pss></p>
             <script async src="static/js/latency.js"></script>
             <script src="static/js/defocus.js"></script>
-            <script async src="static/js/defocus.js"></script>
-        </div>
-        <div style="visibility:hidden;">
+        </footer>
+        <!-- Hidden SEO links -->
+        <div style="visibility:hidden;" aria-hidden="true">
             <a href="https://radio.dragon-fly.club/">radio669</a>
             <a href="https://music.dragon-fly.club/">music669</a>
             <a href="https://mast.dragon-fly.club/">island</a>
@@ -595,12 +507,12 @@
             <a href="https://holger.one/">blog</a>
             <a href="https://holger.one/feed">holger's blog</a>
             <a href="https://blog.mast.dragon-fly.club/index.xml">island blog</a>
-            <a href="https://minecraft.dragon-fly.club/">rminecraft669</a><a
-                href="https://music.dragon-fly.club/">music669</a>
+            <a href="https://minecraft.dragon-fly.club/">rminecraft669</a>
+            <a href="https://music.dragon-fly.club/">music669</a>
             <a href="https://i.holger.net.cn/">ms</a>
         </div>
-    </div>
-    <!--搜索框和书签 end-->
+    </main>
+    <!-- Main Content end -->
 
     <!--
 作者:D.Young

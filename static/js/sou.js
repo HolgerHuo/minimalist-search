@@ -13,492 +13,564 @@ https://holger.one/
 Apr.11 2020
 */
 
-$(document).ready(function() {
+(function() {
+    'use strict';
 
-    //搜索引擎列表【预设】
-    var se_list_preinstall = {
-        '1':{
-            id      :1,
-            title   :"Google",
-            url     :"https://www.google.com/search",
-            name    :"q",
-            img     :"./static/icon/google_1.png",
+    // ===== Constants =====
+    const COOKIE_EXPIRY = 36500;
+    const MOBILE_WIDTH_THRESHOLD = 640;
 
-        },
-        '2':{
-            id      :2,
-            title   :"百度",
-            url     :"https://www.baidu.com/s",
-            name    :"wd",
-            img     :"./static/icon/baidu.ico",
-        },
-        '3':{
-            id      :3,
-            title   :"Bing CN",
-            url     :"https://cn.bing.com/search",
-            name    :"q",
-            img     :"./static/icon/bing.ico",
-        },
-        '4':{
-            id      :4,
-            title   :"多吉",
-            url     :"https://www.dogedoge.com/results",
-            name    :"q",
-            img     :"./static/icon/doge_ico.png",
-        },
-        '5':{
-            id      :5,
-            title   :"秘迹",
-            url     :"https://mijisou.com",
-            name    :"q",
-            img     :"./static/icon/mijisou.png",
-        },
-        '6':{
-            id      :6,
-            title   :"seeres*",
-            url     :"https://seeres.com/search",
-            name    :"q",
-            img     :"./static/icon/seeres.png",
-        },
-    };
+    // ===== Utility Functions =====
+    const $ = (selector, context = document) => context.querySelector(selector);
+    const $$ = (selector, context = document) => Array.from(context.querySelectorAll(selector));
 
-    //主页快捷方式【预设】
-    var quick_list_preinstall = {
-        '1':{
-            title   :"Blog",
-            url     :"https://holger.one/",
-            img     :"https://mravatar.dragoncloud.win/avatar/holgerhuo@dragon-fly.club?no-cache=true&proxied=true",
-            explain :"Holger's Blog",
+    // Cookie utilities (replacing js.cookie.js) - Exposed globally for other scripts
+    window.Cookies = {
+        get: (name) => {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) {
+                const cookieValue = parts.pop().split(';').shift();
+                try {
+                    return decodeURIComponent(cookieValue);
+                } catch (e) {
+                    return cookieValue;
+                }
+            }
+            return undefined;
         },
-        '2':{
-            title   :"Island",
-            url     :"https://mast.dragon-fly.club",
-            img     :"https://mast.dragon-fly.club/favicon.ico",
-            explain :"Island 岛屿 | 一座属于你的岛屿",
-
-        },
-        '3':{
-            title   :"V2EX",
-            url     :"https://www.v2ex.com/",
-            img     :"./static/icon/v2ex.png",
-            explain :"V2EX",
-        },
-        '4':{
-            title   :"Steam",
-            url     :"https://store.steampowered.com/",
-            img     :"./static/icon/steam.ico",
-            explain :"Steam",
-        },
-        '5':{
-            title   :"GitHub",
-            url     :"https://github.com/",
-            img     :"./static/icon/github.ico",
-            explain :"GitHub",
-        },
-    };
-
-    //搜索框数据加载
-    searchData();
-
-    //快捷方式数据加载
-    quickData();
-
-    //判断窗口大小，添加输入框自动完成
-    var wid = $("body").width();
-    if (wid < 640) {
-        $(".wd").attr('autocomplete', 'off');
-    }else{
-        $(".wd").focus();
-    }
-
-    //设置内容加载
-    setSeInit();//搜索引擎设置
-    setQuickInit();//快捷方式设置
-
-
-    //获取搜索引擎列表
-    function getSeList() {
-        var se_list_local = Cookies.get('se_list');
-        if (se_list_local !== "{}"&&se_list_local) {
-            return JSON.parse(se_list_local);
-        } else {
-            setSeList (se_list_preinstall);
-            return se_list_preinstall;
+        set: (name, value, options = {}) => {
+            let cookieString = `${name}=${encodeURIComponent(typeof value === 'object' ? JSON.stringify(value) : value)}`;
+            if (options.expires) {
+                const date = new Date();
+                date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
+                cookieString += `; expires=${date.toUTCString()}`;
+            }
+            cookieString += '; path=/';
+            document.cookie = cookieString;
         }
+    };
+    
+    const Cookies = window.Cookies;
+
+    // Simple tabs implementation (replacing jQuery.rTabs)
+    function initTabs(container) {
+        const navLinks = $$('.tab-nav a', container);
+        const tabItems = $$('.tab-con-item', container);
+
+        navLinks.forEach((link, index) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Remove current class from all
+                navLinks.forEach(l => l.classList.remove('current'));
+                tabItems.forEach(t => t.style.display = 'none');
+                
+                // Add current class to clicked
+                link.classList.add('current');
+                tabItems[index].style.display = 'block';
+            });
+        });
     }
 
-    //设置搜索引擎列表
-    function setSeList (se_list) {
-        if(se_list){
-           Cookies.set('se_list', se_list, { expires: 36500 });
-           return true;
+    // ===== Preinstalled Search Engines =====
+    const SE_LIST_PREINSTALL = {
+        '1': {
+            id: 1,
+            title: "Google",
+            url: "https://www.google.com/search",
+            name: "q",
+            img: "./static/icon/google_1.png"
+        },
+        '2': {
+            id: 2,
+            title: "百度",
+            url: "https://www.baidu.com/s",
+            name: "wd",
+            img: "./static/icon/baidu.ico"
+        },
+        '3': {
+            id: 3,
+            title: "Bing CN",
+            url: "https://cn.bing.com/search",
+            name: "q",
+            img: "./static/icon/bing.ico"
+        },
+        '4': {
+            id: 4,
+            title: "多吉",
+            url: "https://www.dogedoge.com/results",
+            name: "q",
+            img: "./static/icon/doge_ico.png"
+        },
+        '5': {
+            id: 5,
+            title: "秘迹",
+            url: "https://mijisou.com",
+            name: "q",
+            img: "./static/icon/mijisou.png"
+        },
+        '6': {
+            id: 6,
+            title: "seeres*",
+            url: "https://seeres.com/search",
+            name: "q",
+            img: "./static/icon/seeres.png"
+        }
+    };
+
+    // ===== Preinstalled Quick Links =====
+    const QUICK_LIST_PREINSTALL = {
+        '1': {
+            title: "Blog",
+            url: "https://holger.one/",
+            img: "https://mravatar.dragoncloud.win/avatar/holgerhuo@dragon-fly.club?no-cache=true&proxied=true",
+            explain: "Holger's Blog"
+        },
+        '2': {
+            title: "Island",
+            url: "https://mast.dragon-fly.club",
+            img: "https://island-media.icu/favicon.ico",
+            explain: "Island 岛屿 | 一座属于你的岛屿"
+        },
+        '3': {
+            title: "V2EX",
+            url: "https://www.v2ex.com/",
+            img: "./static/icon/v2ex.png",
+            explain: "V2EX"
+        },
+        '4': {
+            title: "Steam",
+            url: "https://store.steampowered.com/",
+            img: "./static/icon/steam.ico",
+            explain: "Steam"
+        },
+        '5': {
+            title: "GitHub",
+            url: "https://github.com/",
+            img: "./static/icon/github.ico",
+            explain: "GitHub"
+        }
+    };
+
+    // ===== Data Management Functions =====
+    function getSeList() {
+        const seListLocal = Cookies.get('se_list');
+        if (seListLocal && seListLocal !== "{}") {
+            return JSON.parse(seListLocal);
+        }
+        setSeList(SE_LIST_PREINSTALL);
+        return SE_LIST_PREINSTALL;
+    }
+
+    function setSeList(seList) {
+        if (seList) {
+            Cookies.set('se_list', seList, { expires: COOKIE_EXPIRY });
+            return true;
         }
         return false;
     }
 
-    //选择搜索引擎点击事件
-    $(document).on('click',function(e){
-        if($(".search-engine").is(":hidden") && $(".se").is(e.target)){
-            if ($(".se").is(e.target)) {
-                seList();
-                $(".search-engine").show();
-            }
-        }else{
-            if (!$(".search-engine").is(e.target) && $(".search-engine").has(e.target).length === 0) {
-                $(".search-engine").hide();
-            }
-        }
-    });
-
-    //搜索引擎列表点击
-    $(".search-engine-list").on("click",".se-li",function(){
-        var url = $(this).attr('url');
-        var name = $(this).attr('name');
-        var img = $(this).attr('img');
-        $(".search").attr("action",url);
-        $(".wd").attr("name",name);
-        $(".se").attr("src",img);
-        $(".search-engine").hide();
-    });
-
-    //菜单点击
-    $("#menu").click(function(event) {
-        $(this).toggleClass('on');
-        $(".side").toggleClass('closed');
-    });
-    $("#content").click(function(event) {
-        $(".on").removeClass('on');
-        $(".side").addClass('closed');
-    });
-
-    // 侧栏标签卡切换
-    $(".side").rTabs({
-        bind: 'click',
-        animation: 'left'
-    });
-
-    //修改默认搜索引擎
-    $(".se_list_table").on("click",".set_se_default",function(){
-        var name = $(this).val();
-        Cookies.set('se_default', name, { expires: 36500 });
-        setSeInit();
-    });
-
-    //获得默认搜索引擎
-    function getSeDefault(){
-        var se_default = Cookies.get('se_default');
-        return se_default?se_default:1;
+    function getSeDefault() {
+        return Cookies.get('se_default') || '1';
     }
 
-    //搜索框数据加载
+    function getQuickList() {
+        const quickListLocal = Cookies.get('quick_list');
+        if (quickListLocal && quickListLocal !== "{}") {
+            return JSON.parse(quickListLocal);
+        }
+        setQuickList(QUICK_LIST_PREINSTALL);
+        return QUICK_LIST_PREINSTALL;
+    }
+
+    function setQuickList(quickList) {
+        if (quickList) {
+            Cookies.set('quick_list', quickList, { expires: COOKIE_EXPIRY });
+            return true;
+        }
+        return false;
+    }
+
+    function isValidNumber(value) {
+        return /^\+?[1-9][0-9]*$/.test(value);
+    }
+
+    // ===== Search Engine Functions =====
     function searchData() {
-        var se_default =getSeDefault();
-        var se_list = getSeList();
-        var defaultSe = se_list[se_default];
-        if (defaultSe){
-            $(".search").attr("action", defaultSe["url"]);
-            $(".se").attr("src", defaultSe["img"]);
-            $(".wd").attr("name", defaultSe["name"]);
+        const seDefault = getSeDefault();
+        const seList = getSeList();
+        const defaultSe = seList[seDefault];
+        
+        if (defaultSe) {
+            $('.search').setAttribute('action', defaultSe.url);
+            $('.se').setAttribute('src', defaultSe.img);
+            $('.wd').setAttribute('name', defaultSe.name);
         }
-
     }
 
-    //搜索引擎列表加载
-    function seList() {
-        var html = "";
-        var se_list = getSeList();
-        for(var i in se_list){
-            html+="<li style='float: left; width: 80px!important; height: 30px!important; line-height: 30px; text-align: left; font-size: 14px; left: 15px; padding: 5px 10px 5px 10px; margin: 0 10px 10px 0; cursor: pointer; list-style: none; position: relative; border-radius: 10px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;' class='se-li' url='"+se_list[i]["url"]+"' name='"+se_list[i]["name"]+"' img='"+se_list[i]["img"]+"'><img src='"+se_list[i]["img"]+"'></img>"+se_list[i]["title"]+"</li>";
-        }
-        $(".search-engine-list").html(html);
+    function renderSeList() {
+        const seList = getSeList();
+        const html = Object.keys(seList).map(key => {
+            const se = seList[key];
+            return `<li style='float: left; width: 80px!important; height: 30px!important; line-height: 30px; text-align: left; font-size: 14px; left: 15px; padding: 5px 10px 5px 10px; margin: 0 10px 10px 0; cursor: pointer; list-style: none; position: relative; border-radius: 10px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;' class='se-li' data-url='${se.url}' data-name='${se.name}' data-img='${se.img}'><img src='${se.img}'></img>${se.title}</li>`;
+        }).join('');
+        
+        $('.search-engine-list').innerHTML = html;
     }
 
-    //设置-搜索引擎列表加载
-    function setSeInit () {
-        var se_default = getSeDefault();
-        var se_list  = getSeList();
-        var html = "";
-        for(var i in se_list){
-            var tr = "<tr><td></td>";
-            if(i == se_default){
-                tr ="<tr><td><span class='iconfont iconhome'></span></td>";
+    function setSeInit() {
+        const seDefault = getSeDefault();
+        const seList = getSeList();
+        
+        const html = Object.keys(seList).map(key => {
+            const se = seList[key];
+            const isDefault = key === seDefault;
+            const homeIcon = isDefault ? "<span class='iconfont iconhome'></span>" : "";
+            
+            return `<tr>
+                <td>${homeIcon}</td>
+                <td>${key}. ${se.title}</td>
+                <td>
+                    <button class='set_se_default' value='${key}'><span class='iconfont iconstrore-add'></span></button>
+                    <button class='edit_se' value='${key}'><span class='iconfont iconbook-edit'></span></button>
+                    <button class='delete_se' value='${key}'><span class='iconfont icondelete'></span></button>
+                </td>
+            </tr>`;
+        }).join('');
+        
+        $('.se_list_table').innerHTML = html;
+    }
+
+    // ===== Quick Links Functions =====
+    function quickData() {
+        const quickList = getQuickList();
+        
+        const html = Object.keys(quickList).map(key => {
+            const quick = quickList[key];
+            return `<li class='quick' target='_blank' title='${quick.explain}'>
+                <a class='quick_div_a' target='_blank' href='${quick.url}'>
+                    <i style='background-image: url(${quick.img});'></i>
+                    <div id='txtq'>${quick.title}</div>
+                </a>
+            </li>`;
+        }).join('');
+        
+        $('.quick-ul').innerHTML = html;
+    }
+
+    function setQuickInit() {
+        const quickList = getQuickList();
+        
+        const html = Object.keys(quickList).map(key => {
+            const quick = quickList[key];
+            return `<tr>
+                <td>${key}.&nbsp;</td>
+                <td>${quick.title}</td>
+                <td>
+                    <button class='edit_quick' value='${key}'><span class='iconfont iconbook-edit'></span></button>
+                    &nbsp;
+                    <button class='delete_quick' value='${key}'><span class='iconfont icondelete'></span></button>
+                </td>
+            </tr>`;
+        }).join('');
+        
+        $('.quick_list_table').innerHTML = html;
+    }
+
+    // ===== Event Handlers =====
+    function initEventHandlers() {
+        // Search engine selector toggle
+        document.addEventListener('click', (e) => {
+            const searchEngine = $('.search-engine');
+            const seButton = $('.se');
+            
+            if (searchEngine.style.display === 'none' && e.target === seButton) {
+                renderSeList();
+                searchEngine.style.display = 'block';
+            } else if (e.target !== searchEngine && !searchEngine.contains(e.target)) {
+                searchEngine.style.display = 'none';
             }
-            tr += "<td>"+i+". "+ se_list[i]["title"] +"</td><td><button class='set_se_default' value='"+i+"'><span class='iconfont iconstrore-add'></span></button><button class='edit_se' value='"+i+"'><span class='iconfont iconbook-edit'></span></button> <button class='delete_se' value='"+i+"'><span class='iconfont icondelete'></span></button></td></tr>";
-            html+=tr;
-        }
-        $(".se_list_table").html(html);
-    }
+        });
 
-    //搜索引擎添加
-    $(".set_se_list_add").click(function () {
-        $(".se_add_content input").val("");
-        $(".se_add_content").show();
-    });
+        // Search engine selection (event delegation)
+        $('.search-engine-list').addEventListener('click', (e) => {
+            const li = e.target.closest('.se-li');
+            if (li) {
+                const url = li.dataset.url;
+                const name = li.dataset.name;
+                const img = li.dataset.img;
+                
+                $('.search').setAttribute('action', url);
+                $('.wd').setAttribute('name', name);
+                $('.se').setAttribute('src', img);
+                $('.search-engine').style.display = 'none';
+            }
+        });
 
-    //搜索引擎保存
-    $(".se_add_save").click(function () {
-        var key_inhere = $(".se_add_content input[name='key_inhere']").val();
-        var key = $(".se_add_content input[name='key']").val();
-        var title = $(".se_add_content input[name='title']").val();
-        var url = $(".se_add_content input[name='url']").val();
-        var name = $(".se_add_content input[name='name']").val();
-        var img = $(".se_add_content input[name='img']").val();
+        // Menu toggle
+        $('#menu').addEventListener('click', () => {
+            $('#menu').classList.toggle('on');
+            $('.side').classList.toggle('closed');
+        });
 
-        var num = /^\+?[1-9][0-9]*$/;
-        if (!num.test(key)){
-            alert("Sequence "+key+" is invalid!");
-            return;
-        }
+        $('#content').addEventListener('click', () => {
+            $('#menu').classList.remove('on');
+            $('.side').classList.add('closed');
+        });
 
-        var se_list = getSeList();
-
-        if (se_list[key]) {
-            alert("Sequence "+key+" has been taken!");
-            return;
-        }
-
-        if (key_inhere && key != key_inhere) {
-            delete se_list[key_inhere];
-        }
-
-        se_list[key] = {
-            title: title,
-            url: url,
-            name: name,
-            img: img,
-        };
-        setSeList(se_list);
-        setSeInit();
-        $(".se_add_content").hide();
-
-    });
-
-    //关闭表单
-    $(".se_add_cancel").click(function () {
-        $(".se_add_content").hide();
-    });
-
-    //搜索引擎修改
-    $(".se_list").on("click",".edit_se",function(){
-
-        var se_list = getSeList();
-        var key = $(this).val();
-        $(".se_add_content input[name='key_inhere']").val(key);
-        $(".se_add_content input[name='key']").val(key);
-        $(".se_add_content input[name='title']").val(se_list[key]["title"]);
-        $(".se_add_content input[name='url']").val(se_list[key]["url"]);
-        $(".se_add_content input[name='name']").val(se_list[key]["name"]);
-        $(".se_add_content input[name='img']").val(se_list[key]["img"]);
-
-        $(".se_add_content").show();
-    });
-
-    //搜索引擎删除
-    $(".se_list").on("click",".delete_se",function(){
-        var se_default = getSeDefault();
-        var key = $(this).val();
-        if (key==se_default){
-            alert("Cannot delete default search engine!");
-        } else {
-            var r = confirm("Delete sequence "+key+" ?");
-            if (r) {
-                var se_list = getSeList();
-                delete se_list[key];
-                setSeList(se_list);
+        // Set default search engine (event delegation)
+        $('.se_list_table').addEventListener('click', (e) => {
+            if (e.target.closest('.set_se_default')) {
+                const button = e.target.closest('.set_se_default');
+                const name = button.value;
+                Cookies.set('se_default', name, { expires: COOKIE_EXPIRY });
                 setSeInit();
             }
-        }
-    });
+        });
 
-    //恢复预设搜索引擎
-    $(".set_se_list_preinstall").click(function () {
-         var r=confirm("Current settings will be removed! (You'd better backup before performing this)");
-         if (r) {
-             setSeList (se_list_preinstall);
-             Cookies.set('se_default', 1, { expires: 36500 });
-             setSeInit();
-         }
-    });
+        // Add search engine
+        $('.set_se_list_add').addEventListener('click', () => {
+            $$('.se_add_content input').forEach(input => input.value = '');
+            $('.se_add_content').style.display = 'block';
+        });
 
-    //获取快捷方式列表
-    function getQuickList() {
-        var quick_list_local = Cookies.get('quick_list');
-        if (quick_list_local !== "{}" && quick_list_local) {
-            return JSON.parse(quick_list_local);
-        } else {
-            setQuickList(quick_list_preinstall);
-            return quick_list_preinstall;
-        }
-    }
+        // Save search engine
+        $('.se_add_save').addEventListener('click', () => {
+            const keyInhere = $('.se_add_content input[name="key_inhere"]').value;
+            const key = $('.se_add_content input[name="key"]').value;
+            const title = $('.se_add_content input[name="title"]').value;
+            const url = $('.se_add_content input[name="url"]').value;
+            const name = $('.se_add_content input[name="name"]').value;
+            const img = $('.se_add_content input[name="img"]').value;
 
-    //设置快捷方式列表
-    function setQuickList(quick_list) {
-        if(quick_list){
-           Cookies.set('quick_list', quick_list, {expires: 36500});
-           return true;
-        }
-        return false;
-    }
-
-    //快捷方式数据加载
-    function quickData() {
-        var html = "";
-        var quick_list = getQuickList();
-        for (var i in quick_list) {
-            html += "<li class='quick' target='_blank' title='"+quick_list[i]['explain']+"'>\
-                        <a class='quick_div_a' target=_blank href='"+quick_list[i]['url']+"'>\
-                            <i style='background-image: url("+quick_list[i]['img']+");'></i><div id='txtq'>\
-                            "+quick_list[i]['title']+"\</div>\
-                        </a>\
-                     </li>";
-        }
-        $(".quick-ul").html(html);
-    }
-
-    //设置-快捷方式加载
-    function setQuickInit () {
-
-        var quick_list  = getQuickList();
-        var html = "";
-        for(var i in quick_list){
-            tr ="<tr>\
-                    <td>"+i+".&nbsp;</td>\
-                    <td>"+quick_list[i]['title']+"</td>\
-                    <td>\
-                        <button class='edit_quick' value='"+i+"'><span class='iconfont iconbook-edit'></span></button>\
-                        &nbsp;\
-                        <button class='delete_quick' value='"+i+"'><span class='iconfont icondelete'></span></button>\
-                    </td>\
-                </tr>";
-            html+=tr;
-        }
-        $(".quick_list_table").html(html);
-    }
-
-    //设置-快捷方式添加
-    $(".set_quick_list_add").click(function () {
-        $(".quick_add_content input").val("");
-        $(".quick_add_content").show();
-    });
-
-    //设置-快捷方式保存
-    $(".quick_add_save").click(function () {
-        var key_inhere = $(".quick_add_content input[name='key_inhere']").val();
-        var key = $(".quick_add_content input[name='key']").val();
-        var title = $(".quick_add_content input[name='title']").val();
-        var url = $(".quick_add_content input[name='url']").val();
-        var img = $(".quick_add_content input[name='img']").val();
-
-        var num = /^\+?[1-9][0-9]*$/;
-        if (!num.test(key)){
-            alert("Sequence "+key+" is invalid!");
-            return;
-        }
-
-        var quick_list = getQuickList();
-
-        if (quick_list[key]) {
-            alert("Sequence "+key+" has been taken!");
-            return;
-        }
-
-        if (key_inhere && key != key_inhere) {
-            delete quick_list[key_inhere];
-        }
-
-        quick_list[key] = {
-            title: title,
-            url: url,
-            img: img,
-        };
-        setQuickList(quick_list);
-        setQuickInit();
-        $(".quick_add_content").hide();
-    });
-
-    //设置-快捷方式关闭添加表单
-    $(".quick_add_cancel").click(function () {
-        $(".quick_add_content").hide();
-    });
-
-    //恢复预设快捷方式
-    $(".set_quick_list_preinstall").click(function () {
-         var r=confirm("Current settings will be removed! (You'd better backup before performing this)");
-         if (r) {
-             setQuickList (quick_list_preinstall);
-             setQuickInit();
-         }
-    });
-
-    //快捷方式修改
-    $(".quick_list").on("click",".edit_quick",function(){
-
-        var quick_list = getQuickList();
-        var key = $(this).val();
-        $(".quick_add_content input[name='key_inhere']").val(key);
-        $(".quick_add_content input[name='key']").val(key);
-        $(".quick_add_content input[name='title']").val(quick_list[key]["title"]);
-        $(".quick_add_content input[name='url']").val(quick_list[key]["url"]);
-        $(".quick_add_content input[name='img']").val(quick_list[key]["img"]);
-
-        $(".quick_add_content").show();
-    });
-
-    //快捷方式删除
-    $(".quick_list").on("click",".delete_quick",function(){
-
-        var key = $(this).val();
-
-        var r = confirm("Delete sequence "+key+" ?");
-        if (r) {
-            var quick_list = getQuickList();
-            delete quick_list[key];
-            setQuickList(quick_list);
-            setQuickInit();
-        }
-    });
-
-    //我的数据导出
-    $("#my_data_out").click(function () {
-        var se = getSeList();
-        var se_default = getSeDefault();
-        var quick = getQuickList();
-
-        var mydata = {"se":se,"se_default":se_default,"quick":quick};
-        var json = JSON.stringify(mydata);
-        $("#data_txt").val(json);
-    });
-
-    //我的数据导入
-    $("#my_data_in").click(function () {
-        var json = $("#data_txt").val();
-
-        //json 格式校验
-        try {
-            var mydata = JSON.parse(json);
-        } catch (e) {
-            alert("Invalid backup!");
-            black;
-        }
-        if (typeof mydata != 'object') {
-            alert("Invalid format!");
-            black;
-        }
-
-        if(confirm("Current settings will be erased, continue?")){
-            setSeList(mydata["se"]);
-            if (mydata["se_default"]) {
-                Cookies.set('se_default', mydata["se_default"], {expires: 36500});
+            if (!isValidNumber(key)) {
+                alert(`Sequence ${key} is invalid!`);
+                return;
             }
-            setQuickList(mydata["quick"]);
 
-            searchData();
-            quickData();
+            const seList = getSeList();
+
+            if (seList[key]) {
+                alert(`Sequence ${key} has been taken!`);
+                return;
+            }
+
+            if (keyInhere && key !== keyInhere) {
+                delete seList[keyInhere];
+            }
+
+            seList[key] = { title, url, name, img };
+            setSeList(seList);
             setSeInit();
-            setQuickInit();
+            $('.se_add_content').style.display = 'none';
+        });
 
-            alert("Success!");
+        // Cancel search engine form
+        $('.se_add_cancel').addEventListener('click', () => {
+            $('.se_add_content').style.display = 'none';
+        });
+
+        // Edit search engine (event delegation)
+        $('.se_list').addEventListener('click', (e) => {
+            if (e.target.closest('.edit_se')) {
+                const button = e.target.closest('.edit_se');
+                const seList = getSeList();
+                const key = button.value;
+                const se = seList[key];
+                
+                $('.se_add_content input[name="key_inhere"]').value = key;
+                $('.se_add_content input[name="key"]').value = key;
+                $('.se_add_content input[name="title"]').value = se.title;
+                $('.se_add_content input[name="url"]').value = se.url;
+                $('.se_add_content input[name="name"]').value = se.name;
+                $('.se_add_content input[name="img"]').value = se.img;
+                $('.se_add_content').style.display = 'block';
+            }
+        });
+
+        // Delete search engine (event delegation)
+        $('.se_list').addEventListener('click', (e) => {
+            if (e.target.closest('.delete_se')) {
+                const button = e.target.closest('.delete_se');
+                const seDefault = getSeDefault();
+                const key = button.value;
+                
+                if (key === seDefault) {
+                    alert("Cannot delete default search engine!");
+                } else if (confirm(`Delete sequence ${key}?`)) {
+                    const seList = getSeList();
+                    delete seList[key];
+                    setSeList(seList);
+                    setSeInit();
+                }
+            }
+        });
+
+        // Reset search engines
+        $('.set_se_list_preinstall').addEventListener('click', () => {
+            if (confirm("Current settings will be removed! (You'd better backup before performing this)")) {
+                setSeList(SE_LIST_PREINSTALL);
+                Cookies.set('se_default', '1', { expires: COOKIE_EXPIRY });
+                setSeInit();
+            }
+        });
+
+        // Add quick link
+        $('.set_quick_list_add').addEventListener('click', () => {
+            $$('.quick_add_content input').forEach(input => input.value = '');
+            $('.quick_add_content').style.display = 'block';
+        });
+
+        // Save quick link
+        $('.quick_add_save').addEventListener('click', () => {
+            const keyInhere = $('.quick_add_content input[name="key_inhere"]').value;
+            const key = $('.quick_add_content input[name="key"]').value;
+            const title = $('.quick_add_content input[name="title"]').value;
+            const url = $('.quick_add_content input[name="url"]').value;
+            const img = $('.quick_add_content input[name="img"]').value;
+
+            if (!isValidNumber(key)) {
+                alert(`Sequence ${key} is invalid!`);
+                return;
+            }
+
+            const quickList = getQuickList();
+
+            if (quickList[key]) {
+                alert(`Sequence ${key} has been taken!`);
+                return;
+            }
+
+            if (keyInhere && key !== keyInhere) {
+                delete quickList[keyInhere];
+            }
+
+            quickList[key] = { title, url, img };
+            setQuickList(quickList);
+            setQuickInit();
+            $('.quick_add_content').style.display = 'none';
+        });
+
+        // Cancel quick link form
+        $('.quick_add_cancel').addEventListener('click', () => {
+            $('.quick_add_content').style.display = 'none';
+        });
+
+        // Reset quick links
+        $('.set_quick_list_preinstall').addEventListener('click', () => {
+            if (confirm("Current settings will be removed! (You'd better backup before performing this)")) {
+                setQuickList(QUICK_LIST_PREINSTALL);
+                setQuickInit();
+            }
+        });
+
+        // Edit quick link (event delegation)
+        $('.quick_list').addEventListener('click', (e) => {
+            if (e.target.closest('.edit_quick')) {
+                const button = e.target.closest('.edit_quick');
+                const quickList = getQuickList();
+                const key = button.value;
+                const quick = quickList[key];
+                
+                $('.quick_add_content input[name="key_inhere"]').value = key;
+                $('.quick_add_content input[name="key"]').value = key;
+                $('.quick_add_content input[name="title"]').value = quick.title;
+                $('.quick_add_content input[name="url"]').value = quick.url;
+                $('.quick_add_content input[name="img"]').value = quick.img;
+                $('.quick_add_content').style.display = 'block';
+            }
+        });
+
+        // Delete quick link (event delegation)
+        $('.quick_list').addEventListener('click', (e) => {
+            if (e.target.closest('.delete_quick')) {
+                const button = e.target.closest('.delete_quick');
+                const key = button.value;
+                
+                if (confirm(`Delete sequence ${key}?`)) {
+                    const quickList = getQuickList();
+                    delete quickList[key];
+                    setQuickList(quickList);
+                    setQuickInit();
+                }
+            }
+        });
+
+        // Export data
+        $('#my_data_out').addEventListener('click', () => {
+            const mydata = {
+                se: getSeList(),
+                se_default: getSeDefault(),
+                quick: getQuickList()
+            };
+            $('#data_txt').value = JSON.stringify(mydata);
+        });
+
+        // Import data
+        $('#my_data_in').addEventListener('click', () => {
+            const json = $('#data_txt').value;
+
+            try {
+                const mydata = JSON.parse(json);
+                
+                if (typeof mydata !== 'object') {
+                    alert("Invalid format!");
+                    return;
+                }
+
+                if (confirm("Current settings will be erased, continue?")) {
+                    setSeList(mydata.se);
+                    if (mydata.se_default) {
+                        Cookies.set('se_default', mydata.se_default, { expires: COOKIE_EXPIRY });
+                    }
+                    setQuickList(mydata.quick);
+
+                    searchData();
+                    quickData();
+                    setSeInit();
+                    setQuickInit();
+
+                    alert("Success!");
+                }
+            } catch (e) {
+                alert("Invalid backup!");
+            }
+        });
+    }
+
+    // ===== Initialization =====
+    function init() {
+        // Load search engine data
+        searchData();
+
+        // Load quick links data
+        quickData();
+
+        // Set autocomplete based on window size
+        const wid = document.body.offsetWidth;
+        if (wid < MOBILE_WIDTH_THRESHOLD) {
+            $('.wd').setAttribute('autocomplete', 'off');
+        } else {
+            $('.wd').focus();
         }
 
-    });
-});
+        // Initialize settings
+        setSeInit();
+        setQuickInit();
+
+        // Initialize sidebar tabs
+        initTabs($('.side'));
+
+        // Initialize event handlers
+        initEventHandlers();
+    }
+
+    // Run when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+
+})();
